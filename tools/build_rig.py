@@ -158,25 +158,51 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
 
     # ---- pixels: one text_display per (face,i,j), transform baked ----
     count = 0
+    
+    # Text display scale adjustments and pivot parameters
+    pixel_scale_xy = 5.705
+    text_pivot_y = 0.135
+    
     for dirn, (p0, eu, ev, nrm, (ru, rv)) in _faces(w, h, d).items():
-        quat = _quat_from_normal(nrm)
+        # Compute rotation basis vectors to accurately translate the pivot offset
+        nz = _norm(nrm)
+        up = [0, 1, 0] if abs(nz[1]) < 0.99 else [0, 0, 1]
+        rx = _norm(_cross(up, nz))
+        ry = _cross(nz, rx) # Local Y-axis in world space
+        
+        quat = _mat_to_quat([rx, ry, nz])
+        
+        # Calculate the translation shift needed to counter the scale's pull towards the pivot
+        # Delta = Old Visual Offset - New Visual Offset
+        local_delta_y = (px * text_pivot_y) - (px * pixel_scale_xy * text_pivot_y)
+        shift_x = ry[0] * local_delta_y
+        shift_y = ry[1] * local_delta_y
+        shift_z = ry[2] * local_delta_y
+
         for j in range(rv):
             for i in range(ru):
                 # pixel centre in block space relative to the cuboid origin
                 cx = (p0[0] + (eu[0]*(i+0.5)/ru) + (ev[0]*(j+0.5)/rv)) * px
                 cy = (p0[1] + (eu[1]*(i+0.5)/ru) + (ev[1]*(j+0.5)/rv)) * px
                 cz = (p0[2] + (eu[2]*(i+0.5)/ru) + (ev[2]*(j+0.5)/rv)) * px
+                
+                # Apply the compensational shift to our translation
+                tx = cx + shift_x
+                ty = cy + shift_y
+                tz = cz + shift_z
+                
                 transform = {
-                    "translation": [F(round(cx, 5)), F(round(cy, 5)), F(round(cz, 5))],
+                    "translation": [F(round(tx, 5)), F(round(ty, 5)), F(round(tz, 5))],
                     "left_rotation": [F(q) for q in quat],
-                    "scale": [F(round(px, 5)), F(round(px, 5)), F(round(px, 5))],
+                    "scale": [F(round(px * pixel_scale_xy, 5)), F(round(px * pixel_scale_xy, 5)), F(round(px, 5))],
                     "right_rotation": [F(0.0), F(0.0), F(0.0), F(1.0)],
                 }
                 disp = {
                     "Tags": ["meccha_pixel", "meccha_rig_part", "rig_unassigned",
                              f"cb_{name}", f"face_{dirn}", f"u_{i}", f"v_{j}"],
                     "text": {"text":"⬛"},
-                    "background": 0,                  # transparent until painted
+                    "text_opacity": 0,                 # hidden
+                    "background": -1,                  # white by default
                     "billboard": "fixed",
                     "transformation": transform,
                     "Glowing": False,
@@ -194,7 +220,8 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
             "Tags": ["meccha_overlay", "meccha_rig_part", "rig_unassigned",
                      f"cb_{name}", f"face_{dirn}"],
             "text": {"text":"⬛"},
-            "background": 0,
+            "text_opacity": 0,                 # hidden
+            "background": -1,
             "billboard": "fixed",
             "transformation": {
                 "translation": [F(round(ctr_x, 5)), F(round(ctr_y, 5)), F(round(ctr_z + 0.001, 5))],
