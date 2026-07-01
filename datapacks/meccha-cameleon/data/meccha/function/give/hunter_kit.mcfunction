@@ -1,0 +1,3 @@
+# meccha:give/hunter_kit
+# Full hunter loadout: the Hunter Pointer.
+give @s minecraft:blaze_rod[minecraft:consumable={consume_seconds:10000000.0f,animation:"none",has_consume_particles:false,sound:"minecraft:intentionally_empty"},minecraft:custom_data={hunter_pointer:true},minecraft:item_name={"text":"Hunter Pointer","color":"gold"},minecraft:max_stack_size=1] 1

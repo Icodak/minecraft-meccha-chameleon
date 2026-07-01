@@ -49,11 +49,19 @@ class ShapeRegistry:
         self.shapes: dict[str, dict] = {}        # shape_id -> {elements:[...]}
         self._sig_to_id: dict[str, str] = {}
 
-    def intern(self, resolved_model, parent_hint: str | None = None) -> str:
+    def intern(self, resolved_model, parent_hint: str | None = None,
+               model_id: str | None = None) -> str:
         sig = _signature(resolved_model.elements)
         if sig in self._sig_to_id:
             return self._sig_to_id[sig]
-        name = _KNOWN_PARENTS.get(parent_hint or "", None) or f"shape_{sig[:8]}"
+        name = _KNOWN_PARENTS.get(parent_hint or "", None)
+        if not name:
+            # Unrecognised silhouette: prefer the source model's own file
+            # name (e.g. "block/custom_gate" -> "custom_gate") over a bare
+            # hash, so a human staring at generated shapes.mcfunction can
+            # tell which model first produced this geometry. Falls back to
+            # the hash only if we truly have no model id to work with.
+            name = model_id.rsplit("/", 1)[-1] if model_id else f"shape_{sig[:8]}"
         # Avoid friendly-name collisions across differing geometry.
         if name in self.shapes and self.shapes[name]["sig"] != sig:
             name = f"{name}_{sig[:6]}"

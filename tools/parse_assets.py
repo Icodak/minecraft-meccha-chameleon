@@ -92,7 +92,7 @@ def main() -> int:
         if not rm.elements:
             no_geometry.append(model_id)
             continue
-        shape_id = shapes.intern(rm, _model_parent_hint(lib, model_id))
+        shape_id = shapes.intern(rm, _model_parent_hint(lib, model_id), model_id)
         model_entries[model_id] = {"shape": shape_id, "textures": rm.textures}
         for tex in rm.textures.values():
             if not tex.startswith("#"):

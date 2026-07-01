@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:arrow",
+          "predicates": {
+            "minecraft:custom_data": "{eye_dropper:true}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "meccha:trigger/eyedropper"
+  }
+}
