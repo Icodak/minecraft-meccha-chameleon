@@ -5,7 +5,7 @@ execute store result score #P meccha.tmp run scoreboard players get @s meccha.pi
 scoreboard players set @s meccha.pick_rgb 0
 scoreboard players remove #P meccha.tmp 1
 
-# Per-player brush colour (packed 0xRRGGBB) \u2014 multiplayer-safe.
+# Per-player brush colour (packed 0xRRGGBB) - multiplayer-safe.
 scoreboard players operation @s meccha.color = #P meccha.tmp
 
 # Decode for the hex feedback.

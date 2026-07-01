@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Static sanity checker for the Meccha datapack.
 
-Not a full Minecraft parser \u2014 it catches the mistakes that actually bite:
+Not a full Minecraft parser - it catches the mistakes that actually bite:
   * macro lines (containing $(...)) that forget the leading '$'
   * unbalanced { } [ ] " on a command line
   * `function ns:path` references with no corresponding file

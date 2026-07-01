@@ -1,6 +1,7 @@
 # meccha:eyedropper/finalize   (executed AS the sampling player)
 # Store the sampled colour as THIS player's brush colour (meccha.color, packed
 # 0xRRGGBB) so painters stay independent in multiplayer, then show feedback.
+# say finalize
 data modify storage meccha:rt col.hex set from storage meccha:rt sample.color
 data modify storage meccha:rt col.rr set string storage meccha:rt col.hex 1 3
 data modify storage meccha:rt col.gg set string storage meccha:rt col.hex 3 5

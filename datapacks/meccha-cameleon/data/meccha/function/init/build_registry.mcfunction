@@ -7,7 +7,7 @@
 # (tools/parse_assets.py). It simply `function`-calls every emitted file
 # in dependency order: textures -> states -> shapes -> vertices.
 
-say [Meccha] First-time registry build \u2014 loading relational asset data...
+say [Meccha] First-time registry build - loading relational asset data...
 
 function meccha:generated/_index
 

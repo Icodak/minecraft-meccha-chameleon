@@ -1,5 +1,5 @@
 # meccha:rig/sync_rig   (macro: $(rid))
-# PILLAR 7.1 (multi-rig) \u2014 mirror rig <rid> into the per-rig BVH schema at
+# PILLAR 7.1 (multi-rig) - mirror rig <rid> into the per-rig BVH schema at
 # storage meccha:players."r<rid>":
 #   { rid, name, pose, root:[x,y,z], fat_bbox:{c,h}, limbs:[ {id,origin,rot,half,hp} ] }
 $data modify storage meccha:players r$(rid) set value {rid:$(rid),name:"hider",root:[0.0d,0.0d,0.0d],limbs:[]}

@@ -1,5 +1,5 @@
 # meccha:init/storage_scaffold
-# Runtime (non-relational) storage. Rebuilt every reload \u2014 cheap & safe.
+# Runtime (non-relational) storage. Rebuilt every reload - cheap & safe.
 # Relational asset data (meccha:registry) is NOT touched here.
 
 # Per-tick scratch space used by raycast callbacks and the paintbrush.

@@ -1,5 +1,5 @@
 # meccha:hunter/broad_phase   (executed AS a hider root marker, at @s)
-# PILLAR 7.2 \u2014 AABB Slab Method against this hider's root Fat BBox. Discard
+# PILLAR 7.2 - AABB Slab Method against this hider's root Fat BBox. Discard
 # misses immediately; only on a hit do we descend into the OBB narrow phase.
 
 # Fat BBox centre = rootPos + data.fat.c ; half = data.fat.h

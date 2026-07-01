@@ -19,4 +19,4 @@ title @a times 5 30 10
 title @a title [{"text":"Hide!","color":"green","bold":true}]
 title @a[tag=meccha_hunter] title [{"text":"Blinded","color":"dark_red","bold":true}]
 playsound minecraft:block.note_block.pling master @a ~ ~ ~ 1 1.5
-tellraw @a [{"text":"[Meccha] ","color":"green"},{"text":"Round started \u2014 hide!","color":"gray"}]
+tellraw @a [{"text":"[Meccha] ","color":"green"},{"text":"Round started - hide!","color":"gray"}]

@@ -2,7 +2,7 @@
 # Resolve the chosen model -> {shape, textures}, then pull the flat face list.
 # Reset mdl/faces first so a model with NO geometry (e.g. a missing-parent
 # stairs corner) can't leave STALE faces from a previous cast to be reprocessed.
-$say load shape $(model)
+# $say load shape $(model)
 data modify storage meccha:rt mdl set value {}
 data modify storage meccha:rt faces set value []
 data modify storage meccha:rt sample.textures set value {}

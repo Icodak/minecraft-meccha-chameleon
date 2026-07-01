@@ -18,7 +18,7 @@ scoreboard players operation #DX meccha.math -= #OX meccha.math
 scoreboard players operation #DY meccha.math -= #OY meccha.math
 scoreboard players operation #DZ meccha.math -= #OZ meccha.math
 
-tellraw @a [{"text":"------ O=("},{"score":{"name":"#OX","objective":"meccha.math"}},{"text":","},{"score":{"name":"#OY","objective":"meccha.math"}},{"text":","},{"score":{"name":"#OZ","objective":"meccha.math"}},{"text":")"}]
+# tellraw @a [{"text":"------ O=("},{"score":{"name":"#OX","objective":"meccha.math"}},{"text":","},{"score":{"name":"#OY","objective":"meccha.math"}},{"text":","},{"score":{"name":"#OZ","objective":"meccha.math"}},{"text":")"}]
 execute store result storage meccha:rt ray.ox double 0.001 run scoreboard players get #OX meccha.math
 execute store result storage meccha:rt ray.oy double 0.001 run scoreboard players get #OY meccha.math
 execute store result storage meccha:rt ray.oz double 0.001 run scoreboard players get #OZ meccha.math

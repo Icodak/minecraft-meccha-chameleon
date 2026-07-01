@@ -1,6 +1,6 @@
 # meccha:eyedropper/record_best
 # This face is the current nearest candidate. Compute the texel, fetch the
-# hex, and \u2014 only if the pixel is OPAQUE \u2014 commit it as the best hit.
+# hex, and - only if the pixel is OPAQUE - commit it as the best hit.
 # (Transparent texels must NOT advance best_t: the ray sees through them to
 #  faces behind, exactly like the eyedropper "ignore #..00" rule.)
 
@@ -49,14 +49,14 @@ data modify storage meccha:rt pick.color set value "#00000000"
 data modify storage meccha:rt pick.var set from storage meccha:rt face.var
 
 function meccha:eyedropper/resolve_tex with storage meccha:rt pick
-tellraw @a [{"text":"Pick: ","color":"gold"},{"nbt":"pick","storage":"meccha:rt","interpret":false,"color":"aqua"}]
+# tellraw @a [{"text":"Pick: ","color":"gold"},{"nbt":"pick","storage":"meccha:rt","interpret":false,"color":"aqua"}]
 
 execute unless data storage meccha:rt {pick:{texkey:""}} run function meccha:eyedropper/fetch_pixel with storage meccha:rt pick
 # alpha = last two hex chars of "#RRGGBBAA" (indices 7..9 via `set string`).
 data modify storage meccha:rt pick.alpha set string storage meccha:rt pick.color 7 9
 execute if data storage meccha:rt {pick:{alpha:"00"}} run return 0
 
-say color found
+# say color found
 # OPAQUE -> commit as best hit.
 scoreboard players operation #BEST_T meccha.math = #T meccha.math
 data modify storage meccha:rt sample.color set from storage meccha:rt pick.color

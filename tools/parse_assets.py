@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Meccha Chameleon \u2014 Pillar 2 pre-computation pipeline.
+"""Meccha Chameleon - Pillar 2 pre-computation pipeline.
 
 Parses a vanilla asset tree (assets/minecraft/{blockstates,models,textures})
 and emits the generated NBT builder .mcfunction files consumed once at
@@ -123,9 +123,34 @@ def main() -> int:
         print(f"[meccha] WARN missing parent models ({len(lib.missing)}): "
               f"{', '.join(sorted(lib.missing)[:8])}"
               f"{' ...' if len(lib.missing) > 8 else ''}")
+    if shapes.alias_mismatches:
+        print(f"[meccha] WARN _KNOWN_PARENTS inconsistencies ({len(shapes.alias_mismatches)}) "
+              f"- these parents produce the SAME shape but are mapped to DIFFERENT names:")
+        for m in shapes.alias_mismatches:
+            print(f"[meccha]   parent={m['parent_hint']!r} expected "
+                  f"'{m['expected_name']}' but shape is already named "
+                  f"'{m['actual_name']}' (model={m['model_id']}) - merge these "
+                  f"two entries in _KNOWN_PARENTS to the same name")
+    if shapes.clashes:
+        print(f"[meccha] WARN shape name clashes ({len(shapes.clashes)}) - "
+              f"auto-disambiguated, but check these:")
+        for c in shapes.clashes:
+            reason = ("a _KNOWN_PARENTS entry conflates two different shapes"
+                      if c["known_parent"] else
+                      "two unmapped models share a filename; consider adding "
+                      f"{c['parent_hint']!r} to _KNOWN_PARENTS")
+            print(f"[meccha]   '{c['wanted_name']}' -> '{c['resolved_name']}' "
+                  f"(model={c['model_id']}, parent={c['parent_hint']}) - {reason}")
+    shared_unmapped = shapes.unmapped_shared_shapes()
+    if shared_unmapped:
+        print(f"[meccha] note: {len(shared_unmapped)} shape(s) are reused by "
+              f"multiple models but named from a fallback filename - add "
+              f"their parent to _KNOWN_PARENTS for a stable canonical name:")
+        for name, parent_hint, count in shared_unmapped[:8]:
+            print(f"[meccha]   '{name}' used by {count} models (parent={parent_hint})")
     if no_geometry:
         print(f"[meccha] note: {len(no_geometry)} models have no in-world "
-              f"geometry (block entities / missing parents / cross-only) \u2014 "
+              f"geometry (block entities / missing parents / cross-only) - "
               f"they are skipped, e.g. {', '.join(no_geometry[:5])}")
     return 0
 
@@ -200,7 +225,7 @@ def _empty(root, name):
 
 def _emit_index(root, emitted):
     fn = FunctionWriter("meccha:generated/_index",
-                        "AUTO-GENERATED dispatcher \u2014 called once by build_registry")
+                        "AUTO-GENERATED dispatcher - called once by build_registry")
     fn.comment("Order matters: textures -> shapes -> models -> states")
     for fid in emitted:
         fn.raw(f"function {fid}")

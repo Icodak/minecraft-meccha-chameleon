@@ -1,6 +1,6 @@
 # meccha:game/help
 # Operator command index for running a round.
-tellraw @s [{"text":"\u2500\u2500 Meccha Gameplay \u2500\u2500","color":"gold","bold":true}]
+tellraw @s [{"text":"-- Meccha Gameplay --","color":"gold","bold":true}]
 tellraw @s [{"text":"Roles  ","color":"aqua"},{"text":"execute as <player> run function meccha:role/make_hunter | make_hider","color":"gray"}]
 tellraw @s [{"text":"Clear  ","color":"aqua"},{"text":"role/clear (as player)   role/clear_all","color":"gray"}]
 tellraw @s [{"text":"Round  ","color":"aqua"},{"text":"game/start   game/stop   game/reset","color":"gray"}]

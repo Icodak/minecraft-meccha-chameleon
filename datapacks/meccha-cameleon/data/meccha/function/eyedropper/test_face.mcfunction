@@ -1,5 +1,5 @@
 # meccha:eyedropper/test_face
-# PILLAR 4.1 Step 3 \u2014 ray vs ONE face plane, in BLOCK-LOCAL space.
+# PILLAR 4.1 Step 3 - ray vs ONE face plane, in BLOCK-LOCAL space.
 #
 #   t = ((P0 - O) . N) / (D . N)        P = O + tD
 #   u = (P - P0) . Eu / |Eu|^2          v = (P - P0) . Ev / |Ev|^2
@@ -118,6 +118,6 @@ scoreboard players operation #B meccha.math = #DOT meccha.math
 function meccha:lib/math/div
 scoreboard players operation #V meccha.math = #R meccha.math
 
-say test face
+# say test face
 # --- bounds check (0..1 in *1000 units) ---
 execute if score #U meccha.math matches 0..1000 if score #V meccha.math matches 0..1000 run function meccha:eyedropper/record_best

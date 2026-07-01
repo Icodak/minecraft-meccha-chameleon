@@ -1,7 +1,7 @@
 # meccha:lib/color/unpack   (executed AS a player)
 # Read this player's packed 0xRRGGBB colour (objective meccha.color) into
 # channels + an opaque ARGB int ready for a text_display background.
-# OUT: #RRv/#GGv/#BBv (0..255), #ARGB (signed opaque ARGB)  \u2014 all meccha.math
+# OUT: #RRv/#GGv/#BBv (0..255), #ARGB (signed opaque ARGB)  - all meccha.math
 scoreboard players set #C65536 meccha.tmp 65536
 scoreboard players set #C256 meccha.tmp 256
 execute store result score #CC meccha.math run scoreboard players get @s meccha.color

@@ -1,6 +1,6 @@
 # meccha:load
 # =====================================================================
-# PILLAR 1 \u2014 Entry point registered in #minecraft:load
+# PILLAR 1 - Entry point registered in #minecraft:load
 # Runs on world start AND every /reload. We therefore split work into:
 #   (a) cheap runtime scaffolding -> rebuilt every reload (idempotent)
 #   (b) heavy relational data     -> built ONCE, then persisted in storage
@@ -23,4 +23,4 @@ function meccha:init/teams
 execute unless data storage meccha:registry meta.loaded run function meccha:init/build_registry
 
 # ---- ready banner ----------------------------------------------------
-execute if data storage meccha:registry meta.loaded run tellraw @a [{"text":"[Meccha] ","color":"green","bold":true},{"text":"engine loaded \u2014 registry ready.","color":"gray","bold":false}]
+execute if data storage meccha:registry meta.loaded run tellraw @a [{"text":"[Meccha] ","color":"green","bold":true},{"text":"engine loaded - registry ready.","color":"gray","bold":false}]

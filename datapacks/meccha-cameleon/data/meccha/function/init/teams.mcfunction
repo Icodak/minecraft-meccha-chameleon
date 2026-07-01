@@ -6,7 +6,7 @@ team modify meccha_rig nametagVisibility never
 # Player role teams (colour + friendly-fire control).
 team add meccha_hunters
 team modify meccha_hunters color red
-team modify meccha_hunters prefix [{"text":"\u2620 ","color":"red"}]
+team modify meccha_hunters prefix [{"text":"☠ ","color":"red"}]
 team add meccha_hiders
 team modify meccha_hiders color green
 team modify meccha_hiders nametagVisibility hideForOtherTeams

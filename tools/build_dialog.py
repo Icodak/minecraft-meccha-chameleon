@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Meccha Chameleon \u2014 colour-picker Dialog generator.
+"""Meccha Chameleon - colour-picker Dialog generator.
 
 Emits data/meccha/dialog/color_picker.json: a `minecraft:multi_action` dialog
 (1.21.6+ Dialog system, available in 26.2) whose body is a perceptually-uniform
 swatch grid laid out in OKLCH space (hue across columns, lightness down rows,
-plus a grayscale row). Each swatch is a tinted "\u25a0\u25a0" button; clicking it runs a
+plus a grayscale row). Each swatch is a tinted "■■" button; clicking it runs a
 non-op-safe `/trigger meccha.pick_rgb set <packed+1>` that the datapack decodes
 and applies as the active colour. Brightness / saturation adjust buttons sit
 below the grid (`meccha.pick_adj`).
 
-This picker is fully DECORRELATED from the in-world eyedropper \u2014 it is a second,
+This picker is fully DECORRELATED from the in-world eyedropper - it is a second,
 independent way to choose the brush colour.
 
 Usage: python tools/build_dialog.py --datapack . [--hues 12 --rows 8]
@@ -53,7 +53,7 @@ def _swatch(hexstr: str) -> dict:
     # +1 offset so pure black (packed 0) is still detected by scores=1..
     val = _packed(hexstr) + 1
     return {
-        "label": {"text": "\u25a0\u25a0", "color": hexstr},
+        "label": {"text": "■■", "color": hexstr},
         "tooltip": hexstr,
         "width": 28,
         "action": {"type": "run_command",
@@ -86,10 +86,10 @@ def build(datapack: str, hues: int, rows: int):
         actions.append(_swatch(oklch_to_srgb_hex(L, 0.0, 0.0)))
 
     # Brightness / saturation controls, BELOW the grid.
-    actions.append(_adjust("\u2600 Brighter", "#FFE08A", ADJ_BRIGHTER, "Increase brightness"))
-    actions.append(_adjust("\u263e Darker", "#9AA0B5", ADJ_DARKER, "Decrease brightness"))
-    actions.append(_adjust("\u25c8 Saturate +", "#7ED0FF", ADJ_SAT_UP, "Increase saturation"))
-    actions.append(_adjust("\u25c7 Saturate \u2212", "#B9B9B9", ADJ_SAT_DOWN, "Decrease saturation"))
+    actions.append(_adjust("☀ Brighter", "#FFE08A", ADJ_BRIGHTER, "Increase brightness"))
+    actions.append(_adjust("☾ Darker", "#9AA0B5", ADJ_DARKER, "Decrease brightness"))
+    actions.append(_adjust("✦ Saturate +", "#7ED0FF", ADJ_SAT_UP, "Increase saturation"))
+    actions.append(_adjust("✧ Saturate −", "#B9B9B9", ADJ_SAT_DOWN, "Decrease saturation"))
 
     dialog = {
         "type": "minecraft:multi_action",

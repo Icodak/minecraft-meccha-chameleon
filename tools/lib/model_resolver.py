@@ -84,7 +84,7 @@ def _apply_rotation(rot, p0, eu, ev, n):
     """Apply an element rotation to the face frame. Supports BOTH vanilla forms:
       * single axis: {origin, axis:"x|y|z", angle}
       * Euler (newer templates, e.g. hanging signs): {origin, x, y, z}
-        \u2014 applied X then Y then Z about the shared origin.
+        - applied X then Y then Z about the shared origin.
     `rescale` is a render-only UV hint and is ignored for hit geometry.
     """
     o = rot.get("origin", [8, 8, 8])

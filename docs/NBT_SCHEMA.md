@@ -1,9 +1,9 @@
-# Meccha Chameleon \u2014 NBT Schemas
+# Meccha Chameleon - NBT Schemas
 
 All relational data lives in the storage namespace `meccha:`. Positions in
 scoreboards use fixed-point `*1000` (objective `meccha.math`).
 
-## `meccha:registry` (asset data \u2014 built once, guarded on `/reload`)
+## `meccha:registry` (asset data - built once, guarded on `/reload`)
 
 ```
 meta     : { loaded:1b, version:int, scale:1000 }
@@ -45,7 +45,7 @@ int2hex : { "0":"00", ... "255":"FF" }        # int -> hex byte (dialog colours)
 sin/cos : { "0":0 ... "359":-17 }             # degree -> sin/cos *1000
 ```
 
-## `meccha:rt` (per-action scratch \u2014 rebuilt freely)
+## `meccha:rt` (per-action scratch - rebuilt freely)
 ```
 ray      : { ox,oy,oz, dx,dy,dz : double }    # captured look ray
 block    : { id, properties:{...}, pos:[int x,y,z] }   # Bookshelf block result
@@ -56,7 +56,7 @@ rig.pose : "standing" | "crawling" | "curled_up"
 vec      : { a,b,dot,cross }                  # Bookshelf vector marshalling
 ```
 
-## `meccha:players` (per-rig BVH \u2014 Pillar 7.1, multi-rig)
+## `meccha:players` (per-rig BVH - Pillar 7.1, multi-rig)
 ```
 "r<rid>" : {                                  # one entry per rig id
   rid      : int,
@@ -89,7 +89,7 @@ the root also stores `data.rid`, `data.pose`, `data.fat`, and (if bound)
 `data.owner` (owner UUID) + the `rig_follow` tag.
 
 ## Item custom_data tags (Pillar 3 + gameplay)
-`eye_dropper:true` (Arrow) \u00b7 `paint_brush:true` (Feather) \u00b7 `hunter_pointer:true` (Blaze Rod) \u00b7 `pose_switcher:true` (Knowledge Book)
+`eye_dropper:true` (Arrow) - `paint_brush:true` (Feather) - `hunter_pointer:true` (Blaze Rod) - `pose_switcher:true` (Knowledge Book)
 
 ## `meccha:settings` + `meccha:game` (gameplay state)
 ```

@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "Meccha Chameleon \u2014 vanilla rendering & hunter engine",
+    "description": "Meccha Chameleon - vanilla rendering & hunter engine",
     "min_format": [107, 1],
     "max_format": 107
   }

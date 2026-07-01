@@ -1,5 +1,5 @@
 # meccha:hunter/test_obb   (executed AS a limb cuboid marker, at @s)
-# PILLAR 7.3 \u2014 Oriented Bounding Box test via the Separating Axis Theorem.
+# PILLAR 7.3 - Oriented Bounding Box test via the Separating Axis Theorem.
 # Build the cuboid's rotated axes (u,v,w), then PROJECT the ray onto each axis
 # with #bs.vector:dot_product (w itself comes from #bs.vector:cross_product),
 # reducing the OBB test to an axis-aligned slab in the box's own frame.

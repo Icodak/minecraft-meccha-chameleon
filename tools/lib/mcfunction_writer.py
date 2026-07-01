@@ -14,7 +14,7 @@ import os
 class F(float):
     """Marker subclass: serialise as a 32-bit FLOAT (trailing 'f').
 
-    Required for fields the game stores as floats \u2014 notably the display
+    Required for fields the game stores as floats - notably the display
     `transformation` (translation / left_rotation / right_rotation / scale).
     Passing doubles there can make a display entity fail to load.
     """

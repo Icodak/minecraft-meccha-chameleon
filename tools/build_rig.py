@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Meccha Chameleon \u2014 Pillar 5 rig generator.
+"""Meccha Chameleon - Pillar 5 rig generator.
 
 Emits the spawn .mcfunction files for the custom player rig. The heavy,
 per-pixel *static* affine transforms are computed here (matching the Pillar-2
