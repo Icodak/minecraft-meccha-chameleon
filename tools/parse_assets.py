@@ -94,7 +94,16 @@ def main() -> int:
             continue
         shape_id = shapes.intern(rm, _model_parent_hint(lib, model_id), model_id)
         model_entries[model_id] = {"shape": shape_id, "textures": rm.textures}
+
         for tex in rm.textures.values():
+            if isinstance(tex, dict):
+                tex = tex.get("sprite")
+                if tex is None:
+                    continue
+
+            if not isinstance(tex, str):
+                continue
+
             if not tex.startswith("#"):
                 texture_vars.add(tex.split(":", 1)[-1])
 

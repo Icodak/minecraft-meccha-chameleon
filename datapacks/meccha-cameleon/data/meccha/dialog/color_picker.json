@@ -1350,7 +1350,7 @@
     },
     {
       "label": {
-        "text": "◈ Saturate +",
+        "text": "✦ Saturate +",
         "color": "#7ED0FF",
         "bold": true
       },
@@ -1363,7 +1363,7 @@
     },
     {
       "label": {
-        "text": "◇ Saturate −",
+        "text": "✧ Saturate −",
         "color": "#B9B9B9",
         "bold": true
       },

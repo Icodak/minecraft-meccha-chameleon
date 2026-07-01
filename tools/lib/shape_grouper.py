@@ -41,12 +41,12 @@ _KNOWN_PARENTS = {
     # they MUST all resolve to one name (see note above) -------------------
     "block/cube": "full_block",
     "block/cube_all": "full_block",
-    "block/cube_bottom_top": "full_block",
-    "block/cube_top": "full_block",
-    "block/cube_directional": "full_block",
-    "block/cube_column": "full_block",
-    "block/cube_column_horizontal": "full_block",
-    "block/leaves": "full_block",              # leaves.json has no elements of its own; inherits cube.json via cube_all
+    "block/cube_bottom_top": "bottom_top_block",
+    "block/cube_top": "top_block",
+    "block/cube_directional": "directional_block",
+    "block/cube_column": "column_block",
+    "block/cube_column_horizontal": "column_block_horizontal",
+    "block/leaves": "leaves_block",              # leaves.json has no elements of its own; inherits cube.json via cube_all
     # NOTE: cube_mirrored / cube_north_west_mirrored / cube_column_mirrored /
     # cube_column_uv_locked_* / *_inner_faces are NOT verified against real
     # files yet. If they turn out to also just alias textures (no elements
@@ -62,6 +62,10 @@ _KNOWN_PARENTS = {
     "block/cube_column_uv_locked_x": "column_uvlock_x",
     "block/cube_column_uv_locked_y": "column_uvlock_y",
     "block/cube_column_uv_locked_z": "column_uvlock_z",
+    "block/cube": "cube",
+    "block/orientable": "orientable",
+    "block/orientable_with_bottom": "orientable_bottom",
+    "block/orientable_vertical": "orientable_vertical",
     # --- slabs / stairs ---------------------------------------------------
     "block/slab": "slab_bottom",
     "block/slab_top": "slab_top",
@@ -205,6 +209,22 @@ _KNOWN_PARENTS = {
     "block/template_piston_head_short": "piston_head_short",
     "block/template_sculk_shrieker": "sculk_shrieker",
     "block/template_vault": "vault",
+    "block/flower_pot_cross": "flower_pot_cross",
+    "block/crop": "crop",
+    "block/carpet": "carpet",
+    "block/coral_fan": "coral_fan",
+    "block/coral_wall_fan": "coral_wall_fan",
+    "block/rail_flat": "rail_flat",
+    "block/rail_corner": "rail_corner",
+    "block/template_rail_flat": "rail_flat",
+    "block/template_rail_corner": "rail_corner",
+    "block/block": "block",
+    "block/dried_ghast": "dried_ghast",
+    "block/template_farmland": "farmland",
+    "block/template_crop": "crop",
+    "block/template_flower_pot_cross": "flower_pot_cross",
+    "block/template_coral_fan": "coral_fan",
+    "block/template_coral_wall_fan": "coral_wall_fan",
 }
 
 
