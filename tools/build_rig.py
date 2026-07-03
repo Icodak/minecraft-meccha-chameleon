@@ -160,8 +160,9 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
     count = 0
     
     # Text display scale adjustments and pivot parameters
-    pixel_scale_xy = 5.705
-    text_pivot_y = 0.135
+    pixel_scale_xy = 5.7
+    text_pivot_x = 0.0135
+    text_pivot_y = 0.15
     
     for dirn, (p0, eu, ev, nrm, (ru, rv)) in _faces(w, h, d).items():
         # Compute rotation basis vectors to accurately translate the pivot offset
@@ -174,10 +175,11 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
         
         # Calculate the translation shift needed to counter the scale's pull towards the pivot
         # Delta = Old Visual Offset - New Visual Offset
+        local_delta_x = (px * text_pivot_x) - (px * pixel_scale_xy * text_pivot_x)
         local_delta_y = (px * text_pivot_y) - (px * pixel_scale_xy * text_pivot_y)
-        shift_x = ry[0] * local_delta_y
-        shift_y = ry[1] * local_delta_y
-        shift_z = ry[2] * local_delta_y
+        shift_x = rx[0] * local_delta_x + ry[0] * local_delta_y
+        shift_y = rx[1] * local_delta_x + ry[1] * local_delta_y
+        shift_z = rx[2] * local_delta_x + ry[2] * local_delta_y
 
         for j in range(rv):
             for i in range(ru):
@@ -200,9 +202,8 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
                 disp = {
                     "Tags": ["meccha_pixel", "meccha_rig_part", "rig_unassigned",
                              f"cb_{name}", f"face_{dirn}", f"u_{i}", f"v_{j}"],
-                    "text": {"text":"⬛"},
-                    "text_opacity": 0,                 # hidden
-                    "background": -1,                  # white by default
+                    "text": {"text":"⬛","color":"#FFC5C5"},
+                    "background": 0,
                     "billboard": "fixed",
                     "transformation": transform,
                     "Glowing": False,
@@ -219,9 +220,8 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
         overlay = {
             "Tags": ["meccha_overlay", "meccha_rig_part", "rig_unassigned",
                      f"cb_{name}", f"face_{dirn}"],
-            "text": {"text":"⬛"},
-            "text_opacity": 0,                 # hidden
-            "background": -1,
+            "text": {"text":"⬛","color":"#B9FFB3"},
+            "background": 0,
             "billboard": "fixed",
             "transformation": {
                 "translation": [F(round(ctr_x, 5)), F(round(ctr_y, 5)), F(round(ctr_z + 0.001, 5))],
