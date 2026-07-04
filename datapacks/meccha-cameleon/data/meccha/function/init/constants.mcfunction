@@ -5,6 +5,7 @@ scoreboard players set #HALF meccha.math 500
 # 1/16 block * 1000 (rounded 62.5)
 scoreboard players set #PX meccha.math 62
 scoreboard players set #ZERO meccha.math 0
+scoreboard players set #NEGATIVE_ONE meccha.math -1
 scoreboard players set #ONE meccha.math 1000
 # Vanilla directional shading multipliers * 1000 (Pillar 6).
 scoreboard players set #SHADE_TOP meccha.math 1000

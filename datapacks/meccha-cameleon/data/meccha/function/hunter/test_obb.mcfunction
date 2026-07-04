@@ -8,6 +8,7 @@
 scoreboard players set #C360 meccha.tmp 360
 execute store result score #DYAW meccha.tmp run data get entity @s Rotation[0] 1
 execute store result score #DPITCH meccha.tmp run data get entity @s Rotation[1] 1
+scoreboard players operation #DYAW meccha.tmp *= #NEGATIVE_ONE meccha.math
 scoreboard players operation #DYAW meccha.tmp %= #C360 meccha.tmp
 scoreboard players operation #DPITCH meccha.tmp %= #C360 meccha.tmp
 execute store result storage meccha:rt sh.yaw int 1 run scoreboard players get #DYAW meccha.tmp
@@ -30,7 +31,6 @@ function meccha:lib/math/rot_normal
 scoreboard players operation #VX meccha.math = #WNX meccha.math
 scoreboard players operation #VY meccha.math = #WNY meccha.math
 scoreboard players operation #VZ meccha.math = #WNZ meccha.math
-# --- w = u x v  (Bookshelf cross product) ---
 # --- w = u x v  (Bookshelf cross product) ---
 scoreboard players operation #AX meccha.math = #UX meccha.math
 scoreboard players operation #AY meccha.math = #UY meccha.math
