@@ -21,3 +21,7 @@ scoreboard objectives add meccha.pick_adj trigger
 scoreboard objectives add meccha.color dummy
 # Per-player bound rig id (which rig this player owns; 0/unset = none).
 scoreboard objectives add meccha.rig dummy
+# Per-player active brush type (multiplayer-safe: each
+# player carries their own brush type; set by the brush selection UI,
+# read by the paintbrush).
+scoreboard objectives add meccha.brush_type dummy

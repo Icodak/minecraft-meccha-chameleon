@@ -25,3 +25,5 @@ execute store result storage meccha:rt rgb.b int 1 run scoreboard players get #B
 
 # Direct hex string reconstruction (or rely on build_hex to populate sample.rgb)
 function meccha:dialog/build_hex with storage meccha:rt rgb
+
+function meccha:dialog/open_macro with storage meccha:rt sample

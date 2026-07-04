@@ -8,6 +8,7 @@ function meccha:lib/raycast/capture_ray
 
 # Fresh nearest-hit record.
 data modify storage meccha:rt brush set value {found:0b}
+function meccha:paintbrush/update_brush_type
 scoreboard players set #BEST_T meccha.math 2000000000
 
 # Visit every rig cuboid (markers carry their own geometry in `data`).

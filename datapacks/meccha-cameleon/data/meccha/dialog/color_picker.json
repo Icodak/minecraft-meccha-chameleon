@@ -27,868 +27,1732 @@
   "columns": 12,
   "actions": [
     {
-      "label": { "text": "███", "color": "#FFC1E1" },
+      "label": {
+        "text": "███",
+        "color": "#FFC1E1"
+      },
       "tooltip": "#FFC1E1",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16761314" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16761314"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FFC5B3" },
+      "label": {
+        "text": "███",
+        "color": "#FFC5B3"
+      },
       "tooltip": "#FFC5B3",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16762292" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16762292"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FFD18D" },
+      "label": {
+        "text": "███",
+        "color": "#FFD18D"
+      },
       "tooltip": "#FFD18D",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16765326" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16765326"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FFE17E" },
+      "label": {
+        "text": "███",
+        "color": "#FFE17E"
+      },
       "tooltip": "#FFE17E",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16769407" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16769407"
+      }
     },
     {
-      "label": { "text": "███", "color": "#DAF190" },
+      "label": {
+        "text": "███",
+        "color": "#DAF190"
+      },
       "tooltip": "#DAF190",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 14348689" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 14348689"
+      }
     },
     {
-      "label": { "text": "███", "color": "#A6FCB8" },
+      "label": {
+        "text": "███",
+        "color": "#A6FCB8"
+      },
       "tooltip": "#A6FCB8",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 10943673" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 10943673"
+      }
     },
     {
-      "label": { "text": "███", "color": "#78FFE8" },
+      "label": {
+        "text": "███",
+        "color": "#78FFE8"
+      },
       "tooltip": "#78FFE8",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 7929833" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 7929833"
+      }
     },
     {
-      "label": { "text": "███", "color": "#6EFBFF" },
+      "label": {
+        "text": "███",
+        "color": "#6EFBFF"
+      },
       "tooltip": "#6EFBFF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 7273472" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 7273472"
+      }
     },
     {
-      "label": { "text": "███", "color": "#93F0FF" },
+      "label": {
+        "text": "███",
+        "color": "#93F0FF"
+      },
       "tooltip": "#93F0FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 9695488" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 9695488"
+      }
     },
     {
-      "label": { "text": "███", "color": "#C4E1FF" },
+      "label": {
+        "text": "███",
+        "color": "#C4E1FF"
+      },
       "tooltip": "#C4E1FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 12902912" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 12902912"
+      }
     },
     {
-      "label": { "text": "███", "color": "#F1D2FF" },
+      "label": {
+        "text": "███",
+        "color": "#F1D2FF"
+      },
       "tooltip": "#F1D2FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 15848192" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 15848192"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FFC6FF" },
+      "label": {
+        "text": "███",
+        "color": "#FFC6FF"
+      },
       "tooltip": "#FFC6FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16762624" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16762624"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FFA5C4" },
+      "label": {
+        "text": "███",
+        "color": "#FFA5C4"
+      },
       "tooltip": "#FFA5C4",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16754117" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16754117"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FFA897" },
+      "label": {
+        "text": "███",
+        "color": "#FFA897"
+      },
       "tooltip": "#FFA897",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16754840" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16754840"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FFB471" },
+      "label": {
+        "text": "███",
+        "color": "#FFB471"
+      },
       "tooltip": "#FFB471",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16757874" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16757874"
+      }
     },
     {
-      "label": { "text": "███", "color": "#E7C460" },
+      "label": {
+        "text": "███",
+        "color": "#E7C460"
+      },
       "tooltip": "#E7C460",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 15189089" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 15189089"
+      }
     },
     {
-      "label": { "text": "███", "color": "#BDD473" },
+      "label": {
+        "text": "███",
+        "color": "#BDD473"
+      },
       "tooltip": "#BDD473",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 12440692" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 12440692"
+      }
     },
     {
-      "label": { "text": "███", "color": "#89DF9C" },
+      "label": {
+        "text": "███",
+        "color": "#89DF9C"
+      },
       "tooltip": "#89DF9C",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 9035677" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 9035677"
+      }
     },
     {
-      "label": { "text": "███", "color": "#56E2CB" },
+      "label": {
+        "text": "███",
+        "color": "#56E2CB"
+      },
       "tooltip": "#56E2CB",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 5694156" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 5694156"
+      }
     },
     {
-      "label": { "text": "███", "color": "#4BDEF4" },
+      "label": {
+        "text": "███",
+        "color": "#4BDEF4"
+      },
       "tooltip": "#4BDEF4",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 4972277" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 4972277"
+      }
     },
     {
-      "label": { "text": "███", "color": "#75D2FF" },
+      "label": {
+        "text": "███",
+        "color": "#75D2FF"
+      },
       "tooltip": "#75D2FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 7721728" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 7721728"
+      }
     },
     {
-      "label": { "text": "███", "color": "#A8C4FF" },
+      "label": {
+        "text": "███",
+        "color": "#A8C4FF"
+      },
       "tooltip": "#A8C4FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 11060480" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 11060480"
+      }
     },
     {
-      "label": { "text": "███", "color": "#D4B5FF" },
+      "label": {
+        "text": "███",
+        "color": "#D4B5FF"
+      },
       "tooltip": "#D4B5FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 13940224" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 13940224"
+      }
     },
     {
-      "label": { "text": "███", "color": "#F6AAEE" },
+      "label": {
+        "text": "███",
+        "color": "#F6AAEE"
+      },
       "tooltip": "#F6AAEE",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16165615" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16165615"
+      }
     },
     {
-      "label": { "text": "███", "color": "#EB89A8" },
+      "label": {
+        "text": "███",
+        "color": "#EB89A8"
+      },
       "tooltip": "#EB89A8",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 15436201" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 15436201"
+      }
     },
     {
-      "label": { "text": "███", "color": "#F08C7C" },
+      "label": {
+        "text": "███",
+        "color": "#F08C7C"
+      },
       "tooltip": "#F08C7C",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 15764605" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 15764605"
+      }
     },
     {
-      "label": { "text": "███", "color": "#E59854" },
+      "label": {
+        "text": "███",
+        "color": "#E59854"
+      },
       "tooltip": "#E59854",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 15046741" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 15046741"
+      }
     },
     {
-      "label": { "text": "███", "color": "#CAA842" },
+      "label": {
+        "text": "███",
+        "color": "#CAA842"
+      },
       "tooltip": "#CAA842",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 13281347" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 13281347"
+      }
     },
     {
-      "label": { "text": "███", "color": "#A2B757" },
+      "label": {
+        "text": "███",
+        "color": "#A2B757"
+      },
       "tooltip": "#A2B757",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 10663768" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 10663768"
+      }
     },
     {
-      "label": { "text": "███", "color": "#6DC281" },
+      "label": {
+        "text": "███",
+        "color": "#6DC281"
+      },
       "tooltip": "#6DC281",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 7193218" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 7193218"
+      }
     },
     {
-      "label": { "text": "███", "color": "#2FC5AF" },
+      "label": {
+        "text": "███",
+        "color": "#2FC5AF"
+      },
       "tooltip": "#2FC5AF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 3130800" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 3130800"
+      }
     },
     {
-      "label": { "text": "███", "color": "#1AC0D7" },
+      "label": {
+        "text": "███",
+        "color": "#1AC0D7"
+      },
       "tooltip": "#1AC0D7",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 1753304" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 1753304"
+      }
     },
     {
-      "label": { "text": "███", "color": "#58B5F2" },
+      "label": {
+        "text": "███",
+        "color": "#58B5F2"
+      },
       "tooltip": "#58B5F2",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 5813747" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 5813747"
+      }
     },
     {
-      "label": { "text": "███", "color": "#8DA7FB" },
+      "label": {
+        "text": "███",
+        "color": "#8DA7FB"
+      },
       "tooltip": "#8DA7FB",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 9283580" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 9283580"
+      }
     },
     {
-      "label": { "text": "███", "color": "#B899EF" },
+      "label": {
+        "text": "███",
+        "color": "#B899EF"
+      },
       "tooltip": "#B899EF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 12098032" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 12098032"
+      }
     },
     {
-      "label": { "text": "███", "color": "#D88ED1" },
+      "label": {
+        "text": "███",
+        "color": "#D88ED1"
+      },
       "tooltip": "#D88ED1",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 14192338" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 14192338"
+      }
     },
     {
-      "label": { "text": "███", "color": "#CD6E8D" },
+      "label": {
+        "text": "███",
+        "color": "#CD6E8D"
+      },
       "tooltip": "#CD6E8D",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 13463182" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 13463182"
+      }
     },
     {
-      "label": { "text": "███", "color": "#D27162" },
+      "label": {
+        "text": "███",
+        "color": "#D27162"
+      },
       "tooltip": "#D27162",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 13791587" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 13791587"
+      }
     },
     {
-      "label": { "text": "███", "color": "#C77C37" },
+      "label": {
+        "text": "███",
+        "color": "#C77C37"
+      },
       "tooltip": "#C77C37",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 13073464" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 13073464"
+      }
     },
     {
-      "label": { "text": "███", "color": "#AE8C1E" },
+      "label": {
+        "text": "███",
+        "color": "#AE8C1E"
+      },
       "tooltip": "#AE8C1E",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 11439135" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 11439135"
+      }
     },
     {
-      "label": { "text": "███", "color": "#879B3A" },
+      "label": {
+        "text": "███",
+        "color": "#879B3A"
+      },
       "tooltip": "#879B3A",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 8887099" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 8887099"
+      }
     },
     {
-      "label": { "text": "███", "color": "#51A666" },
+      "label": {
+        "text": "███",
+        "color": "#51A666"
+      },
       "tooltip": "#51A666",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 5351015" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 5351015"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00A993" },
+      "label": {
+        "text": "███",
+        "color": "#00A993"
+      },
       "tooltip": "#00A993",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 43412" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 43412"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00A4BA" },
+      "label": {
+        "text": "███",
+        "color": "#00A4BA"
+      },
       "tooltip": "#00A4BA",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 42171" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 42171"
+      }
     },
     {
-      "label": { "text": "███", "color": "#3999D5" },
+      "label": {
+        "text": "███",
+        "color": "#3999D5"
+      },
       "tooltip": "#3999D5",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 3774934" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 3774934"
+      }
     },
     {
-      "label": { "text": "███", "color": "#738BDD" },
+      "label": {
+        "text": "███",
+        "color": "#738BDD"
+      },
       "tooltip": "#738BDD",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 7572446" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 7572446"
+      }
     },
     {
-      "label": { "text": "███", "color": "#9C7ED1" },
+      "label": {
+        "text": "███",
+        "color": "#9C7ED1"
+      },
       "tooltip": "#9C7ED1",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 10256082" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 10256082"
+      }
     },
     {
-      "label": { "text": "███", "color": "#BB73B5" },
+      "label": {
+        "text": "███",
+        "color": "#BB73B5"
+      },
       "tooltip": "#BB73B5",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 12284854" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 12284854"
+      }
     },
     {
-      "label": { "text": "███", "color": "#AF5373" },
+      "label": {
+        "text": "███",
+        "color": "#AF5373"
+      },
       "tooltip": "#AF5373",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 11490164" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 11490164"
+      }
     },
     {
-      "label": { "text": "███", "color": "#B45648" },
+      "label": {
+        "text": "███",
+        "color": "#B45648"
+      },
       "tooltip": "#B45648",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 11818569" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 11818569"
+      }
     },
     {
-      "label": { "text": "███", "color": "#AA6115" },
+      "label": {
+        "text": "███",
+        "color": "#AA6115"
+      },
       "tooltip": "#AA6115",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 11165974" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 11165974"
+      }
     },
     {
-      "label": { "text": "███", "color": "#937100" },
+      "label": {
+        "text": "███",
+        "color": "#937100"
+      },
       "tooltip": "#937100",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 9662721" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 9662721"
+      }
     },
     {
-      "label": { "text": "███", "color": "#6D8018" },
+      "label": {
+        "text": "███",
+        "color": "#6D8018"
+      },
       "tooltip": "#6D8018",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 7176217" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 7176217"
+      }
     },
     {
-      "label": { "text": "███", "color": "#348A4D" },
+      "label": {
+        "text": "███",
+        "color": "#348A4D"
+      },
       "tooltip": "#348A4D",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 3443278" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 3443278"
+      }
     },
     {
-      "label": { "text": "███", "color": "#008D79" },
+      "label": {
+        "text": "███",
+        "color": "#008D79"
+      },
       "tooltip": "#008D79",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 36218" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 36218"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00899E" },
+      "label": {
+        "text": "███",
+        "color": "#00899E"
+      },
       "tooltip": "#00899E",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 35231" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 35231"
+      }
     },
     {
-      "label": { "text": "███", "color": "#117EB8" },
+      "label": {
+        "text": "███",
+        "color": "#117EB8"
+      },
       "tooltip": "#117EB8",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 1146553" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 1146553"
+      }
     },
     {
-      "label": { "text": "███", "color": "#5A70BF" },
+      "label": {
+        "text": "███",
+        "color": "#5A70BF"
+      },
       "tooltip": "#5A70BF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 5927104" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 5927104"
+      }
     },
     {
-      "label": { "text": "███", "color": "#8263B4" },
+      "label": {
+        "text": "███",
+        "color": "#8263B4"
+      },
       "tooltip": "#8263B4",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 8545205" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 8545205"
+      }
     },
     {
-      "label": { "text": "███", "color": "#9E5899" },
+      "label": {
+        "text": "███",
+        "color": "#9E5899"
+      },
       "tooltip": "#9E5899",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 10377370" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 10377370"
+      }
     },
     {
-      "label": { "text": "███", "color": "#92395A" },
+      "label": {
+        "text": "███",
+        "color": "#92395A"
+      },
       "tooltip": "#92395A",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 9582939" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 9582939"
+      }
     },
     {
-      "label": { "text": "███", "color": "#963C2F" },
+      "label": {
+        "text": "███",
+        "color": "#963C2F"
+      },
       "tooltip": "#963C2F",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 9845808" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 9845808"
+      }
     },
     {
-      "label": { "text": "███", "color": "#8E4700" },
+      "label": {
+        "text": "███",
+        "color": "#8E4700"
+      },
       "tooltip": "#8E4700",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 9324289" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 9324289"
+      }
     },
     {
-      "label": { "text": "███", "color": "#785700" },
+      "label": {
+        "text": "███",
+        "color": "#785700"
+      },
       "tooltip": "#785700",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 7886593" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 7886593"
+      }
     },
     {
-      "label": { "text": "███", "color": "#546600" },
+      "label": {
+        "text": "███",
+        "color": "#546600"
+      },
       "tooltip": "#546600",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 5531137" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 5531137"
+      }
     },
     {
-      "label": { "text": "███", "color": "#106F34" },
+      "label": {
+        "text": "███",
+        "color": "#106F34"
+      },
       "tooltip": "#106F34",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 1077045" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 1077045"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00725F" },
+      "label": {
+        "text": "███",
+        "color": "#00725F"
+      },
       "tooltip": "#00725F",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 29280" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 29280"
+      }
     },
     {
-      "label": { "text": "███", "color": "#006E83" },
+      "label": {
+        "text": "███",
+        "color": "#006E83"
+      },
       "tooltip": "#006E83",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 28292" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 28292"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00639B" },
+      "label": {
+        "text": "███",
+        "color": "#00639B"
+      },
       "tooltip": "#00639B",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 25500" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 25500"
+      }
     },
     {
-      "label": { "text": "███", "color": "#4256A3" },
+      "label": {
+        "text": "███",
+        "color": "#4256A3"
+      },
       "tooltip": "#4256A3",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 4347556" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 4347556"
+      }
     },
     {
-      "label": { "text": "███", "color": "#684998" },
+      "label": {
+        "text": "███",
+        "color": "#684998"
+      },
       "tooltip": "#684998",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 6834585" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 6834585"
+      }
     },
     {
-      "label": { "text": "███", "color": "#833F7E" },
+      "label": {
+        "text": "███",
+        "color": "#833F7E"
+      },
       "tooltip": "#833F7E",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 8601471" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 8601471"
+      }
     },
     {
-      "label": { "text": "███", "color": "#761E42" },
+      "label": {
+        "text": "███",
+        "color": "#761E42"
+      },
       "tooltip": "#761E42",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 7740995" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 7740995"
+      }
     },
     {
-      "label": { "text": "███", "color": "#7A2017" },
+      "label": {
+        "text": "███",
+        "color": "#7A2017"
+      },
       "tooltip": "#7A2017",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 8003608" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 8003608"
+      }
     },
     {
-      "label": { "text": "███", "color": "#722E00" },
+      "label": {
+        "text": "███",
+        "color": "#722E00"
+      },
       "tooltip": "#722E00",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 7482881" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 7482881"
+      }
     },
     {
-      "label": { "text": "███", "color": "#5E3E00" },
+      "label": {
+        "text": "███",
+        "color": "#5E3E00"
+      },
       "tooltip": "#5E3E00",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 6176257" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 6176257"
+      }
     },
     {
-      "label": { "text": "███", "color": "#3D4D00" },
+      "label": {
+        "text": "███",
+        "color": "#3D4D00"
+      },
       "tooltip": "#3D4D00",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 4017409" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 4017409"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00561B" },
+      "label": {
+        "text": "███",
+        "color": "#00561B"
+      },
       "tooltip": "#00561B",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 22044" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 22044"
+      }
     },
     {
-      "label": { "text": "███", "color": "#005847" },
+      "label": {
+        "text": "███",
+        "color": "#005847"
+      },
       "tooltip": "#005847",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 22600" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 22600"
+      }
     },
     {
-      "label": { "text": "███", "color": "#005469" },
+      "label": {
+        "text": "███",
+        "color": "#005469"
+      },
       "tooltip": "#005469",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 21610" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 21610"
+      }
     },
     {
-      "label": { "text": "███", "color": "#004A80" },
+      "label": {
+        "text": "███",
+        "color": "#004A80"
+      },
       "tooltip": "#004A80",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 19073" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 19073"
+      }
     },
     {
-      "label": { "text": "███", "color": "#2C3D86" },
+      "label": {
+        "text": "███",
+        "color": "#2C3D86"
+      },
       "tooltip": "#2C3D86",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 2899335" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 2899335"
+      }
     },
     {
-      "label": { "text": "███", "color": "#50307C" },
+      "label": {
+        "text": "███",
+        "color": "#50307C"
+      },
       "tooltip": "#50307C",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 5255293" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 5255293"
+      }
     },
     {
-      "label": { "text": "███", "color": "#672564" },
+      "label": {
+        "text": "███",
+        "color": "#672564"
+      },
       "tooltip": "#672564",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 6759781" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 6759781"
+      }
     },
     {
-      "label": { "text": "███", "color": "#5A002B" },
+      "label": {
+        "text": "███",
+        "color": "#5A002B"
+      },
       "tooltip": "#5A002B",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 5898284" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 5898284"
+      }
     },
     {
-      "label": { "text": "███", "color": "#5D0000" },
+      "label": {
+        "text": "███",
+        "color": "#5D0000"
+      },
       "tooltip": "#5D0000",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 6094849" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 6094849"
+      }
     },
     {
-      "label": { "text": "███", "color": "#571300" },
+      "label": {
+        "text": "███",
+        "color": "#571300"
+      },
       "tooltip": "#571300",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 5706497" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 5706497"
+      }
     },
     {
-      "label": { "text": "███", "color": "#462600" },
+      "label": {
+        "text": "███",
+        "color": "#462600"
+      },
       "tooltip": "#462600",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 4597249" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 4597249"
+      }
     },
     {
-      "label": { "text": "███", "color": "#273400" },
+      "label": {
+        "text": "███",
+        "color": "#273400"
+      },
       "tooltip": "#273400",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 2569217" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 2569217"
+      }
     },
     {
-      "label": { "text": "███", "color": "#003D00" },
+      "label": {
+        "text": "███",
+        "color": "#003D00"
+      },
       "tooltip": "#003D00",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 15617" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 15617"
+      }
     },
     {
-      "label": { "text": "███", "color": "#003F30" },
+      "label": {
+        "text": "███",
+        "color": "#003F30"
+      },
       "tooltip": "#003F30",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16177" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16177"
+      }
     },
     {
-      "label": { "text": "███", "color": "#003B50" },
+      "label": {
+        "text": "███",
+        "color": "#003B50"
+      },
       "tooltip": "#003B50",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 15185" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 15185"
+      }
     },
     {
-      "label": { "text": "███", "color": "#003065" },
+      "label": {
+        "text": "███",
+        "color": "#003065"
+      },
       "tooltip": "#003065",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 12390" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 12390"
+      }
     },
     {
-      "label": { "text": "███", "color": "#18236B" },
+      "label": {
+        "text": "███",
+        "color": "#18236B"
+      },
       "tooltip": "#18236B",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 1581932" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 1581932"
+      }
     },
     {
-      "label": { "text": "███", "color": "#391661" },
+      "label": {
+        "text": "███",
+        "color": "#391661"
+      },
       "tooltip": "#391661",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 3741282" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 3741282"
+      }
     },
     {
-      "label": { "text": "███", "color": "#4D084B" },
+      "label": {
+        "text": "███",
+        "color": "#4D084B"
+      },
       "tooltip": "#4D084B",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 5048396" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 5048396"
+      }
     },
     {
-      "label": { "text": "███", "color": "#F2F2F2" },
+      "label": {
+        "text": "███",
+        "color": "#F2F2F2"
+      },
       "tooltip": "#F2F2F2",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 15921907" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 15921907"
+      }
     },
     {
-      "label": { "text": "███", "color": "#D9D9D9" },
+      "label": {
+        "text": "███",
+        "color": "#D9D9D9"
+      },
       "tooltip": "#D9D9D9",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 14277082" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 14277082"
+      }
     },
     {
-      "label": { "text": "███", "color": "#C1C1C1" },
+      "label": {
+        "text": "███",
+        "color": "#C1C1C1"
+      },
       "tooltip": "#C1C1C1",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 12698050" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 12698050"
+      }
     },
     {
-      "label": { "text": "███", "color": "#A9A9A9" },
+      "label": {
+        "text": "███",
+        "color": "#A9A9A9"
+      },
       "tooltip": "#A9A9A9",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 11119018" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 11119018"
+      }
     },
     {
-      "label": { "text": "███", "color": "#939393" },
+      "label": {
+        "text": "███",
+        "color": "#939393"
+      },
       "tooltip": "#939393",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 9671572" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 9671572"
+      }
     },
     {
-      "label": { "text": "███", "color": "#7C7C7C" },
+      "label": {
+        "text": "███",
+        "color": "#7C7C7C"
+      },
       "tooltip": "#7C7C7C",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 8158333" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 8158333"
+      }
     },
     {
-      "label": { "text": "███", "color": "#676767" },
+      "label": {
+        "text": "███",
+        "color": "#676767"
+      },
       "tooltip": "#676767",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 6776680" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 6776680"
+      }
     },
     {
-      "label": { "text": "███", "color": "#525252" },
+      "label": {
+        "text": "███",
+        "color": "#525252"
+      },
       "tooltip": "#525252",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 5395027" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 5395027"
+      }
     },
     {
-      "label": { "text": "███", "color": "#3E3E3E" },
+      "label": {
+        "text": "███",
+        "color": "#3E3E3E"
+      },
       "tooltip": "#3E3E3E",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 4079167" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 4079167"
+      }
     },
     {
-      "label": { "text": "███", "color": "#2B2B2B" },
+      "label": {
+        "text": "███",
+        "color": "#2B2B2B"
+      },
       "tooltip": "#2B2B2B",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 2829100" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 2829100"
+      }
     },
     {
-      "label": { "text": "███", "color": "#191919" },
+      "label": {
+        "text": "███",
+        "color": "#191919"
+      },
       "tooltip": "#191919",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 1644826" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 1644826"
+      }
     },
     {
-      "label": { "text": "███", "color": "#090909" },
+      "label": {
+        "text": "███",
+        "color": "#090909"
+      },
       "tooltip": "#090909",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 592138" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 592138"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FF0000" },
+      "label": {
+        "text": "███",
+        "color": "#FF0000"
+      },
       "tooltip": "#FF0000",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16711680" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16711680"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FF5500" },
+      "label": {
+        "text": "███",
+        "color": "#FF5500"
+      },
       "tooltip": "#FF5500",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16733440" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16733440"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FFAA00" },
+      "label": {
+        "text": "███",
+        "color": "#FFAA00"
+      },
       "tooltip": "#FFAA00",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16755200" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16755200"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FFFF00" },
+      "label": {
+        "text": "███",
+        "color": "#FFFF00"
+      },
       "tooltip": "#FFFF00",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16776960" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16776960"
+      }
     },
     {
-      "label": { "text": "███", "color": "#AAFF00" },
+      "label": {
+        "text": "███",
+        "color": "#AAFF00"
+      },
       "tooltip": "#AAFF00",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 11206400" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 11206400"
+      }
     },
     {
-      "label": { "text": "███", "color": "#55FF00" },
+      "label": {
+        "text": "███",
+        "color": "#55FF00"
+      },
       "tooltip": "#55FF00",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 5635840" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 5635840"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00FF00" },
+      "label": {
+        "text": "███",
+        "color": "#00FF00"
+      },
       "tooltip": "#00FF00",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 65280" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 65280"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00FF55" },
+      "label": {
+        "text": "███",
+        "color": "#00FF55"
+      },
       "tooltip": "#00FF55",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 65365" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 65365"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00FFAA" },
+      "label": {
+        "text": "███",
+        "color": "#00FFAA"
+      },
       "tooltip": "#00FFAA",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 65450" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 65450"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00FFFF" },
+      "label": {
+        "text": "███",
+        "color": "#00FFFF"
+      },
       "tooltip": "#00FFFF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 65535" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 65535"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00AAFF" },
+      "label": {
+        "text": "███",
+        "color": "#00AAFF"
+      },
       "tooltip": "#00AAFF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 43775" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 43775"
+      }
     },
     {
-      "label": { "text": "███", "color": "#0055FF" },
+      "label": {
+        "text": "███",
+        "color": "#0055FF"
+      },
       "tooltip": "#0055FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 22015" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 22015"
+      }
     },
     {
-      "label": { "text": "███", "color": "#0000FF" },
+      "label": {
+        "text": "███",
+        "color": "#0000FF"
+      },
       "tooltip": "#0000FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 255" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 255"
+      }
     },
     {
-      "label": { "text": "███", "color": "#5500FF" },
+      "label": {
+        "text": "███",
+        "color": "#5500FF"
+      },
       "tooltip": "#5500FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 5570815" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 5570815"
+      }
     },
     {
-      "label": { "text": "███", "color": "#AA00FF" },
+      "label": {
+        "text": "███",
+        "color": "#AA00FF"
+      },
       "tooltip": "#AA00FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 11141375" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 11141375"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FF00FF" },
+      "label": {
+        "text": "███",
+        "color": "#FF00FF"
+      },
       "tooltip": "#FF00FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16711935" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16711935"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FF00AA" },
+      "label": {
+        "text": "███",
+        "color": "#FF00AA"
+      },
       "tooltip": "#FF00AA",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16711850" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16711850"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FF0055" },
+      "label": {
+        "text": "███",
+        "color": "#FF0055"
+      },
       "tooltip": "#FF0055",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16711765" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16711765"
+      }
     },
     {
-      "label": { "text": "███", "color": "#CC0000" },
+      "label": {
+        "text": "███",
+        "color": "#CC0000"
+      },
       "tooltip": "#CC0000",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 13369344" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 13369344"
+      }
     },
     {
-      "label": { "text": "███", "color": "#CCCC00" },
+      "label": {
+        "text": "███",
+        "color": "#CCCC00"
+      },
       "tooltip": "#CCCC00",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 13421568" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 13421568"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00CC00" },
+      "label": {
+        "text": "███",
+        "color": "#00CC00"
+      },
       "tooltip": "#00CC00",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 52224" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 52224"
+      }
     },
     {
-      "label": { "text": "███", "color": "#00CCCC" },
+      "label": {
+        "text": "███",
+        "color": "#00CCCC"
+      },
       "tooltip": "#00CCCC",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 52428" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 52428"
+      }
     },
     {
-      "label": { "text": "███", "color": "#0000CC" },
+      "label": {
+        "text": "███",
+        "color": "#0000CC"
+      },
       "tooltip": "#0000CC",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 204" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 204"
+      }
     },
     {
-      "label": { "text": "███", "color": "#CC00CC" },
+      "label": {
+        "text": "███",
+        "color": "#CC00CC"
+      },
       "tooltip": "#CC00CC",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 13369548" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 13369548"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FF9999" },
+      "label": {
+        "text": "███",
+        "color": "#FF9999"
+      },
       "tooltip": "#FF9999",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16751001" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16751001"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FFCC99" },
+      "label": {
+        "text": "███",
+        "color": "#FFCC99"
+      },
       "tooltip": "#FFCC99",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16764057" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16764057"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FFFF99" },
+      "label": {
+        "text": "███",
+        "color": "#FFFF99"
+      },
       "tooltip": "#FFFF99",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16777113" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16777113"
+      }
     },
     {
-      "label": { "text": "███", "color": "#CCFF99" },
+      "label": {
+        "text": "███",
+        "color": "#CCFF99"
+      },
       "tooltip": "#CCFF99",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 13434777" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 13434777"
+      }
     },
     {
-      "label": { "text": "███", "color": "#99FF99" },
+      "label": {
+        "text": "███",
+        "color": "#99FF99"
+      },
       "tooltip": "#99FF99",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 10092441" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 10092441"
+      }
     },
     {
-      "label": { "text": "███", "color": "#99FFCC" },
+      "label": {
+        "text": "███",
+        "color": "#99FFCC"
+      },
       "tooltip": "#99FFCC",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 10092492" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 10092492"
+      }
     },
     {
-      "label": { "text": "███", "color": "#99FFFF" },
+      "label": {
+        "text": "███",
+        "color": "#99FFFF"
+      },
       "tooltip": "#99FFFF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 10092543" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 10092543"
+      }
     },
     {
-      "label": { "text": "███", "color": "#99CCFF" },
+      "label": {
+        "text": "███",
+        "color": "#99CCFF"
+      },
       "tooltip": "#99CCFF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 10079487" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 10079487"
+      }
     },
     {
-      "label": { "text": "███", "color": "#9999FF" },
+      "label": {
+        "text": "███",
+        "color": "#9999FF"
+      },
       "tooltip": "#9999FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 10066431" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 10066431"
+      }
     },
     {
-      "label": { "text": "███", "color": "#CC99FF" },
+      "label": {
+        "text": "███",
+        "color": "#CC99FF"
+      },
       "tooltip": "#CC99FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 13408767" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 13408767"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FF99FF" },
+      "label": {
+        "text": "███",
+        "color": "#FF99FF"
+      },
       "tooltip": "#FF99FF",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16751103" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16751103"
+      }
     },
     {
-      "label": { "text": "███", "color": "#FF99CC" },
+      "label": {
+        "text": "███",
+        "color": "#FF99CC"
+      },
       "tooltip": "#FF99CC",
       "width": 28,
-      "action": { "type": "run_command", "command": "trigger meccha.pick_rgb set 16751052" }
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_rgb set 16751052"
+      }
     },
     {
       "label": {

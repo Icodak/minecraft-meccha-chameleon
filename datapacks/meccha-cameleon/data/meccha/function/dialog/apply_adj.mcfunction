@@ -18,3 +18,5 @@ execute store result storage meccha:rt rgb.r int 1 run scoreboard players get #R
 execute store result storage meccha:rt rgb.g int 1 run scoreboard players get #GGv meccha.math
 execute store result storage meccha:rt rgb.b int 1 run scoreboard players get #BBv meccha.math
 function meccha:dialog/build_hex with storage meccha:rt rgb
+
+function meccha:dialog/open_macro with storage meccha:rt sample
