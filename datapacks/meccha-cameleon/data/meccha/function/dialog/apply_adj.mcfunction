@@ -1,11 +1,15 @@
 # meccha:dialog/apply_adj   (executed AS the clicking player)
 # A brightness/saturation button was tapped: meccha.pick_adj in 1..4.
-# Adjust THIS player's own colour (meccha.color) in RGB space.
+# Adjust the currently shown dialog colour, falling back to this player's
+# saved colour only when no preview state is present.
 execute store result score #ADJ meccha.tmp run scoreboard players get @s meccha.pick_adj
 scoreboard players set @s meccha.pick_adj 0
 
-# Load this player's colour into #RRv/#GGv/#BBv.
-function meccha:lib/color/unpack
+# Load the current preview colour into #RRv/#GGv/#BBv.
+execute if data storage meccha:rt rgb.r if data storage meccha:rt rgb.g if data storage meccha:rt rgb.b run execute store result score #RRv meccha.math run data get storage meccha:rt rgb.r
+execute if data storage meccha:rt rgb.r if data storage meccha:rt rgb.g if data storage meccha:rt rgb.b run execute store result score #GGv meccha.math run data get storage meccha:rt rgb.g
+execute if data storage meccha:rt rgb.r if data storage meccha:rt rgb.g if data storage meccha:rt rgb.b run execute store result score #BBv meccha.math run data get storage meccha:rt rgb.b
+execute unless data storage meccha:rt rgb.r unless data storage meccha:rt rgb.g unless data storage meccha:rt rgb.b run function meccha:lib/color/unpack
 
 execute if score #ADJ meccha.tmp matches 1 run function meccha:dialog/adj_brighter
 execute if score #ADJ meccha.tmp matches 2 run function meccha:dialog/adj_darker

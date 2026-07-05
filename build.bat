@@ -20,7 +20,7 @@ echo ==> Asset pipeline (Pillar 2)
 if errorlevel 1 exit /b %errorlevel%
 
 echo ==> Rig generator (Pillar 5)
-%PY% tools\build_rig.py --datapack ".\datapacks\meccha-cameleon" --scale 0.3333333
+%PY% tools\build_rig.py --datapack ".\datapacks\meccha-cameleon" --scale 0.5
 if errorlevel 1 exit /b %errorlevel%
 
 echo ==> Colour-picker dialog
