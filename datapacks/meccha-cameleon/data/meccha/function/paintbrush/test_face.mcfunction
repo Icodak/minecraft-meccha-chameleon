@@ -16,10 +16,10 @@ execute store result score #EVX meccha.math run data get storage meccha:rt wface
 execute store result score #EVY meccha.math run data get storage meccha:rt wface.ev[1] 1000
 execute store result score #EVZ meccha.math run data get storage meccha:rt wface.ev[2] 1000
 
-# denom = D . N
-scoreboard players operation #AX meccha.math = #DX meccha.math
-scoreboard players operation #AY meccha.math = #DY meccha.math
-scoreboard players operation #AZ meccha.math = #DZ meccha.math
+# denom = D . N  (D here is the LOCAL/rotated direction from test_cuboid)
+scoreboard players operation #AX meccha.math = #DLX meccha.math
+scoreboard players operation #AY meccha.math = #DLY meccha.math
+scoreboard players operation #AZ meccha.math = #DLZ meccha.math
 scoreboard players operation #BX meccha.math = #NX meccha.math
 scoreboard players operation #BY meccha.math = #NY meccha.math
 scoreboard players operation #BZ meccha.math = #NZ meccha.math
@@ -50,19 +50,19 @@ execute if score #T meccha.math >= #BEST_T meccha.math run return 0
 
 # rel = O' + tD - P0
 scoreboard players operation #A meccha.math = #T meccha.math
-scoreboard players operation #B meccha.math = #DX meccha.math
+scoreboard players operation #B meccha.math = #DLX meccha.math
 function meccha:lib/math/mul
 scoreboard players operation #RELX meccha.math = #OLX meccha.math
 scoreboard players operation #RELX meccha.math += #R meccha.math
 scoreboard players operation #RELX meccha.math -= #PX meccha.math
 scoreboard players operation #A meccha.math = #T meccha.math
-scoreboard players operation #B meccha.math = #DY meccha.math
+scoreboard players operation #B meccha.math = #DLY meccha.math
 function meccha:lib/math/mul
 scoreboard players operation #RELY meccha.math = #OLY meccha.math
 scoreboard players operation #RELY meccha.math += #R meccha.math
 scoreboard players operation #RELY meccha.math -= #PY meccha.math
 scoreboard players operation #A meccha.math = #T meccha.math
-scoreboard players operation #B meccha.math = #DZ meccha.math
+scoreboard players operation #B meccha.math = #DLZ meccha.math
 function meccha:lib/math/mul
 scoreboard players operation #RELZ meccha.math = #OLZ meccha.math
 scoreboard players operation #RELZ meccha.math += #R meccha.math
