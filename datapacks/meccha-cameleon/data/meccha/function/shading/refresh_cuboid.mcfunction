@@ -1,6 +1,6 @@
-# meccha:shading/refresh_cuboid   (executed AS a pose_dirty cuboid marker)
+# meccha:shading/refresh_cuboid   (executed AS a pose_dirty cuboid marker) shading entrypoint
 # PILLAR 6 - recompute each face's world normal after a pose change and set
-# its overlay opacity to reproduce vanilla directional shading.
+# its overlay text_opacity to reproduce vanilla directional shading.
 data modify storage meccha:rt sh set value {}
 data modify storage meccha:rt sh.id set from entity @s data.cuboid
 

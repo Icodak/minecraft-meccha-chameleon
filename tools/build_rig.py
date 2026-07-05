@@ -160,7 +160,7 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
     count = 0
     
     # Text display scale adjustments and pivot parameters
-    pixel_scale_xy = 5.7
+    pixel_scale_xy = 5.75
     text_pivot_x = 0.0135
     text_pivot_y = 0.15
     
@@ -213,20 +213,61 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
                 count += 1
 
         # ---- one stretched shading overlay per face (Pillar 6) ----
-        oquat = _quat_from_normal(nrm)
+        # The overlay must cover the WHOLE face. A raw block-space length
+        # (edge length * px) is only correct for the *default* text_display
+        # size; the same pixel_scale_xy conversion factor used for the
+        # individual pixels above is needed here too, or the overlay renders
+        # ~5.7x too small and only covers a corner of the face.
+        oquat = _quat_from_normal(nrm)  # same basis as `quat` above (rx, ry, nz)
+        eu_len = _len(eu) * px
+        ev_len = _len(ev) * px
         ctr_x = (p0[0] + eu[0]*0.5 + ev[0]*0.5) * px
         ctr_y = (p0[1] + eu[1]*0.5 + ev[1]*0.5) * px
         ctr_z = (p0[2] + eu[2]*0.5 + ev[2]*0.5) * px
+
+        overlay_pixel_scale = pixel_scale_xy
+
+        # Same pivot-compensation as the pixels: the display's scale stretches
+        # around the glyph's pivot, not the visual center, so inflating scale
+        # by pixel_scale_xy (to hit the right on-screen size) drags the
+        # overlay off-center by an amount proportional to *this face's* edge
+        # length -- not px, since the overlay is scaled to eu_len/ev_len
+        # rather than a single pixel. Reuses the rx/ry basis from `quat`
+        # above (oquat shares the same basis).
+        overlay_delta_x = eu_len * text_pivot_x * (1 - overlay_pixel_scale)
+        overlay_delta_y = ev_len * text_pivot_y * (1 - overlay_pixel_scale)
+        overlay_shift_x = rx[0] * overlay_delta_x + ry[0] * overlay_delta_y
+        overlay_shift_y = rx[1] * overlay_delta_x + ry[1] * overlay_delta_y
+        overlay_shift_z = rx[2] * overlay_delta_x + ry[2] * overlay_delta_y
+        ctr_x += overlay_shift_x
+        ctr_y += overlay_shift_y
+        ctr_z += overlay_shift_z
+
+        # Nudge the overlay a hair along the face's actual world normal
+        # (not just +local-Z, which is only correct for north/south faces)
+        # so it never z-fights with the pixel layer sitting right behind it.
+        overlay_offset = 0.015  # blocks
+        ctr_x += nrm[0] * overlay_offset
+        ctr_y += nrm[1] * overlay_offset
+        ctr_z += nrm[2] * overlay_offset
+
         overlay = {
             "Tags": ["meccha_overlay", "meccha_rig_part", "rig_unassigned",
                      f"cb_{name}", f"face_{dirn}"],
-            "text": {"text":"⬛","color":"#B9FFB3"},
+            # Text displays take a plain RGB color for the glyph; alpha is a
+            # *separate* `text_opacity` field (signed byte, 0-127 covers the
+            # range we need), not something packed into the color itself.
+            "text": {"text": "⬛", "color": "#000000"},
+            "text_opacity": 0,
             "background": 0,
+            "see_through": 1,
             "billboard": "fixed",
             "transformation": {
-                "translation": [F(round(ctr_x, 5)), F(round(ctr_y, 5)), F(round(ctr_z + 0.001, 5))],
+                "translation": [F(round(ctr_x, 5)), F(round(ctr_y, 5)), F(round(ctr_z, 5))],
                 "left_rotation": [F(q) for q in oquat],
-                "scale": [F(round(abs(_len(eu)) * px, 5)), F(round(abs(_len(ev)) * px, 5)), F(1.0)],
+                "scale": [F(round(eu_len * overlay_pixel_scale, 5)),
+                          F(round(ev_len * overlay_pixel_scale, 5)),
+                          F(1.0)],
                 "right_rotation": [F(0.0), F(0.0), F(0.0), F(1.0)],
             },
         }
