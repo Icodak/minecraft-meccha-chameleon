@@ -225,7 +225,8 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
         ctr_y = (p0[1] + eu[1]*0.5 + ev[1]*0.5) * px
         ctr_z = (p0[2] + eu[2]*0.5 + ev[2]*0.5) * px
 
-        overlay_pixel_scale = pixel_scale_xy
+        overlay_pixel_scale_x = pixel_scale_xy - 0.7
+        overlay_pixel_scale_y = pixel_scale_xy - 1.1
 
         # Same pivot-compensation as the pixels: the display's scale stretches
         # around the glyph's pivot, not the visual center, so inflating scale
@@ -234,8 +235,8 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
         # length -- not px, since the overlay is scaled to eu_len/ev_len
         # rather than a single pixel. Reuses the rx/ry basis from `quat`
         # above (oquat shares the same basis).
-        overlay_delta_x = eu_len * text_pivot_x * (1 - overlay_pixel_scale)
-        overlay_delta_y = ev_len * text_pivot_y * (1 - overlay_pixel_scale)
+        overlay_delta_x = eu_len * text_pivot_x * (1 - overlay_pixel_scale_x)
+        overlay_delta_y = ev_len * text_pivot_y * (1 - overlay_pixel_scale_y)
         overlay_shift_x = rx[0] * overlay_delta_x + ry[0] * overlay_delta_y
         overlay_shift_y = rx[1] * overlay_delta_x + ry[1] * overlay_delta_y
         overlay_shift_z = rx[2] * overlay_delta_x + ry[2] * overlay_delta_y
@@ -246,7 +247,9 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
         # Nudge the overlay a hair along the face's actual world normal
         # (not just +local-Z, which is only correct for north/south faces)
         # so it never z-fights with the pixel layer sitting right behind it.
+
         overlay_offset = 0.015  # blocks
+
         ctr_x += nrm[0] * overlay_offset
         ctr_y += nrm[1] * overlay_offset
         ctr_z += nrm[2] * overlay_offset
@@ -254,19 +257,24 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
         overlay = {
             "Tags": ["meccha_overlay", "meccha_rig_part", "rig_unassigned",
                      f"cb_{name}", f"face_{dirn}"],
-            # Text displays take a plain RGB color for the glyph; alpha is a
-            # *separate* `text_opacity` field (signed byte, 0-127 covers the
-            # range we need), not something packed into the color itself.
+            # The text glyph itself is pinned permanently invisible (a solid
+            # block char, but text_opacity clamps it below the render
+            # threshold) -- it exists only to give the display a nonzero
+            # bounding box. The actual shading tint+alpha is carried by
+            # `background`, which (unlike text.color) IS a packed ARGB int:
+            # background = (alpha << 24) | (r << 16) | (g << 8) | b. This is
+            # what avoids the depth-fight with the pixel layer: a see-through
+            # background quad still occludes/is-occluded by terrain normally,
+            # it just doesn't fight its own sibling pixel for the depth test.
             "text": {"text": "⬛", "color": "#000000"},
             "text_opacity": 0,
             "background": 0,
-            "see_through": 1,
             "billboard": "fixed",
             "transformation": {
                 "translation": [F(round(ctr_x, 5)), F(round(ctr_y, 5)), F(round(ctr_z, 5))],
                 "left_rotation": [F(q) for q in oquat],
-                "scale": [F(round(eu_len * overlay_pixel_scale, 5)),
-                          F(round(ev_len * overlay_pixel_scale, 5)),
+                "scale": [F(round(eu_len * overlay_pixel_scale_x, 5)),
+                          F(round(ev_len * overlay_pixel_scale_y, 5)),
                           F(1.0)],
                 "right_rotation": [F(0.0), F(0.0), F(0.0), F(1.0)],
             },
