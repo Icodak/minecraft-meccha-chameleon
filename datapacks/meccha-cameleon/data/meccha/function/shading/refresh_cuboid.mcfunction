@@ -3,6 +3,7 @@
 # its overlay text_opacity to reproduce vanilla directional shading.
 data modify storage meccha:rt sh set value {}
 data modify storage meccha:rt sh.id set from entity @s data.cuboid
+data modify storage meccha:rt sh.rid set from entity @s data.rid
 
 # Pose angles -> 0..359 integer degrees (floored modulo handles negatives).
 scoreboard players set #C360 meccha.tmp 360
