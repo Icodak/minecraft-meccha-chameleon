@@ -46,7 +46,7 @@ arguments are macros - call them with an SNBT compound, e.g.
 **Pose / move / rotate**
 | Function | Args | Purpose |
 |---|---|---|
-| `rig/poses/standing` - `crawling` - `curled_up` | - | Switch the whole-rig pose. |
+| `rig/poses/standing` - `crawling` - `superhero_landing` | - | Switch the whole-rig pose. |
 | `rig/move_to` | `x,y,z` | Force-move the rig to world coords, then re-pose. |
 | `dev/move_cuboid` | `cuboid,dx,dy,dz` | Translate one cuboid by a relative offset. |
 | `dev/rotate_cuboid` | `cuboid,yaw,pitch` | Set one cuboid's rotation (re-runs shading + affects OBB hits). |
@@ -123,7 +123,7 @@ vision is hidden via `blindness`+`darkness` for exactly `hide_seconds`
 and is driven from `meccha:game/tick`.
 
 **Pose Switcher (no `consumable`):** hiders right-click the **Knowledge Book**
-to cycle stance (standing -> crawling -> curled_up). Using a knowledge book is a
+to cycle stance (standing -> crawling -> superhero_landing). Using a knowledge book is a
 *discrete* event - it increments the `minecraft.used:minecraft.knowledge_book`
 scoreboard criterion (read in `meccha:tick`), unlike the continuous
 `consumable` trigger. The book is consumed and silently re-given each click.
@@ -240,7 +240,7 @@ docs/                            # NBT_SCHEMA.md + bundled Bookshelf module docs
 * Every pixel of a cuboid shares one origin + rotation; per-pixel placement is
   baked into a **static `transformation`** (translation + `left_rotation`
   quaternion + scale). Unique tags `cb_/face_/u_/v_` index each pixel.
-* Poses (`rig/poses/{standing,crawling,curled_up}`) are transform stacks applied
+* Poses (`rig/poses/{standing,crawling,superhero_landing}`) are transform stacks applied
   by **`/tp`-ing the shared cuboid origin** (`rig/apply_pose`).
 * Debug: `rig/debug` (tellraw state dump), `rig/move_to` (force-move + re-pose).
 

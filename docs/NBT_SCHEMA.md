@@ -52,7 +52,7 @@ block    : { id, properties:{...}, pos:[int x,y,z] }   # Bookshelf block result
 sample   : { model, shape, textures, color:"#RRGGBBAA", tex, found:bool }
 brush    : { color, found, cuboid, face, u:int, v:int }
 hunter   : { found:bool, limb, t:int }
-rig.pose : "standing" | "crawling" | "curled_up"
+rig.pose : "standing" | "crawling" | "superhero_landing"
 vec      : { a,b,dot,cross }                  # Bookshelf vector marshalling
 ```
 
