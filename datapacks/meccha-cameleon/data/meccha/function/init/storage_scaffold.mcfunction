@@ -8,6 +8,9 @@ data modify storage meccha:rt scratch set value {}
 # Live list of tracked hider rigs (BVH roots live in meccha:players, see Pillar 7).
 data modify storage meccha:rt active_rigs set value []
 
+# Per-player colour map, keyed by stringified UUID.
+data modify storage meccha:players color set value {}
+
 # Active brush colour (shared by the eyedropper, paintbrush and dialog picker).
 # Only initialised if missing, so a chosen colour survives /reload.
 execute unless data storage meccha:rt last_sample run data modify storage meccha:rt last_sample set value "#FFFFFFFF"

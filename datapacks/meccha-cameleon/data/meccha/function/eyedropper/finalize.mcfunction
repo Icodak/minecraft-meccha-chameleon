@@ -23,6 +23,11 @@ execute store result storage meccha:rt rgb.b int 1 run scoreboard players get #B
 data modify storage meccha:rt last_sample set from storage meccha:rt sample.color
 data modify storage meccha:rt sample.rgb set string storage meccha:rt sample.color 0 7
 
+# Persist this player's chosen colour under the per-player storage map.
+data modify storage meccha:player color set from storage meccha:rt sample.rgb
+
+function meccha:lib/color/store_player_color with storage meccha:player
+
 # You can now cleanly route this to build_hex or keep your feedback function 
 # knowing they share the exact same 'rgb' and 'sample.rgb' data states.
 function meccha:eyedropper/feedback with storage meccha:rt sample

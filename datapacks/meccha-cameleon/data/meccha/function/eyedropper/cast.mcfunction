@@ -3,6 +3,7 @@
 # block raycast. Executed: at <player> anchored eyes.
 # capture_ray fills #OX..#DZ scores + meccha:rt ray.* (used by the secondary
 # virtual raycast in Step 3) and is multiplayer-robust.
+function meccha:lib/uuid/store_current_uuid_as_string with entity @s
 function meccha:lib/raycast/capture_ray
 
 # Step 1: hand off to Bookshelf to find the first solid block. Its
