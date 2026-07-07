@@ -25,3 +25,6 @@ scoreboard objectives add meccha.rig dummy
 # player carries their own brush type; set by the brush selection UI,
 # read by the paintbrush).
 scoreboard objectives add meccha.brush_type dummy
+
+# Per hider state between painting, spectating and running
+scoreboard objectives add meccha.hider_state dummy

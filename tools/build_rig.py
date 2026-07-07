@@ -207,7 +207,6 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
                     "billboard": "fixed",
                     "transformation": transform,
                     "Glowing": False,
-                    "brightness": {"sky": 15, "block": 15},
                 }
                 fn.raw(f"summon minecraft:text_display ~{ox:.4f} ~{oy:.4f} ~{oz:.4f} {snbt(disp)}")
                 count += 1

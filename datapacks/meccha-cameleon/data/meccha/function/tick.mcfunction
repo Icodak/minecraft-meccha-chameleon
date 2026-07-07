@@ -1,6 +1,5 @@
 # meccha:tick
 # Per-tick driver. Kept lean; heavy work is event-driven (advancements).
-# Pillar 6: re-evaluate directional shading for rigs flagged dirty.
 execute as @e[type=marker,tag=meccha_cuboid,tag=pose_dirty] run function meccha:shading/refresh_cuboid
 
 # Pillar 7: nothing polled here - hunter hits are advancement-triggered.
