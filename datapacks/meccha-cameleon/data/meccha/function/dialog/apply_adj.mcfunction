@@ -17,10 +17,14 @@ execute if score #ADJ meccha.tmp matches 3 run function meccha:dialog/adj_sat_up
 execute if score #ADJ meccha.tmp matches 4 run function meccha:dialog/adj_sat_down
 
 # Store the adjusted channels back to this player's colour, then feedback.
-function meccha:lib/color/pack
 execute store result storage meccha:rt rgb.r int 1 run scoreboard players get #RRv meccha.math
 execute store result storage meccha:rt rgb.g int 1 run scoreboard players get #GGv meccha.math
 execute store result storage meccha:rt rgb.b int 1 run scoreboard players get #BBv meccha.math
 function meccha:dialog/build_hex with storage meccha:rt rgb
+
+data modify storage meccha:player color set from storage meccha:rt sample.rgb
+function meccha:lib/uuid/store_current_uuid_as_string with entity @s
+
+function meccha:lib/color/store_player_color with storage meccha:player
 
 function meccha:dialog/open_macro with storage meccha:rt sample
