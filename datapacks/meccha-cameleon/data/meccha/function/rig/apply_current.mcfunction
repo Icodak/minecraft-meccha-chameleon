@@ -10,3 +10,5 @@ execute if data storage meccha:rt cur{pose:"crawling"} run function meccha:rig/p
 execute if data storage meccha:rt cur{pose:"superhero_landing"} run function meccha:rig/poses/superhero_landing_apply with storage meccha:rt cur
 execute if data storage meccha:rt cur{pose:"sneaking"} run function meccha:rig/poses/sneaking_apply with storage meccha:rt cur
 execute if data storage meccha:rt cur{pose:"creeper"} run function meccha:rig/poses/creeper_apply with storage meccha:rt cur
+execute if data storage meccha:rt cur{pose:"t_pose"} run function meccha:rig/poses/t_pose_apply with storage meccha:rt cur
+execute if data storage meccha:rt cur{pose:"zombie"} run function meccha:rig/poses/zombie_apply with storage meccha:rt cur
