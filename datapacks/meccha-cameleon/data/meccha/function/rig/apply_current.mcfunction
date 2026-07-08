@@ -5,10 +5,10 @@
 data modify storage meccha:rt cur set value {rid:0,pose:""}
 data modify storage meccha:rt cur.rid set from entity @s data.rid
 data modify storage meccha:rt cur.pose set from entity @s data.pose
-execute if data storage meccha:rt cur{pose:"standing"} run function meccha:rig/poses/standing_apply with storage meccha:rt cur
-execute if data storage meccha:rt cur{pose:"crawling"} run function meccha:rig/poses/crawling_apply with storage meccha:rt cur
-execute if data storage meccha:rt cur{pose:"superhero_landing"} run function meccha:rig/poses/superhero_landing_apply with storage meccha:rt cur
-execute if data storage meccha:rt cur{pose:"sneaking"} run function meccha:rig/poses/sneaking_apply with storage meccha:rt cur
-execute if data storage meccha:rt cur{pose:"creeper"} run function meccha:rig/poses/creeper_apply with storage meccha:rt cur
-execute if data storage meccha:rt cur{pose:"t_pose"} run function meccha:rig/poses/t_pose_apply with storage meccha:rt cur
-execute if data storage meccha:rt cur{pose:"zombie"} run function meccha:rig/poses/zombie_apply with storage meccha:rt cur
+$execute if data storage meccha:rt cur{pose:"standing"} run function meccha:rig/poses/generated_rotations/standing_apply_$(direction) with storage meccha:rt cur
+$execute if data storage meccha:rt cur{pose:"crawling"} run function meccha:rig/poses/generated_rotations/crawling_apply_$(direction) with storage meccha:rt cur
+$execute if data storage meccha:rt cur{pose:"superhero_landing"} run function meccha:rig/poses/generated_rotations/superhero_landing_apply_$(direction) with storage meccha:rt cur
+$execute if data storage meccha:rt cur{pose:"sneaking"} run function meccha:rig/poses/generated_rotations/sneaking_apply_$(direction) with storage meccha:rt cur
+$execute if data storage meccha:rt cur{pose:"creeper"} run function meccha:rig/poses/generated_rotations/creeper_apply_$(direction) with storage meccha:rt cur
+$execute if data storage meccha:rt cur{pose:"t_pose"} run function meccha:rig/poses/generated_rotations/t_pose_apply_$(direction) with storage meccha:rt cur
+$execute if data storage meccha:rt cur{pose:"zombie"} run function meccha:rig/poses/generated_rotations/zombie_apply_$(direction) with storage meccha:rt cur

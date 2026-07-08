@@ -1,4 +1,4 @@
-# meccha:rig/poses/crawling_apply   (macro: $(rid); positioned at the rig root)
+# meccha:rig/poses/crawling_apply_south   (macro: $(rid); positioned at the rig root)
 # The file in /pose is the source of truth for the pose, call generate_rotations.bat/.sh to regenerate the rotated versions
 $function meccha:rig/apply_pose {cuboid:"head", dx:-0.125, dy:0.27, dz:0.3625, yaw:0, pitch:80, rid:$(rid)}
 $function meccha:rig/apply_pose {cuboid:"torso", dx:-0.125, dy:0.125, dz:0, yaw:0, pitch:90, rid:$(rid)}

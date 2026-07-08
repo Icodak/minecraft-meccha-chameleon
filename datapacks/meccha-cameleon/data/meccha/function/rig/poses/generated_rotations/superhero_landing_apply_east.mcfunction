@@ -1,0 +1,8 @@
+# meccha:rig/poses/superhero_landing_apply_east   (macro: $(rid); positioned at the rig root)
+# The file in /pose is the source of truth for the pose, call generate_rotations.bat/.sh to regenerate the rotated versions
+$function meccha:rig/apply_pose {cuboid:"head", dx:0.1, dy:0.4, dz:0, yaw:-90, pitch:45, rid:$(rid)}
+$function meccha:rig/apply_pose {cuboid:"torso", dx:-0.25, dy:0.2, dz:0, yaw:-90, pitch:60, rid:$(rid)}
+$function meccha:rig/apply_pose {cuboid:"arm_l", dx:0.1, dy:0, dz:-0.3, yaw:-10, pitch:0, rid:$(rid)}
+$function meccha:rig/apply_pose {cuboid:"arm_r", dx:0.1, dy:0.3, dz:0.1, yaw:-120, pitch:-60, rid:$(rid)}
+$function meccha:rig/apply_pose {cuboid:"leg_l", dx:-0.15, dy:0, dz:-0.125, yaw:-90, pitch:-90, rid:$(rid)}
+$function meccha:rig/apply_pose {cuboid:"leg_r", dx:0.05, dy:0.001, dz:0.125, yaw:-90, pitch:-40, rid:$(rid)}
