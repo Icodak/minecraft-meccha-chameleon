@@ -10,3 +10,4 @@ execute if data storage meccha:rt cyc{cur:"creeper"} run data modify storage mec
 execute if data storage meccha:rt cyc{cur:"zombie"} run data modify storage meccha:rt cyc.pose set value "t_pose"
 execute if data storage meccha:rt cyc{cur:"t_pose"} run data modify storage meccha:rt cyc.pose set value "standing"
 function meccha:rig/pose_set with storage meccha:rt cyc
+

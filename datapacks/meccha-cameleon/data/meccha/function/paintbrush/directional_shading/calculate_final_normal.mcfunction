@@ -18,4 +18,4 @@ execute store result storage meccha.math world_normal.y float 0.0001 run scorebo
 execute store result storage meccha.math world_normal.z float 0.0001 run scoreboard players get $marker_z meccha.math
 
 # Push the results straight to the user chat interface
-tellraw @a [{"text": "Text Display Normal: [", "color": "green"}, {"storage": "meccha.math", "nbt": "world_normal.x", "interpret": false}, {"text": ", "}, {"storage": "meccha.math", "nbt": "world_normal.y", "interpret": false}, {"text": ", "}, {"storage": "meccha.math", "nbt": "world_normal.z", "interpret": false}, {"text": "]"}]
+#tellraw @a [{"text": "Text Display Normal: [", "color": "green"}, {"storage": "meccha.math", "nbt": "world_normal.x", "interpret": false}, {"text": ", "}, {"storage": "meccha.math", "nbt": "world_normal.y", "interpret": false}, {"text": ", "}, {"storage": "meccha.math", "nbt": "world_normal.z", "interpret": false}, {"text": "]"}]

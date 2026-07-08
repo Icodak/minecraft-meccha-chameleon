@@ -13,7 +13,7 @@ scoreboard players operation #DYAW meccha.tmp %= #C360 meccha.tmp
 scoreboard players operation #DPITCH meccha.tmp %= #C360 meccha.tmp
 execute store result storage meccha:rt sh.yaw int 1 run scoreboard players get #DYAW meccha.tmp
 execute store result storage meccha:rt sh.pitch int 1 run scoreboard players get #DPITCH meccha.tmp
-function meccha:shading/load_trig with storage meccha:rt sh
+function meccha:lib/math/load_trig with storage meccha:rt sh
 
 # --- u = R * X_local ---
 scoreboard players set #NLX meccha.math 1000

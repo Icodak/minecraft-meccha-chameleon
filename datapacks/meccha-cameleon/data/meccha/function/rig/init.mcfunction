@@ -3,7 +3,7 @@
 # Every entity of the rig is tagged r<rid>; markers store data.rid. The rid is
 # left in storage meccha:rt newrig.rid so callers (e.g. rig/spawn_for) can bind.
 scoreboard players add #RIG_NEXT meccha.sys 1
-data modify storage meccha:rt newrig set value {pose:"standing", direction:"north"}
+data modify storage meccha:rt newrig set value {pose:"standing", direction:"south"}
 execute store result storage meccha:rt newrig.rid int 1 run scoreboard players get #RIG_NEXT meccha.sys
 
 # Root marker (unassigned until assign_rid stamps the rid).
