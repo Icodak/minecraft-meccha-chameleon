@@ -1,0 +1,1 @@
+execute as @e[type=text_display,tag=meccha_overlay] run data modify entity @s background set value 0

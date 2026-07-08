@@ -129,6 +129,24 @@ def build(datapack, scale):
     print(f"[meccha-rig] cuboids={len(RIG)} pixels={total} scale={scale}")
 
 
+def _get_face_color(dir):
+    """Returns a color for a given direction. This is used to color the pixels
+    of the rig based on their direction as a first tint"""
+    if dir == "north":
+        return "#DFDFDF"
+    elif dir == "south":
+        return "#DFDFDF"
+    elif dir == "west":
+        return "#B8B8B8"
+    elif dir == "east":
+        return "#C2C2C2"
+    elif dir == "top":
+        return "#FFFFFF"
+    elif dir == "bottom":
+        return "#8A8A8A"
+    else:
+        return "#FFFFFF"
+
 def _build_cuboid(datapack, name, off, w, h, d, scale, px):
     fid = f"meccha:rig/spawn_{name}"
     fn = FunctionWriter(fid, f"AUTO-GENERATED cuboid '{name}' ({w}x{h}x{d} px)")
@@ -202,7 +220,7 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
                 disp = {
                     "Tags": ["meccha_pixel", "meccha_rig_part", "rig_unassigned",
                              f"cb_{name}", f"face_{dirn}", f"u_{i}", f"v_{j}"],
-                    "text": {"text":"⬛","color":"#FFC5C5"},
+                    "text": {"text":"⬛","color": _get_face_color(dirn)},
                     "background": 0,
                     "billboard": "fixed",
                     "transformation": transform,
@@ -225,7 +243,7 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
         ctr_z = (p0[2] + eu[2]*0.5 + ev[2]*0.5) * px
 
         overlay_pixel_scale_x = pixel_scale_xy - 0.7
-        overlay_pixel_scale_y = pixel_scale_xy - 1.1
+        overlay_pixel_scale_y = pixel_scale_xy - 1.5
 
         # Same pivot-compensation as the pixels: the display's scale stretches
         # around the glyph's pivot, not the visual center, so inflating scale
@@ -243,16 +261,6 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
         ctr_y += overlay_shift_y
         ctr_z += overlay_shift_z
 
-        # Nudge the overlay a hair along the face's actual world normal
-        # (not just +local-Z, which is only correct for north/south faces)
-        # so it never z-fights with the pixel layer sitting right behind it.
-
-        overlay_offset = 0.015  # blocks
-
-        ctr_x += nrm[0] * overlay_offset
-        ctr_y += nrm[1] * overlay_offset
-        ctr_z += nrm[2] * overlay_offset
-
         overlay = {
             "Tags": ["meccha_overlay", "meccha_rig_part", "rig_unassigned",
                      f"cb_{name}", f"face_{dirn}"],
@@ -268,6 +276,7 @@ def _build_cuboid(datapack, name, off, w, h, d, scale, px):
             "text": {"text": "⬛", "color": "#000000"},
             "text_opacity": 0,
             "background": 0,
+            "see_through": 1,
             "billboard": "fixed",
             "transformation": {
                 "translation": [F(round(ctr_x, 5)), F(round(ctr_y, 5)), F(round(ctr_z, 5))],
