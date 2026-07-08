@@ -7,7 +7,7 @@ data modify storage meccha:rt col.bb set string storage meccha:rt col.hex 5 7
 data modify storage meccha:rt col.aa set string storage meccha:rt col.hex 7 9
 
 # Convert hex components to scores/integers
-function meccha:lib/color/lookup with storage meccha:rt col
+function meccha:lib/color/lookup_argb with storage meccha:rt col
 function meccha:lib/color/pack
 
 # Ensure the packed result from the eyedropper sets the exact same player score

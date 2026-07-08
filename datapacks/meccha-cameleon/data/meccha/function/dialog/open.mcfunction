@@ -11,7 +11,7 @@ execute if data storage meccha:rt sample.rgb run data modify storage meccha:rt c
 execute if data storage meccha:rt sample.rgb run data modify storage meccha:rt col.gg set string storage meccha:rt sample.rgb 3 5
 execute if data storage meccha:rt sample.rgb run data modify storage meccha:rt col.bb set string storage meccha:rt sample.rgb 5 7
 execute if data storage meccha:rt sample.rgb run data modify storage meccha:rt col.aa set value "FF"
-execute if data storage meccha:rt sample.rgb run function meccha:lib/color/lookup with storage meccha:rt col
+execute if data storage meccha:rt sample.rgb run function meccha:lib/color/lookup_argb with storage meccha:rt col
 execute if data storage meccha:rt sample.rgb run function meccha:lib/color/pack
 execute if data storage meccha:rt sample.rgb run execute store result storage meccha:rt rgb.r int 1 run scoreboard players get #RRv meccha.math
 execute if data storage meccha:rt sample.rgb run execute store result storage meccha:rt rgb.g int 1 run scoreboard players get #GGv meccha.math

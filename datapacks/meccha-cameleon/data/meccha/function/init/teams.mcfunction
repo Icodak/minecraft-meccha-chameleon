@@ -10,3 +10,6 @@ team modify meccha_hunters prefix [{"text":"☠ ","color":"red"}]
 team add meccha_hiders
 team modify meccha_hiders color green
 team modify meccha_hiders nametagVisibility hideForOtherTeams
+team modify meccha_hiders collisionRule never
+team modify meccha_hiders friendlyFire false
+team modify meccha_hiders seeFriendlyInvisibles false

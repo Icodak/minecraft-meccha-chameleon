@@ -8,7 +8,7 @@ data modify storage meccha:rt col.rr set string storage meccha:rt col.hex 1 3
 data modify storage meccha:rt col.gg set string storage meccha:rt col.hex 3 5
 data modify storage meccha:rt col.bb set string storage meccha:rt col.hex 5 7
 data modify storage meccha:rt col.aa set string storage meccha:rt col.hex 7 9
-function meccha:lib/color/lookup with storage meccha:rt col
+function meccha:lib/color/lookup_argb with storage meccha:rt col
 
 scoreboard players set #M24 meccha.tmp 16777216
 scoreboard players set #M16 meccha.tmp 65536
