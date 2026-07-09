@@ -1,0 +1,1 @@
+data modify storage meccha:game prevent_item_drop set value 1b

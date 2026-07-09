@@ -1,0 +1,1 @@
+execute as @e[type=item] unless score @s dropped_item = @s dropped_item store success entity @s PickupDelay short 0 store success score @s dropped_item run data modify entity @s Owner set from entity @s Thrower

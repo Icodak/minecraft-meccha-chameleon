@@ -2,7 +2,6 @@
 # Per-tick driver. Kept lean; heavy work is event-driven (advancements).
 
 # Gameplay: pose-switch item (discrete right-click) + round countdown.
-execute as @a[scores={meccha.use_pose=1..}] at @s run function meccha:role/pose_used
 function meccha:game/tick
 function meccha:dialog/tick
 

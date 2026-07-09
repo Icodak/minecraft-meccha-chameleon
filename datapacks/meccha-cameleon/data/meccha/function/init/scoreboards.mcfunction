@@ -7,11 +7,6 @@ scoreboard objectives add meccha.tmp dummy
 # them here - our wrappers only read/write their fake-player scores at runtime.
 # Persistent system counters (game timer accumulation, etc).
 scoreboard objectives add meccha.sys dummy
-# Discrete right-click detection for the Pose Switcher (knowledge book).
-# Using a knowledge book always CONSUMES it and increments this `used:`
-# criterion exactly once per right-click - a clean discrete alternative to the
-# continuous `consumable` trigger. We re-give the book after each use.
-scoreboard objectives add meccha.use_pose minecraft.used:minecraft.knowledge_book
 # Dialog colour-picker triggers (non-op safe; clicked buttons run /trigger).
 scoreboard objectives add meccha.pick_rgb trigger
 scoreboard objectives add meccha.pick_adj trigger
@@ -28,5 +23,11 @@ scoreboard objectives add meccha.yaw dummy
 # read by the paintbrush).
 scoreboard objectives add meccha.brush_type dummy
 
-# Per hider state between painting, spectating and running
+# Per hider state between
+# 0: running 
+# 1: painting
+# 2: spectating
 scoreboard objectives add meccha.hider_state dummy
+
+# Prevent item drop: track dropped items and their owners, so we can instantly pick them up again.
+scoreboard objectives add dropped_item dummy

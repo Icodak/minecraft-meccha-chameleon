@@ -9,6 +9,7 @@ function meccha:give/hider_kit
 # Give the hider their own rig (bound + following). Replace any previous one.
 function meccha:rig/unbind
 function meccha:rig/spawn_for
+tag @s add paint_with_automatic_directional_shadow
 title @s title [{"text":"HIDER","color":"green","bold":true}]
 title @s subtitle [{"text":"Blend in. Avoid the hunters.","color":"gray"}]
 playsound minecraft:entity.player.levelup player @s ~ ~ ~ 1 1.4

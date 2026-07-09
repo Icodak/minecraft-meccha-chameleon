@@ -1,0 +1,14 @@
+{
+  "criteria": {
+    "toggle_shadow": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "player": {},
+        "recipe": "meccha:directional_shadows"
+      }
+    }
+  },
+  "rewards": {
+    "function": "meccha:trigger/directional_shadows"
+  }
+}

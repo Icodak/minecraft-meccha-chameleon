@@ -105,7 +105,6 @@ game : {
 ```
 Player role state is held as scoreboard tags: `meccha_hunter` / `meccha_hider`
 (+ teams `meccha_hunters` / `meccha_hiders`). The Pose Switcher uses the
-`meccha.use_pose` objective (criterion `minecraft.used:minecraft.knowledge_book`).
 
 ## Per-player brush colour
 ```

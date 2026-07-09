@@ -17,3 +17,7 @@ scoreboard players set #SHADE_BOT meccha.math 500
 # Hiding-player downscale factor vs Hunter (Pillar 5): 1/3.
 scoreboard players set #RIG_SCALE_NUM meccha.math 1
 scoreboard players set #RIG_SCALE_DEN meccha.math 3
+
+scoreboard players set #RUNNING meccha.hider_state 0
+scoreboard players set #PAINTING meccha.hider_state 1
+scoreboard players set #SPECTATING meccha.hider_state 2

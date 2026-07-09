@@ -1,0 +1,14 @@
+{
+  "criteria": {
+    "pose_cycle": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "player": {},
+        "recipe": "meccha:pose_cycle"
+      }
+    }
+  },
+  "rewards": {
+    "function": "meccha:trigger/pose_cycle"
+  }
+}
