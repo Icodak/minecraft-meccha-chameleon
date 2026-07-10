@@ -4,7 +4,7 @@
       "trigger": "minecraft:using_item",
       "conditions": {
         "item": {
-          "items": "minecraft:music_disc_lava_chicken",
+          "items": "minecraft:target",
           "predicates": {
             "minecraft:custom_data": "{exit_painting_mode:true}"
           }

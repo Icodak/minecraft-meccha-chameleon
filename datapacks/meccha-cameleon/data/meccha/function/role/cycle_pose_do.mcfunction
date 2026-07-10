@@ -1,6 +1,8 @@
 # meccha:role/cycle_pose_do   (macro: $(rid))
 # Read the bound rig's current pose, pick the next one, and apply it to that rig.
 $data modify storage meccha:rt cyc.cur set from entity @e[tag=meccha_rig_root,tag=r$(rid),limit=1] data.pose
+$data modify storage meccha:rt cyc.direction set from entity @e[tag=meccha_rig_root,tag=r$(rid),limit=1] data.direction
+
 data modify storage meccha:rt cyc.pose set value "standing"
 execute if data storage meccha:rt cyc{cur:"standing"} run data modify storage meccha:rt cyc.pose set value "crawling"
 execute if data storage meccha:rt cyc{cur:"crawling"} run data modify storage meccha:rt cyc.pose set value "superhero_landing"

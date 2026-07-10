@@ -5,6 +5,9 @@
 data modify storage meccha:rt cur set value {rid:0,pose:""}
 data modify storage meccha:rt cur.rid set from entity @s data.rid
 data modify storage meccha:rt cur.pose set from entity @s data.pose
+$data modify entity @s data.direction set value $(direction)
+# $say $(direction)
+
 $execute if data storage meccha:rt cur{pose:"standing"} run function meccha:rig/poses/generated_rotations/standing_apply_$(direction) with storage meccha:rt cur
 $execute if data storage meccha:rt cur{pose:"crawling"} run function meccha:rig/poses/generated_rotations/crawling_apply_$(direction) with storage meccha:rt cur
 $execute if data storage meccha:rt cur{pose:"superhero_landing"} run function meccha:rig/poses/generated_rotations/superhero_landing_apply_$(direction) with storage meccha:rt cur

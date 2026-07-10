@@ -4,4 +4,4 @@
 # the eye position + rotation (the eyedropper calls it via `at @s anchored
 # eyes`). `on_targeted_block` runs `at` the aligned hit block.
 # `return run` forwards Bookshelf's hit/miss result (1/0) to our caller.
-return run function #bs.raycast:run {with:{max_distance:6.0,on_targeted_block:"function meccha:eyedropper/on_block_entry"}}
+return run function #bs.raycast:run {with:{max_distance:6.0,on_targeted_block:"execute as @a[tag=eyedropping] run function meccha:eyedropper/on_block_entry"}}

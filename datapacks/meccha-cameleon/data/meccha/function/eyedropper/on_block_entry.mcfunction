@@ -43,5 +43,5 @@ execute store result score #DZ meccha.math run data get storage meccha:rt ray.dz
 # tellraw @a [{"text":"O'=("},{"score":{"name":"#OX","objective":"meccha.math"}},{"text":","},{"score":{"name":"#OY","objective":"meccha.math"}},{"text":","},{"score":{"name":"#OZ","objective":"meccha.math"}},{"text":") B=("},{"score":{"name":"#BX","objective":"meccha.math"}},{"text":","},{"score":{"name":"#BY","objective":"meccha.math"}},{"text":","},{"score":{"name":"#BZ","objective":"meccha.math"}},{"text":") D=("},{"score":{"name":"#DX","objective":"meccha.math"}},{"text":","},{"score":{"name":"#DY","objective":"meccha.math"}},{"text":","},{"score":{"name":"#DZ","objective":"meccha.math"}},{"text":")"}]
 
 function meccha:eyedropper/raycast_faces
-execute if data storage meccha:rt {sample:{found:1b}} run function meccha:eyedropper/finalize
-execute unless data storage meccha:rt {sample:{found:1b}} run function meccha:eyedropper/no_sample
+execute if data storage meccha:rt {sample:{found:1b}} run return run function meccha:eyedropper/finalize
+execute unless data storage meccha:rt {sample:{found:1b}} run return run function meccha:eyedropper/no_sample
