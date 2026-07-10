@@ -1,0 +1,14 @@
+{
+  "criteria": {
+    "open_brush_settings": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "player": {},
+        "recipe": "meccha:open_brush_settings"
+      }
+    }
+  },
+  "rewards": {
+    "function": "meccha:trigger/paintbrush_settings"
+  }
+}

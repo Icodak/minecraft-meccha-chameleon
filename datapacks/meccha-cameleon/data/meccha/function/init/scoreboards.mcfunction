@@ -30,4 +30,6 @@ scoreboard objectives add meccha.brush_type dummy
 scoreboard objectives add meccha.hider_state dummy
 
 # Prevent item drop: track dropped items and their owners, so we can instantly pick them up again.
-scoreboard objectives add dropped_item dummy
+scoreboard objectives add meccha.dropped_item dummy
+
+scoreboard objectives add meccha.toggle_leave_spec_mode trigger

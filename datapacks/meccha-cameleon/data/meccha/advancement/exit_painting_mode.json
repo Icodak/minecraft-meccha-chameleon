@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "using_item": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_lava_chicken",
+          "predicates": {
+            "minecraft:custom_data": "{exit_painting_mode:true}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "meccha:trigger/exit_painting_mode"
+  }
+}

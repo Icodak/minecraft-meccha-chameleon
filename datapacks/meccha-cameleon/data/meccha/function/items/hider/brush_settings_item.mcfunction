@@ -1,0 +1,2 @@
+item replace entity @a[tag=needs_open_brush_settings] hotbar.1 with minecraft:knowledge_book[minecraft:recipes=["meccha:open_brush_settings"],minecraft:item_name=[{"text":"Paintbrush settings ","color":"#fff344"},{"text":"[Right click: open]","color":"#8b8b8b", italic: true}],minecraft:max_stack_size=1,item_model=test_instance_block] 1
+tag @a[tag=needs_open_brush_settings] remove needs_open_brush_settings

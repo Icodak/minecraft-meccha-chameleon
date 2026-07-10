@@ -4,15 +4,15 @@
       "trigger": "minecraft:using_item",
       "conditions": {
         "item": {
-          "items": "minecraft:arrow",
+          "items": "minecraft:phantom_membrane",
           "predicates": {
-            "minecraft:custom_data": "{eye_dropper:true}"
+            "minecraft:custom_data": "{enter_spectator_mode:true}"
           }
         }
       }
     }
   },
   "rewards": {
-    "function": "meccha:trigger/eyedropper"
+    "function": "meccha:trigger/enter_spectator_mode"
   }
 }
