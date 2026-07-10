@@ -2,5 +2,3 @@
 advancement revoke @s only meccha:exit_painting_mode
 
 function meccha:game/enter_running_mode
-
-say trig run

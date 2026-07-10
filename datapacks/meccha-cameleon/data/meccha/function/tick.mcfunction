@@ -10,3 +10,5 @@ execute as @a unless score @s meccha.color matches 0.. run scoreboard players se
 
 # Bound rigs follow their owner (per-rig).
 function meccha:rig/follow
+
+function meccha:climb_on_walls/enable_climbing

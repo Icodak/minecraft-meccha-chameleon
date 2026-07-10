@@ -1,0 +1,17 @@
+{
+    "replace": true,
+    "values": [
+        "structure_void",
+        "#buttons",
+        "ladder",
+        "#walls",
+        "#fence_gates",
+        "#fences",
+        "#bars",
+        "#cave_vines",
+        "vine",
+        "#doors",
+        "#trapdoors",
+        "#chains"
+    ]
+}
