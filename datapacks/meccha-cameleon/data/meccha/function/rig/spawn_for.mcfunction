@@ -7,4 +7,4 @@ execute at @s run function meccha:rig/init
 execute store result score @s meccha.rig run data get storage meccha:rt newrig.rid
 tag @s add meccha_bound
 function meccha:rig/bind_owner with storage meccha:rt newrig
-tellraw @s [{"text":"[Meccha] ","color":"green"},{"text":"rig bound - it now follows you (right-click the Pose Switcher to change stance).","color":"gray"}]
+#tellraw @s [{"text":"[Meccha] ","color":"green"},{"text":"rig bound - it now follows you (right-click the Pose Switcher to change stance).","color":"gray"}]

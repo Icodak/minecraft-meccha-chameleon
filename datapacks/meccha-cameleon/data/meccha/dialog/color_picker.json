@@ -1638,10 +1638,10 @@
   ],
   "exit_action": {
     "label": {
-      "text": "Done",
-      "color": "green"
+      "text": "<Edit/pick a color to have a preview>",
+      "color": "white"
     },
-    "width": 120,
+    "width": 240,
     "action": {
       "type": "run_command",
       "command": "trigger meccha.pick_adj set 0"

@@ -181,8 +181,8 @@ def build(datapack: str, hues: int):
         "columns": hues + 1,
         "actions": actions,
         "exit_action": {
-            "label": {"text": "Done", "color": "green"},
-            "width": 120,
+            "label": {"text": "<Edit/pick a color to have a preview>", "color": "white"},
+            "width": 240,
             "action": {"type": "run_command", "command": "trigger meccha.pick_adj set 0"}
         },
     }
