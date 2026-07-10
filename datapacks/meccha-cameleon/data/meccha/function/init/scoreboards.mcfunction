@@ -21,7 +21,7 @@ scoreboard objectives add meccha.yaw dummy
 # Per-player active brush type (multiplayer-safe: each
 # player carries their own brush type; set by the brush selection UI,
 # read by the paintbrush).
-scoreboard objectives add meccha.brush_type dummy
+scoreboard objectives add meccha.brush_type trigger
 
 # Per hider state between
 # 0: running 
