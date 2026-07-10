@@ -1,7 +1,7 @@
 {
   "type": "minecraft:multi_action",
   "title": {
-    "text": "Meccha Colour Picker",
+    "text": "Brush settings - Size & Color adjustments",
     "color": "white",
     "bold": true
   },
@@ -45,7 +45,7 @@
         "color": "#FFC1E1"
       },
       "tooltip": "#FFC1E1",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16761314"
@@ -57,7 +57,7 @@
         "color": "#FFC5B3"
       },
       "tooltip": "#FFC5B3",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16762292"
@@ -69,7 +69,7 @@
         "color": "#FFD18D"
       },
       "tooltip": "#FFD18D",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16765326"
@@ -81,7 +81,7 @@
         "color": "#FFE17E"
       },
       "tooltip": "#FFE17E",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16769407"
@@ -93,7 +93,7 @@
         "color": "#DAF190"
       },
       "tooltip": "#DAF190",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 14348689"
@@ -105,7 +105,7 @@
         "color": "#A6FCB8"
       },
       "tooltip": "#A6FCB8",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 10943673"
@@ -117,7 +117,7 @@
         "color": "#78FFE8"
       },
       "tooltip": "#78FFE8",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 7929833"
@@ -129,7 +129,7 @@
         "color": "#6EFBFF"
       },
       "tooltip": "#6EFBFF",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 7273472"
@@ -141,7 +141,7 @@
         "color": "#93F0FF"
       },
       "tooltip": "#93F0FF",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 9695488"
@@ -153,7 +153,7 @@
         "color": "#C4E1FF"
       },
       "tooltip": "#C4E1FF",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 12902912"
@@ -165,7 +165,7 @@
         "color": "#F1D2FF"
       },
       "tooltip": "#F1D2FF",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 15848192"
@@ -177,7 +177,7 @@
         "color": "#FFC6FF"
       },
       "tooltip": "#FFC6FF",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16762624"
@@ -202,7 +202,7 @@
         "color": "#E1809F"
       },
       "tooltip": "#E1809F",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 14778528"
@@ -214,7 +214,7 @@
         "color": "#E68373"
       },
       "tooltip": "#E68373",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 15106932"
@@ -226,7 +226,7 @@
         "color": "#DB8E4B"
       },
       "tooltip": "#DB8E4B",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 14388812"
@@ -238,7 +238,7 @@
         "color": "#C19E37"
       },
       "tooltip": "#C19E37",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 12688952"
@@ -250,7 +250,7 @@
         "color": "#99AE4D"
       },
       "tooltip": "#99AE4D",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 10071630"
@@ -262,7 +262,7 @@
         "color": "#64B878"
       },
       "tooltip": "#64B878",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 6600825"
@@ -274,7 +274,7 @@
         "color": "#1CBCA5"
       },
       "tooltip": "#1CBCA5",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 1883302"
@@ -286,7 +286,7 @@
         "color": "#00B7CD"
       },
       "tooltip": "#00B7CD",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 47054"
@@ -298,7 +298,7 @@
         "color": "#4EACE8"
       },
       "tooltip": "#4EACE8",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 5156073"
@@ -310,7 +310,7 @@
         "color": "#849EF1"
       },
       "tooltip": "#849EF1",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 8691442"
@@ -322,7 +322,7 @@
         "color": "#AF90E5"
       },
       "tooltip": "#AF90E5",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 11505894"
@@ -334,7 +334,7 @@
         "color": "#CE85C8"
       },
       "tooltip": "#CE85C8",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 13534665"
@@ -357,7 +357,7 @@
         "color": "#9C4262"
       },
       "tooltip": "#9C4262",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 10240611"
@@ -369,7 +369,7 @@
         "color": "#A04438"
       },
       "tooltip": "#A04438",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 10503225"
@@ -381,7 +381,7 @@
         "color": "#975000"
       },
       "tooltip": "#975000",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 9916417"
@@ -393,7 +393,7 @@
         "color": "#816000"
       },
       "tooltip": "#816000",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 8478721"
@@ -405,7 +405,7 @@
         "color": "#5D6F00"
       },
       "tooltip": "#5D6F00",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 6123265"
@@ -417,7 +417,7 @@
         "color": "#1E783C"
       },
       "tooltip": "#1E783C",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 1996861"
@@ -429,7 +429,7 @@
         "color": "#007B68"
       },
       "tooltip": "#007B68",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 31593"
@@ -441,7 +441,7 @@
         "color": "#00778C"
       },
       "tooltip": "#00778C",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 30605"
@@ -453,7 +453,7 @@
         "color": "#006CA5"
       },
       "tooltip": "#006CA5",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 27814"
@@ -465,7 +465,7 @@
         "color": "#4A5FAC"
       },
       "tooltip": "#4A5FAC",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 4874157"
@@ -477,7 +477,7 @@
         "color": "#7152A1"
       },
       "tooltip": "#7152A1",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 7426722"
@@ -489,7 +489,7 @@
         "color": "#8C4787"
       },
       "tooltip": "#8C4787",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 9193352"
@@ -514,7 +514,7 @@
         "color": "#5A002B"
       },
       "tooltip": "#5A002B",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 5898284"
@@ -526,7 +526,7 @@
         "color": "#5D0000"
       },
       "tooltip": "#5D0000",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 6094849"
@@ -538,7 +538,7 @@
         "color": "#571300"
       },
       "tooltip": "#571300",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 5706497"
@@ -550,7 +550,7 @@
         "color": "#462600"
       },
       "tooltip": "#462600",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 4597249"
@@ -562,7 +562,7 @@
         "color": "#273400"
       },
       "tooltip": "#273400",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 2569217"
@@ -574,7 +574,7 @@
         "color": "#003D00"
       },
       "tooltip": "#003D00",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 15617"
@@ -586,7 +586,7 @@
         "color": "#003F30"
       },
       "tooltip": "#003F30",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16177"
@@ -598,7 +598,7 @@
         "color": "#003B50"
       },
       "tooltip": "#003B50",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 15185"
@@ -610,7 +610,7 @@
         "color": "#003065"
       },
       "tooltip": "#003065",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 12390"
@@ -622,7 +622,7 @@
         "color": "#18236B"
       },
       "tooltip": "#18236B",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 1581932"
@@ -634,7 +634,7 @@
         "color": "#391661"
       },
       "tooltip": "#391661",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 3741282"
@@ -646,7 +646,7 @@
         "color": "#4D084B"
       },
       "tooltip": "#4D084B",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 5048396"
@@ -671,7 +671,7 @@
         "color": "#FF0000"
       },
       "tooltip": "#FF0000",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16711681"
@@ -683,7 +683,7 @@
         "color": "#FF8000"
       },
       "tooltip": "#FF8000",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16744449"
@@ -695,7 +695,7 @@
         "color": "#FFFF00"
       },
       "tooltip": "#FFFF00",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16776961"
@@ -707,7 +707,7 @@
         "color": "#80FF00"
       },
       "tooltip": "#80FF00",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 8453889"
@@ -719,7 +719,7 @@
         "color": "#00FF00"
       },
       "tooltip": "#00FF00",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 65281"
@@ -731,7 +731,7 @@
         "color": "#00FF80"
       },
       "tooltip": "#00FF80",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 65409"
@@ -743,7 +743,7 @@
         "color": "#00FFFF"
       },
       "tooltip": "#00FFFF",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 65536"
@@ -755,7 +755,7 @@
         "color": "#0080FF"
       },
       "tooltip": "#0080FF",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 33024"
@@ -767,7 +767,7 @@
         "color": "#0000FF"
       },
       "tooltip": "#0000FF",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 256"
@@ -779,7 +779,7 @@
         "color": "#8000FF"
       },
       "tooltip": "#8000FF",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 8388864"
@@ -791,7 +791,7 @@
         "color": "#FF00FF"
       },
       "tooltip": "#FF00FF",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16711936"
@@ -803,7 +803,7 @@
         "color": "#FF0080"
       },
       "tooltip": "#FF0080",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16711809"
@@ -826,7 +826,7 @@
         "color": "#CC0000"
       },
       "tooltip": "#CC0000",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 13369345"
@@ -838,7 +838,7 @@
         "color": "#CC6600"
       },
       "tooltip": "#CC6600",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 13395457"
@@ -850,7 +850,7 @@
         "color": "#CCCC00"
       },
       "tooltip": "#CCCC00",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 13421569"
@@ -862,7 +862,7 @@
         "color": "#66CC00"
       },
       "tooltip": "#66CC00",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 6736897"
@@ -874,7 +874,7 @@
         "color": "#00CC00"
       },
       "tooltip": "#00CC00",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 52225"
@@ -886,7 +886,7 @@
         "color": "#00CC66"
       },
       "tooltip": "#00CC66",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 52327"
@@ -898,7 +898,7 @@
         "color": "#00CCCC"
       },
       "tooltip": "#00CCCC",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 52429"
@@ -910,7 +910,7 @@
         "color": "#0066CC"
       },
       "tooltip": "#0066CC",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 26317"
@@ -922,7 +922,7 @@
         "color": "#0000CC"
       },
       "tooltip": "#0000CC",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 205"
@@ -934,7 +934,7 @@
         "color": "#6600CC"
       },
       "tooltip": "#6600CC",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 6684877"
@@ -946,7 +946,7 @@
         "color": "#CC00CC"
       },
       "tooltip": "#CC00CC",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 13369549"
@@ -958,7 +958,7 @@
         "color": "#CC0066"
       },
       "tooltip": "#CC0066",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 13369447"
@@ -983,7 +983,7 @@
         "color": "#990000"
       },
       "tooltip": "#990000",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 10027009"
@@ -995,7 +995,7 @@
         "color": "#994C00"
       },
       "tooltip": "#994C00",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 10046465"
@@ -1007,7 +1007,7 @@
         "color": "#999900"
       },
       "tooltip": "#999900",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 10066177"
@@ -1019,7 +1019,7 @@
         "color": "#4C9900"
       },
       "tooltip": "#4C9900",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 5019905"
@@ -1031,7 +1031,7 @@
         "color": "#009900"
       },
       "tooltip": "#009900",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 39169"
@@ -1043,7 +1043,7 @@
         "color": "#00994C"
       },
       "tooltip": "#00994C",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 39245"
@@ -1055,7 +1055,7 @@
         "color": "#009999"
       },
       "tooltip": "#009999",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 39322"
@@ -1067,7 +1067,7 @@
         "color": "#004C99"
       },
       "tooltip": "#004C99",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 19610"
@@ -1079,7 +1079,7 @@
         "color": "#000099"
       },
       "tooltip": "#000099",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 154"
@@ -1091,7 +1091,7 @@
         "color": "#4C0099"
       },
       "tooltip": "#4C0099",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 4980890"
@@ -1103,7 +1103,7 @@
         "color": "#990099"
       },
       "tooltip": "#990099",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 10027162"
@@ -1115,7 +1115,7 @@
         "color": "#99004C"
       },
       "tooltip": "#99004C",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 10027085"
@@ -1140,7 +1140,7 @@
         "color": "#660000"
       },
       "tooltip": "#660000",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 6684673"
@@ -1152,7 +1152,7 @@
         "color": "#663300"
       },
       "tooltip": "#663300",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 6697729"
@@ -1164,7 +1164,7 @@
         "color": "#666600"
       },
       "tooltip": "#666600",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 6710785"
@@ -1176,7 +1176,7 @@
         "color": "#336600"
       },
       "tooltip": "#336600",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 3368449"
@@ -1188,7 +1188,7 @@
         "color": "#006600"
       },
       "tooltip": "#006600",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 26113"
@@ -1200,7 +1200,7 @@
         "color": "#006633"
       },
       "tooltip": "#006633",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 26164"
@@ -1212,7 +1212,7 @@
         "color": "#006666"
       },
       "tooltip": "#006666",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 26215"
@@ -1224,7 +1224,7 @@
         "color": "#003366"
       },
       "tooltip": "#003366",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 13159"
@@ -1236,7 +1236,7 @@
         "color": "#000066"
       },
       "tooltip": "#000066",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 103"
@@ -1248,7 +1248,7 @@
         "color": "#330066"
       },
       "tooltip": "#330066",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 3342439"
@@ -1260,7 +1260,7 @@
         "color": "#660066"
       },
       "tooltip": "#660066",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 6684775"
@@ -1272,7 +1272,7 @@
         "color": "#660033"
       },
       "tooltip": "#660033",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 6684724"
@@ -1295,7 +1295,7 @@
         "color": "#F2F2F2"
       },
       "tooltip": "#F2F2F2",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 15921907"
@@ -1307,7 +1307,7 @@
         "color": "#D9D9D9"
       },
       "tooltip": "#D9D9D9",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 14277082"
@@ -1319,7 +1319,7 @@
         "color": "#C1C1C1"
       },
       "tooltip": "#C1C1C1",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 12698050"
@@ -1331,7 +1331,7 @@
         "color": "#A9A9A9"
       },
       "tooltip": "#A9A9A9",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 11119018"
@@ -1343,7 +1343,7 @@
         "color": "#939393"
       },
       "tooltip": "#939393",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 9671572"
@@ -1355,7 +1355,7 @@
         "color": "#7C7C7C"
       },
       "tooltip": "#7C7C7C",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 8158333"
@@ -1367,7 +1367,7 @@
         "color": "#676767"
       },
       "tooltip": "#676767",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 6776680"
@@ -1379,7 +1379,7 @@
         "color": "#525252"
       },
       "tooltip": "#525252",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 5395027"
@@ -1391,7 +1391,7 @@
         "color": "#3E3E3E"
       },
       "tooltip": "#3E3E3E",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 4079167"
@@ -1403,7 +1403,7 @@
         "color": "#2B2B2B"
       },
       "tooltip": "#2B2B2B",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 2829100"
@@ -1415,7 +1415,7 @@
         "color": "#191919"
       },
       "tooltip": "#191919",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 1644826"
@@ -1427,7 +1427,7 @@
         "color": "#090909"
       },
       "tooltip": "#090909",
-      "width": 28,
+      "width": 30,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 592138"
@@ -1578,10 +1578,10 @@
     },
     {
       "label": {
-        "text": "Brush size:",
+        "text": "Brush size",
         "color": "gold"
       },
-      "width": 84,
+      "width": 100,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_adj set 0"
@@ -1589,11 +1589,11 @@
     },
     {
       "label": {
-        "text": "▪ pixel",
+        "text": "▪ pixel ▪",
         "color": "white"
       },
       "tooltip": "     +------+\n    /         /|\n   /        /  |\n  +-----+   +\n  |         |   /\n  |    █   |  /\n  |         | /\n  +-----+",
-      "width": 63,
+      "width": 80,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.brush_type set 0"
@@ -1601,11 +1601,11 @@
     },
     {
       "label": {
-        "text": "🞤 cross",
+        "text": "🞤 cross 🞤",
         "color": "white"
       },
       "tooltip": "     +------+\n    /         /|\n   /        /  |\n  +-----+   +\n  |    █   |   /\n  |  ███ |  /\n  |    █   | /\n  +-----+",
-      "width": 63,
+      "width": 80,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.brush_type set 1"
@@ -1613,11 +1613,11 @@
     },
     {
       "label": {
-        "text": "■ face",
+        "text": "■ face ■",
         "color": "white"
       },
       "tooltip": "     +------+\n    /         /|\n   /        /  |\n  +-----+   +\n  |████|   /\n  |████|  /\n  |████| /\n  +-----+",
-      "width": 63,
+      "width": 80,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.brush_type set 2"
@@ -1625,11 +1625,11 @@
     },
     {
       "label": {
-        "text": "❒ cube",
+        "text": "❒ cube ❒",
         "color": "white"
       },
       "tooltip": "     +▄▄▄▄+\n    ◢███❚◤◢▍\n   ◢███❚◤◢❚▍\n  +▄▄▄ +◢❚▍▍\n  |████ ❚❚◤\n  |████ ❚◤\n  |████ ◤\n  +-----+",
-      "width": 63,
+      "width": 80,
       "action": {
         "type": "run_command",
         "command": "trigger meccha.brush_type set 3"

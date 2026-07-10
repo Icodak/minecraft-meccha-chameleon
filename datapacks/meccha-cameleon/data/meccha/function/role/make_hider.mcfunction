@@ -4,8 +4,7 @@
 tag @s remove meccha_hunter
 tag @s add meccha_hider
 team join meccha_hiders @s
-function meccha:role/clear_items
-function meccha:give/hider_kit
+function meccha:game/enter_running_mode
 # Give the hider their own rig (bound + following). Replace any previous one.
 function meccha:rig/unbind
 function meccha:rig/spawn_for

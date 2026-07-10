@@ -13,4 +13,4 @@ data modify storage meccha:players color set value {}
 
 # Active brush colour (shared by the eyedropper, paintbrush and dialog picker).
 # Only initialised if missing, so a chosen colour survives /reload.
-execute unless data storage meccha:rt last_sample run data modify storage meccha:rt last_sample set value "#FFFFFFFF"
+execute unless data storage meccha:rt last_sample run data modify storage meccha:rt last_sample set value "#000000FF"

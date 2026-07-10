@@ -58,7 +58,7 @@ def _swatch(hexstr: str) -> dict:
     return {
         "label": {"text": "███", "color": hexstr},
         "tooltip": hexstr,
-        "width": 28,
+        "width": 30,
         "action": {
             "type": "run_command",
             "command": f"trigger meccha.pick_rgb set {val}",
@@ -140,14 +140,14 @@ def build(datapack: str, hues: int):
     for i in range(hues + 1):
         actions.append(_dummy())
 
-    actions.append(_dummy(width=84, text="Brush size:"))
+    actions.append(_dummy(width=100, text="Brush size"))
     
-    brushes = [("▪ pixel", 0, pixel_ascii()), ("🞤 cross", 1, cross_ascii()), ("■ face", 2, face_ascii()), ("❒ cube", 3, cube_ascii())]
+    brushes = [("▪ pixel ▪", 0, pixel_ascii()), ("🞤 cross 🞤", 1, cross_ascii()), ("■ face ■", 2, face_ascii()), ("❒ cube ❒", 3, cube_ascii())]
     for label, val, tooltip in brushes:
         actions.append({
             "label": {"text": label, "color": "white"},
             "tooltip": tooltip,
-            "width": 63,
+            "width": 80,
             "action": {
                 "type": "run_command",
                 "command": f"trigger meccha.brush_type set {val}"
@@ -161,7 +161,7 @@ def build(datapack: str, hues: int):
     dialog = {
         "type": "minecraft:multi_action",
         "title": {
-            "text": "Meccha Colour Picker",
+            "text": "Brush settings - Size & Color adjustments",
             "color": "white",
             "bold": True,
         },
@@ -199,7 +199,7 @@ def build(datapack: str, hues: int):
     # 2. Setup the Macro exit_action & output the inlined mcfunction
     dialog["exit_action"] = {
         "label": {
-            "text": "Color: ████████████",
+            "text": "█████████ [Current color] █████████",
             "color": "$(rgb)"
         },
         "width": 256,
