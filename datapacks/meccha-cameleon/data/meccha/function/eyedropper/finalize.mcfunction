@@ -1,5 +1,5 @@
 # meccha:eyedropper/finalize (executed AS the sampling player)
-# Store the sampled colour as THIS player's brush colour.
+# Store the sampled color as THIS player's brush color.
 data modify storage meccha:rt col.hex set from storage meccha:rt sample.color
 data modify storage meccha:rt col.rr set string storage meccha:rt col.hex 1 3
 data modify storage meccha:rt col.gg set string storage meccha:rt col.hex 3 5
@@ -23,7 +23,7 @@ execute store result storage meccha:rt rgb.b int 1 run scoreboard players get #B
 data modify storage meccha:rt last_sample set from storage meccha:rt sample.color
 data modify storage meccha:rt sample.rgb set string storage meccha:rt sample.color 0 7
 
-# Persist this player's chosen colour under the per-player storage map.
+# Persist this player's chosen color under the per-player storage map.
 data modify storage meccha:player color set from storage meccha:rt sample.rgb
 
 function meccha:lib/color/store_player_color with storage meccha:player

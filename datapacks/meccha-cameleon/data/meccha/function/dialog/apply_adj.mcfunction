@@ -1,11 +1,11 @@
 # meccha:dialog/apply_adj   (executed AS the clicking player)
 # A brightness/saturation button was tapped: meccha.pick_adj in 1..4.
-# Adjust the currently shown dialog colour, falling back to this player's
-# saved colour only when no preview state is present.
+# Adjust the currently shown dialog color, falling back to this player's
+# saved color only when no preview state is present.
 execute store result score #ADJ meccha.tmp run scoreboard players get @s meccha.pick_adj
 scoreboard players set @s meccha.pick_adj 0
 
-# Load the current preview colour into #RRv/#GGv/#BBv.
+# Load the current preview color into #RRv/#GGv/#BBv.
 execute if data storage meccha:rt rgb.r if data storage meccha:rt rgb.g if data storage meccha:rt rgb.b run execute store result score #RRv meccha.math run data get storage meccha:rt rgb.r
 execute if data storage meccha:rt rgb.r if data storage meccha:rt rgb.g if data storage meccha:rt rgb.b run execute store result score #GGv meccha.math run data get storage meccha:rt rgb.g
 execute if data storage meccha:rt rgb.r if data storage meccha:rt rgb.g if data storage meccha:rt rgb.b run execute store result score #BBv meccha.math run data get storage meccha:rt rgb.b
@@ -18,7 +18,7 @@ execute if score #ADJ meccha.tmp matches 4 run function meccha:dialog/adj_sat_do
 execute if score #ADJ meccha.tmp matches 5 run tag @s add paint_with_automatic_directional_shadow
 execute if score #ADJ meccha.tmp matches 6 run tag @s remove paint_with_automatic_directional_shadow
 
-# Store the adjusted channels back to this player's colour, then feedback.
+# Store the adjusted channels back to this player's color, then feedback.
 execute store result storage meccha:rt rgb.r int 1 run scoreboard players get #RRv meccha.math
 execute store result storage meccha:rt rgb.g int 1 run scoreboard players get #GGv meccha.math
 execute store result storage meccha:rt rgb.b int 1 run scoreboard players get #BBv meccha.math

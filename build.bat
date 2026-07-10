@@ -23,7 +23,7 @@ echo ==> Rig generator (Pillar 5)
 %PY% tools\build_rig.py --datapack ".\datapacks\meccha-cameleon" --scale 0.5
 if errorlevel 1 exit /b %errorlevel%
 
-echo ==> Colour-picker dialog
+echo ==> Color-picker dialog
 %PY% tools\build_dialog.py --datapack ".\datapacks\meccha-cameleon"
 if errorlevel 1 exit /b %errorlevel%
 

@@ -9,4 +9,4 @@ tellraw @s [{"text":"Paint  ","color":"aqua"},{"text":"dev/paint_pixel {rid,cubo
 tellraw @s [{"text":"Glow   ","color":"aqua"},{"text":"dev/glow_cuboid {rid,cuboid}   dev/unglow","color":"gray"}]
 tellraw @s [{"text":"Info   ","color":"aqua"},{"text":"dev/info   dev/info_cuboid {rid,cuboid}   dev/list_cuboids   rig/debug","color":"gray"}]
 tellraw @s [{"text":"Visual ","color":"aqua"},{"text":"dev/show_bvh   dev/show_axes   dev/hide_overlays   dev/show_overlays","color":"gray"}]
-tellraw @s [{"text":"Colour ","color":"aqua"},{"text":"dialog/open  (or pause-menu → Quick Actions: Colour Picker)","color":"gray"}]
+tellraw @s [{"text":"Color ","color":"aqua"},{"text":"dialog/open  (or pause-menu → Quick Actions: Color Picker)","color":"gray"}]

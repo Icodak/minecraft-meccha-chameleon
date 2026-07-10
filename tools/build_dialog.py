@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Meccha Chameleon - colour-picker Dialog generator.
+"""Meccha Chameleon - color-picker Dialog generator.
 
 Emits:
 1. data/meccha/dialog/color_picker.json (Raw JSON dialog)
@@ -165,7 +165,7 @@ def build(datapack: str, hues: int):
             "color": "white",
             "bold": True,
         },
-        "external_title": "Colour Picker",
+        "external_title": "Color Picker",
         "pause": False,
         "after_action": "none",
         "body": [
@@ -174,7 +174,7 @@ def build(datapack: str, hues: int):
                 "width": 640,
                 "contents": [
                     {"text": "Adjust on the left. ", "color": "yellow"},
-                    {"text": "Tap a swatch to set your colour.", "color": "white"},
+                    {"text": "Tap a swatch to set your color.", "color": "white"},
                 ],
             }
         ],

@@ -2,7 +2,7 @@
 
 Reads a PNG (RGBA) and flattens it into a row-major list of `#RRGGBBAA`
 strings. The alpha channel is ALWAYS preserved (Pillar 2.4): fully transparent
-pixels become "#00000000" and the in-game eyedropper treats any colour whose
+pixels become "#00000000" and the in-game eyedropper treats any color whose
 final two hex digits are "00" as a miss.
 
 Falls back gracefully if Pillow is unavailable so the rest of the pipeline can

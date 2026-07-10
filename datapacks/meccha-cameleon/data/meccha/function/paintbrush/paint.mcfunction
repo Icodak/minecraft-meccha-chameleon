@@ -1,7 +1,7 @@
 # meccha:paintbrush/paint   (executed AS the painting player)
-# Load this player's stored colour, then recolour the target(s)
+# Load this player's stored color, then recolor the target(s)
 # selected by the active brush — pixel, cross, face, or cube.
-# Per-player colour/brush state keeps painters independent in multiplayer.
+# Per-player color/brush state keeps painters independent in multiplayer.
 function meccha:lib/uuid/store_current_uuid_as_string with entity @s
 function meccha:lib/color/load_player_color with storage meccha:player
 

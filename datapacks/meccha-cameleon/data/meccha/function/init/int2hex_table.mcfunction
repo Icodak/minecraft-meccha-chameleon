@@ -1,6 +1,6 @@
 # meccha:init/int2hex_table
 # 0..255 -> two-char uppercase hex. Inverse of hex2int; used to rebuild
-# "#RRGGBB" strings from decoded dialog colour values.
+# "#RRGGBB" strings from decoded dialog color values.
 data modify storage meccha:consts int2hex set value {}
 data modify storage meccha:consts int2hex."0" set value "00"
 data modify storage meccha:consts int2hex."1" set value "01"

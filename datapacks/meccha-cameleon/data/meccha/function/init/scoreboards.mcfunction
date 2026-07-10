@@ -7,11 +7,11 @@ scoreboard objectives add meccha.tmp dummy
 # them here - our wrappers only read/write their fake-player scores at runtime.
 # Persistent system counters (game timer accumulation, etc).
 scoreboard objectives add meccha.sys dummy
-# Dialog colour-picker triggers (non-op safe; clicked buttons run /trigger).
+# Dialog color-picker triggers (non-op safe; clicked buttons run /trigger).
 scoreboard objectives add meccha.pick_rgb trigger
 scoreboard objectives add meccha.pick_adj trigger
-# Per-player active brush colour, packed as 0xRRGGBB (multiplayer-safe: each
-# player carries their own colour; set by the eyedropper and the dialog picker,
+# Per-player active brush color, packed as 0xRRGGBB (multiplayer-safe: each
+# player carries their own color; set by the eyedropper and the dialog picker,
 # read by the paintbrush).
 scoreboard objectives add meccha.color dummy
 # Per-player bound rig id (which rig this player owns; 0/unset = none).

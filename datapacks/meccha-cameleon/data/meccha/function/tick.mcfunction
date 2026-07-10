@@ -5,7 +5,7 @@
 function meccha:game/tick
 function meccha:dialog/tick
 
-# Ensure every player has a default brush colour (white) exactly once.
+# Ensure every player has a default brush color (white) exactly once.
 execute as @a unless score @s meccha.color matches 0.. run scoreboard players set @s meccha.color 16777215
 
 # Bound rigs follow their owner (per-rig).

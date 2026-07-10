@@ -1,8 +1,8 @@
 # meccha:paintbrush/cast
 # PILLAR 4.2 — purely-virtual raycast against the custom player rig. No
 # Bookshelf block step: we intersect the mathematical planes of every rig cuboid
-# directly, find the nearest face, localize to (face,u,v), and recolour that
-# pixel with the player's own colour (meccha.color).
+# directly, find the nearest face, localize to (face,u,v), and recolor that
+# pixel with the player's own color (meccha.color).
 # Executed: at <player> anchored eyes.
 function meccha:lib/raycast/capture_ray
 

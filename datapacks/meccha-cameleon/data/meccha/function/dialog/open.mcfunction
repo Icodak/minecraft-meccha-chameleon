@@ -1,12 +1,12 @@
 # meccha:dialog/open   (op helper)
-# Open the colour picker for the executing player. Non-ops can also open it from
+# Open the color picker for the executing player. Non-ops can also open it from
 # the pause menu / Quick Actions key (see the dialog tags). Enable the triggers
 # so the first click registers immediately.
 scoreboard players enable @s meccha.pick_rgb
 scoreboard players enable @s meccha.pick_adj
 
-# Keep the dialog preview and the player's active colour in sync so
-# brightness/saturation edits the same colour that is currently shown.
+# Keep the dialog preview and the player's active color in sync so
+# brightness/saturation edits the same color that is currently shown.
 execute if data storage meccha:rt sample.rgb run data modify storage meccha:rt col.rr set string storage meccha:rt sample.rgb 1 3
 execute if data storage meccha:rt sample.rgb run data modify storage meccha:rt col.gg set string storage meccha:rt sample.rgb 3 5
 execute if data storage meccha:rt sample.rgb run data modify storage meccha:rt col.bb set string storage meccha:rt sample.rgb 5 7

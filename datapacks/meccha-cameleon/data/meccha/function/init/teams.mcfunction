@@ -3,7 +3,7 @@
 team add meccha_rig
 team modify meccha_rig collisionRule never
 team modify meccha_rig nametagVisibility never
-# Player role teams (colour + friendly-fire control).
+# Player role teams (color + friendly-fire control).
 team add meccha_hunters
 team modify meccha_hunters color red
 team modify meccha_hunters prefix [{"text":"☠ ","color":"red"}]

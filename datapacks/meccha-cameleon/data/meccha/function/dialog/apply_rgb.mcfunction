@@ -4,7 +4,7 @@ execute store result score #P meccha.tmp run scoreboard players get @s meccha.pi
 scoreboard players set @s meccha.pick_rgb 0
 scoreboard players remove #P meccha.tmp 1
 
-# Per-player brush colour (packed 0xRRGGBB) - multiplayer-safe.
+# Per-player brush color (packed 0xRRGGBB) - multiplayer-safe.
 scoreboard players operation @s meccha.color = #P meccha.tmp
 
 # Decode for the hex/storage feedback.
@@ -26,7 +26,7 @@ execute store result storage meccha:rt rgb.b int 1 run scoreboard players get #B
 # Direct hex string reconstruction (or rely on build_hex to populate sample.rgb)
 function meccha:dialog/build_hex with storage meccha:rt rgb
 
-# Persist this player's chosen colour under the per-player storage map.
+# Persist this player's chosen color under the per-player storage map.
 data modify storage meccha:player color set from storage meccha:rt sample.rgb
 function meccha:lib/uuid/store_current_uuid_as_string with entity @s
 
