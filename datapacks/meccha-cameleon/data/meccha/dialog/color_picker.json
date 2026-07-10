@@ -14,18 +14,31 @@
       "width": 640,
       "contents": [
         {
-          "text": "Tap a swatch to set your colour. ",
-          "color": "black"
+          "text": "Adjust on the left. ",
+          "color": "yellow"
         },
         {
-          "text": "Adjust brightness/saturation below.",
+          "text": "Tap a swatch to set your colour.",
           "color": "white"
         }
       ]
     }
   ],
-  "columns": 12,
+  "columns": 13,
   "actions": [
+    {
+      "label": {
+        "text": "☀ Brighter",
+        "color": "#FFE08A",
+        "bold": true
+      },
+      "tooltip": "Increase brightness",
+      "width": 84,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 1"
+      }
+    },
     {
       "label": {
         "text": "███",
@@ -168,6 +181,19 @@
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16762624"
+      }
+    },
+    {
+      "label": {
+        "text": "☾ Darker",
+        "color": "#9AA0B5",
+        "bold": true
+      },
+      "tooltip": "Decrease brightness",
+      "width": 84,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 2"
       }
     },
     {
@@ -316,6 +342,17 @@
     },
     {
       "label": {
+        "text": "",
+        "color": "gold"
+      },
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
+      }
+    },
+    {
+      "label": {
         "text": "███",
         "color": "#9C4262"
       },
@@ -456,6 +493,19 @@
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 9193352"
+      }
+    },
+    {
+      "label": {
+        "text": "✦ Sat +",
+        "color": "#7ED0FF",
+        "bold": true
+      },
+      "tooltip": "Increase saturation",
+      "width": 84,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 3"
       }
     },
     {
@@ -604,6 +654,19 @@
     },
     {
       "label": {
+        "text": "✧ Sat −",
+        "color": "#B9B9B9",
+        "bold": true
+      },
+      "tooltip": "Decrease saturation",
+      "width": 84,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 4"
+      }
+    },
+    {
+      "label": {
         "text": "███",
         "color": "#FF0000"
       },
@@ -744,6 +807,17 @@
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 16711809"
+      }
+    },
+    {
+      "label": {
+        "text": "",
+        "color": "gold"
+      },
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
       }
     },
     {
@@ -892,6 +966,19 @@
     },
     {
       "label": {
+        "text": "Auto light on",
+        "color": "#9AEE6A",
+        "bold": true
+      },
+      "tooltip": "When painting, faces will have a directional shadow applied to them depending on their orientation akin to minecraft blocks\n       x---------x\n      ///////////.| \n     ///////////...| \n    x---------x.....| \n    |\\\\\\\\\\\\\\\\\\\\|......| \n    |\\\\\\\\\\\\\\\\\\\\|.....x\n    |\\\\\\\\\\\\\\\\\\\\|.../ \n    |\\\\\\\\\\\\\\\\\\\\|/  \n    x---------x ",
+      "width": 84,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 5"
+      }
+    },
+    {
+      "label": {
         "text": "███",
         "color": "#990000"
       },
@@ -1032,6 +1119,19 @@
       "action": {
         "type": "run_command",
         "command": "trigger meccha.pick_rgb set 10027085"
+      }
+    },
+    {
+      "label": {
+        "text": "Auto light off",
+        "color": "#F88253",
+        "bold": true
+      },
+      "tooltip": "When painting, faces will have the same flat color applied to them, no matter the orientation\n       x---------x\n      /\\\\\\\\\\\\\\\\\\\\| \n     / \\\\\\\\\\\\\\\\\\\\| \n    x.\\\\\\\\\\\\\\\\x\\\\| \n    |\\\\\\\\\\\\\\\\\\\\\\\\| \n    |\\\\\\\\\\\\\\\\\\\\\\\\x\n    |\\\\\\\\\\\\\\\\\\\\\\/ \n    |\\\\\\\\\\\\\\\\\\\\/  \n    x---------x ",
+      "width": 84,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 6"
       }
     },
     {
@@ -1180,6 +1280,17 @@
     },
     {
       "label": {
+        "text": "",
+        "color": "gold"
+      },
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
+      }
+    },
+    {
+      "label": {
         "text": "███",
         "color": "#F2F2F2"
       },
@@ -1324,61 +1435,164 @@
     },
     {
       "label": {
-        "text": "☀ Brighter",
-        "color": "#FFE08A",
-        "bold": true
+        "text": "",
+        "color": "gold"
       },
-      "tooltip": "Increase brightness",
-      "width": 84,
+      "width": 1,
       "action": {
         "type": "run_command",
-        "command": "trigger meccha.pick_adj set 1"
+        "command": "trigger meccha.pick_adj set 0"
       }
     },
     {
       "label": {
-        "text": "☾ Darker",
-        "color": "#9AA0B5",
-        "bold": true
+        "text": "",
+        "color": "gold"
       },
-      "tooltip": "Decrease brightness",
-      "width": 84,
+      "width": 1,
       "action": {
         "type": "run_command",
-        "command": "trigger meccha.pick_adj set 2"
+        "command": "trigger meccha.pick_adj set 0"
       }
     },
     {
       "label": {
-        "text": "✦ Saturate +",
-        "color": "#7ED0FF",
-        "bold": true
+        "text": "",
+        "color": "gold"
       },
-      "tooltip": "Increase saturation",
-      "width": 84,
+      "width": 1,
       "action": {
         "type": "run_command",
-        "command": "trigger meccha.pick_adj set 3"
+        "command": "trigger meccha.pick_adj set 0"
       }
     },
     {
       "label": {
-        "text": "✧ Saturate −",
-        "color": "#B9B9B9",
-        "bold": true
+        "text": "",
+        "color": "gold"
       },
-      "tooltip": "Decrease saturation",
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
+      }
+    },
+    {
+      "label": {
+        "text": "",
+        "color": "gold"
+      },
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
+      }
+    },
+    {
+      "label": {
+        "text": "",
+        "color": "gold"
+      },
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
+      }
+    },
+    {
+      "label": {
+        "text": "",
+        "color": "gold"
+      },
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
+      }
+    },
+    {
+      "label": {
+        "text": "",
+        "color": "gold"
+      },
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
+      }
+    },
+    {
+      "label": {
+        "text": "",
+        "color": "gold"
+      },
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
+      }
+    },
+    {
+      "label": {
+        "text": "",
+        "color": "gold"
+      },
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
+      }
+    },
+    {
+      "label": {
+        "text": "",
+        "color": "gold"
+      },
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
+      }
+    },
+    {
+      "label": {
+        "text": "",
+        "color": "gold"
+      },
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
+      }
+    },
+    {
+      "label": {
+        "text": "",
+        "color": "gold"
+      },
+      "width": 1,
+      "action": {
+        "type": "run_command",
+        "command": "trigger meccha.pick_adj set 0"
+      }
+    },
+    {
+      "label": {
+        "text": "Brush size:",
+        "color": "gold"
+      },
       "width": 84,
       "action": {
         "type": "run_command",
-        "command": "trigger meccha.pick_adj set 4"
+        "command": "trigger meccha.pick_adj set 0"
       }
     },
     {
       "label": {
         "text": "▪ pixel",
-        "color": "gray"
+        "color": "white"
       },
+      "tooltip": "     +------+\n    /         /|\n   /        /  |\n  +-----+   +\n  |         |   /\n  |    █   |  /\n  |         | /\n  +-----+",
       "width": 63,
       "action": {
         "type": "run_command",
@@ -1388,8 +1602,9 @@
     {
       "label": {
         "text": "🞤 cross",
-        "color": "gray"
+        "color": "white"
       },
+      "tooltip": "     +------+\n    /         /|\n   /        /  |\n  +-----+   +\n  |    █   |   /\n  |  ███ |  /\n  |    █   | /\n  +-----+",
       "width": 63,
       "action": {
         "type": "run_command",
@@ -1399,8 +1614,9 @@
     {
       "label": {
         "text": "■ face",
-        "color": "gray"
+        "color": "white"
       },
+      "tooltip": "     +------+\n    /         /|\n   /        /  |\n  +-----+   +\n  |████|   /\n  |████|  /\n  |████| /\n  +-----+",
       "width": 63,
       "action": {
         "type": "run_command",
@@ -1410,8 +1626,9 @@
     {
       "label": {
         "text": "❒ cube",
-        "color": "gray"
+        "color": "white"
       },
+      "tooltip": "     +▄▄▄▄+\n    ◢███❚◤◢▍\n   ◢███❚◤◢❚▍\n  +▄▄▄ +◢❚▍▍\n  |████ ❚❚◤\n  |████ ❚◤\n  |████ ◤\n  +-----+",
       "width": 63,
       "action": {
         "type": "run_command",

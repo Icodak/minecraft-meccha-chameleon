@@ -19,7 +19,7 @@ OKLAB_ROWS = 4
 SRGB_ROWS = 4
 
 # Adjust action codes
-ADJ_BRIGHTER, ADJ_DARKER, ADJ_SAT_UP, ADJ_SAT_DOWN = 1, 2, 3, 4
+ADJ_BRIGHTER, ADJ_DARKER, ADJ_SAT_UP, ADJ_SAT_DOWN, ENABLE_DIR_LIGHTING, DISABLE_DIR_LIGHTING = 1, 2, 3, 4, 5, 6
 
 def oklch_to_srgb_hex(L: float, C: float, H_deg: float) -> str:
     a = C * math.cos(math.radians(H_deg))
@@ -70,7 +70,7 @@ def _adjust(label: str, color: str, code: int, tip: str) -> dict:
     return {
         "label": {"text": label, "color": color, "bold": True},
         "tooltip": tip,
-        "width": 96,
+        "width": 84,
         "action": {
             "type": "run_command",
             "command": f"trigger meccha.pick_adj set {code}",
@@ -78,42 +78,75 @@ def _adjust(label: str, color: str, code: int, tip: str) -> dict:
     }
 
 
+def _dummy(width: int = 1, text: str = "") -> dict:
+    return {
+        "label": {"text": text, "color": "gold"},
+        "width": width,
+        "action": {
+            "type": "run_command",
+            "command": "trigger meccha.pick_adj set 0",
+        },
+    }
+
+
 def build(datapack: str, hues: int):
     actions = []
-    # 1. OKLCH palette
+
+    # Map adjustments to rows dynamically
+    # OKLCH Rows: 0, 1, 2, 3 -> Brightness updates on rows 0 and 1
+    # sRGB Rows:  4, 5, 6, 7 -> Saturation updates moved to rows 6 and 7 (bottom rows)
+    adjustments = {
+        0: _adjust("☀ Brighter", "#FFE08A", ADJ_BRIGHTER, "Increase brightness"),
+        1: _adjust("☾ Darker", "#9AA0B5", ADJ_DARKER, "Decrease brightness"),
+        3: _adjust("✦ Sat +", "#7ED0FF", ADJ_SAT_UP, "Increase saturation"),
+        4: _adjust("✧ Sat −", "#B9B9B9", ADJ_SAT_DOWN, "Decrease saturation"),
+        6: _adjust("Auto light on", "#9AEE6A", ENABLE_DIR_LIGHTING, f"When painting, faces will have a directional shadow applied to them depending on their orientation akin to minecraft blocks\n{shaded_cube_ascii()}"),
+        7: _adjust("Auto light off", "#F88253", DISABLE_DIR_LIGHTING, f"When painting, faces will have the same flat color applied to them, no matter the orientation\n{flat_cube_ascii()}"),
+    }
+
+    current_row = 0
+
+    # 1. OKLCH palette rows
     chroma = 0.125
     for ri in range(OKLAB_ROWS):
+        actions.append(adjustments.get(current_row, _dummy()))
+        
         L = 0.92 - (ri / (OKLAB_ROWS - 1)) * 0.62
         for ci in range(hues):
             H = (360.0 / hues) * ci
             actions.append(_swatch(oklch_to_srgb_hex(L, chroma, H)))
+        current_row += 1
 
-    # 2. sRGB palette
+    # 2. sRGB palette rows
     values = [1.00, 0.80, 0.60, 0.40]
     for value in values:
+        actions.append(adjustments.get(current_row, _dummy()))
+
         for ci in range(hues):
             hue = ci / hues
             r, g, b = colorsys.hsv_to_rgb(hue, 1.0, value)
             actions.append(_swatch("#{0:02X}{1:02X}{2:02X}".format(round(r * 255), round(g * 255), round(b * 255))))
+        current_row += 1
 
-    # 3. Grayscale
+    # 3. Grayscale row
+    actions.append(adjustments.get(current_row, _dummy()))
     for ci in range(hues):
         L = 0.96 - (ci / max(1, hues - 1)) * 0.82
         actions.append(_swatch(oklch_to_srgb_hex(L, 0.0, 0.0)))
+    current_row += 1
 
-    actions.append(_adjust("☀ Brighter", "#FFE08A", ADJ_BRIGHTER, "Increase brightness"))
-    actions.append(_adjust("☾ Darker", "#9AA0B5", ADJ_DARKER, "Decrease brightness"))
-    actions.append(_adjust("✦ Saturate +", "#7ED0FF", ADJ_SAT_UP, "Increase saturation"))
-    actions.append(_adjust("✧ Saturate −", "#B9B9B9", ADJ_SAT_DOWN, "Decrease saturation"))
+    # 4. Final Row: Brush utilities
+    # Left adjustment spot is replaced by a non-functional label button of width 84
+    for i in range(hues + 1):
+        actions.append(_dummy())
+
+    actions.append(_dummy(width=84, text="Brush size:"))
     
-
-    for act in actions[-4:]:
-        act["width"] = 84
-
-    brushes = [("▪ pixel", 0), ("🞤 cross", 1), ("■ face", 2), ("❒ cube", 3)]
-    for label, val in brushes:
+    brushes = [("▪ pixel", 0, pixel_ascii()), ("🞤 cross", 1, cross_ascii()), ("■ face", 2, face_ascii()), ("❒ cube", 3, cube_ascii())]
+    for label, val, tooltip in brushes:
         actions.append({
-            "label": {"text": label, "color": "gray"},
+            "label": {"text": label, "color": "white"},
+            "tooltip": tooltip,
             "width": 63,
             "action": {
                 "type": "run_command",
@@ -140,12 +173,12 @@ def build(datapack: str, hues: int):
                 "type": "minecraft:plain_message",
                 "width": 640,
                 "contents": [
-                    {"text": "Tap a swatch to set your colour. ", "color": "black"},
-                    {"text": "Adjust brightness/saturation below.", "color": "white"},
+                    {"text": "Adjust on the left. ", "color": "yellow"},
+                    {"text": "Tap a swatch to set your colour.", "color": "white"},
                 ],
             }
         ],
-        "columns": hues,
+        "columns": hues + 1,
         "actions": actions,
         "exit_action": {
             "label": {"text": "Done", "color": "green"},
@@ -177,16 +210,34 @@ def build(datapack: str, hues: int):
     }
     
     macro_path = os.path.join(datapack, "data/meccha/function/dialog/open_macro.mcfunction")
-    # Dumping to compact string for the inline macro command
     dialog_str = json.dumps(dialog, ensure_ascii=False, separators=(',', ':'))
     
     with open(macro_path, "w", encoding="utf-8") as fh:
         fh.write(f"$dialog show @s {dialog_str}\n")
 
-    total_rows = OKLAB_ROWS + SRGB_ROWS + 1
-    print(f"[meccha-dialog] Built {len(actions)} buttons ({hues}x{total_rows} palette + tools)")
+    total_rows = OKLAB_ROWS + SRGB_ROWS + 2  # Included the brush row in count
+    print(f"[meccha-dialog] Built {len(actions)} buttons ({hues + 1}x{total_rows} matrix layout)")
     print(f" -> {json_path}")
     print(f" -> {macro_path}")
+
+def pixel_ascii() -> str:
+    return " \u0020 \u0020 +------+\n \u0020 \u0020/ \u0020 \u0020 \u0020 \u0020 /|\n \u0020 / \u0020 \u0020 \u0020 \u0020/ \u0020|\n \u0020+-----+ \u0020 +\n \u0020| \u0020 \u0020 \u0020 \u0020 | \u0020 /\n \u0020| \u0020 \u0020\u2588 \u0020 | \u0020/\n \u0020| \u0020 \u0020 \u0020 \u0020 | /\n \u0020+-----+"
+
+def cross_ascii() -> str:
+    return " \u0020 \u0020 +------+\n \u0020 \u0020/ \u0020 \u0020 \u0020 \u0020 /|\n \u0020 / \u0020 \u0020 \u0020 \u0020/ \u0020|\n \u0020+-----+ \u0020 +\n \u0020| \u0020 \u0020\u2588 \u0020 | \u0020 /\n \u0020| \u0020\u2588\u2588\u2588 | \u0020/\n \u0020| \u0020 \u0020\u2588 \u0020 | /\n \u0020+-----+"
+
+def face_ascii() -> str:
+    return " \u0020 \u0020 +------+\n \u0020 \u0020/ \u0020 \u0020 \u0020 \u0020 /|\n \u0020 / \u0020 \u0020 \u0020 \u0020/ \u0020|\n \u0020+-----+ \u0020 +\n \u0020|\u2588\u2588\u2588\u2588| \u0020 /\n \u0020|\u2588\u2588\u2588\u2588| \u0020/\n \u0020|\u2588\u2588\u2588\u2588| /\n \u0020+-----+"
+
+def cube_ascii() -> str:
+    return " \u0020 \u0020 +\u2584\u2584\u2584\u2584+\n \u0020 \u0020\u25e2\u2588\u2588\u2588\u275a\u25e4\u25e2\u258d\n \u0020 \u25e2\u2588\u2588\u2588\u275a\u25e4\u25e2\u275a\u258d\n \u0020+\u2584\u2584\u2584 +\u25e2\u275a\u258d\u258d\n \u0020|\u2588\u2588\u2588\u2588 \u275a\u275a\u25e4\n \u0020|\u2588\u2588\u2588\u2588 \u275a\u25e4\n \u0020|\u2588\u2588\u2588\u2588 \u25e4\n \u0020+-----+"
+
+def shaded_cube_ascii() -> str:
+    return " \u0020 \u0020 \u0020 x---------x\n \u0020 \u0020 \u0020///////////.| \n \u0020 \u0020 ///////////...| \n \u0020 \u0020x---------x.....| \n \u0020 \u0020|\\\\\\\\\\\\\\\\\\\\|......| \n \u0020 \u0020|\\\\\\\\\\\\\\\\\\\\|.....x\n \u0020 \u0020|\\\\\\\\\\\\\\\\\\\\|.../ \n \u0020 \u0020|\\\\\\\\\\\\\\\\\\\\|/ \u0020\n \u0020 \u0020x---------x "
+
+def flat_cube_ascii() -> str:
+    return " \u0020 \u0020 \u0020 x---------x\n \u0020 \u0020 \u0020/\\\\\\\\\\\\\\\\\\\\| \n \u0020 \u0020 / \\\\\\\\\\\\\\\\\\\\| \n \u0020 \u0020x.\\\\\\\\\\\\\\\\x\\\\| \n \u0020 \u0020|\\\\\\\\\\\\\\\\\\\\\\\\| \n \u0020 \u0020|\\\\\\\\\\\\\\\\\\\\\\\\x\n \u0020 \u0020|\\\\\\\\\\\\\\\\\\\\\\/ \n \u0020 \u0020|\\\\\\\\\\\\\\\\\\\\/ \u0020\n \u0020 \u0020x---------x "
+
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()

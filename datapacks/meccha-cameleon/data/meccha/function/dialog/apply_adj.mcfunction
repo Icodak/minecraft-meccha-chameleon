@@ -15,6 +15,8 @@ execute if score #ADJ meccha.tmp matches 1 run function meccha:dialog/adj_bright
 execute if score #ADJ meccha.tmp matches 2 run function meccha:dialog/adj_darker
 execute if score #ADJ meccha.tmp matches 3 run function meccha:dialog/adj_sat_up
 execute if score #ADJ meccha.tmp matches 4 run function meccha:dialog/adj_sat_down
+execute if score #ADJ meccha.tmp matches 5 run tag @s add paint_with_automatic_directional_shadow
+execute if score #ADJ meccha.tmp matches 6 run tag @s remove paint_with_automatic_directional_shadow
 
 # Store the adjusted channels back to this player's colour, then feedback.
 execute store result storage meccha:rt rgb.r int 1 run scoreboard players get #RRv meccha.math
