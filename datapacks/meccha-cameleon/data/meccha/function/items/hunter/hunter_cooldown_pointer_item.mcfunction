@@ -1,0 +1,1 @@
+item replace entity @s hotbar.0 with minecraft:breeze_rod[minecraft:item_name={"text":"Hunter Pointer - Cooldown","color":"#a7a180"},minecraft:max_stack_size=1] 1
