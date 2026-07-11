@@ -1,4 +1,4 @@
-# meccha:dialog/sat_apply
+# meccha:color_picker/sat_apply
 # c' = luma + (c - luma) * F/100, with luma = 0.299R + 0.587G + 0.114B.
 # IN: #RRv/#GGv/#BBv (0..255, meccha.math), #F (percent, meccha.tmp).
 scoreboard players set #W_R meccha.tmp 299
@@ -30,4 +30,4 @@ scoreboard players operation #BBv meccha.math -= #LUMA meccha.math
 scoreboard players operation #BBv meccha.math *= #F meccha.tmp
 scoreboard players operation #BBv meccha.math /= #C100 meccha.tmp
 scoreboard players operation #BBv meccha.math += #LUMA meccha.math
-function meccha:dialog/clamp_rgb
+function meccha:color_picker/clamp_rgb

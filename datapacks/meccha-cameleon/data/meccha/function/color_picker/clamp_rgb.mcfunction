@@ -1,4 +1,4 @@
-# meccha:dialog/clamp_rgb
+# meccha:color_picker/clamp_rgb
 # Clamp #RRv/#GGv/#BBv into 0..255 (meccha.math).
 execute if score #RRv meccha.math matches ..-1 run scoreboard players set #RRv meccha.math 0
 execute if score #RRv meccha.math matches 256.. run scoreboard players set #RRv meccha.math 255

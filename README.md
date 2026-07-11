@@ -139,7 +139,7 @@ the in-world eyedropper. Built on the 1.21.6+ **Dialog** system
 * **Below the grid**: `☀ Brighter` / `☾ Darker` / `◈ Saturate +` / `◇ Saturate -`
   adjust the currently-selected color.
 * Every button runs a **non-op-safe** `/trigger` (swatches -> `meccha.pick_rgb`
-  = packed `0xRRGGBB+1`; adjust -> `meccha.pick_adj` = 1..4). `meccha:dialog/tick`
+  = packed `0xRRGGBB+1`; adjust -> `meccha.pick_adj` = 1..4). `meccha:color_picker/tick`
   decodes the packed value to `#RRGGBB` (via the `int2hex` table) and sets the
   same `last_sample` the Paintbrush uses. Brightness/saturation are applied in
   RGB space (luma-relative) in `dialog/apply_adj`.
@@ -150,7 +150,7 @@ the in-world eyedropper. Built on the 1.21.6+ **Dialog** system
 | How | Detail |
 |---|---|
 | Pause menu / **Quick Actions** key | Registered via the `#minecraft:pause_screen_additions` and `#minecraft:quick_actions` dialog tags - no operator needed. |
-| `/function meccha:dialog/open` | Operator helper (runs `/dialog show @s meccha:color_picker`). |
+| `/function meccha:color_picker/open` | Operator helper (runs `/dialog show @s meccha:color_picker`). |
 
 Regenerate with a different layout: `python tools/build_dialog.py --datapack . --hues 12 --rows 8`.
 

@@ -85,7 +85,7 @@ scoreboard players operation #BBv meccha.math /= #SCALE meccha.math
 execute store result storage meccha:rt rgb.r int 1 run scoreboard players get #RRv meccha.math
 execute store result storage meccha:rt rgb.g int 1 run scoreboard players get #GGv meccha.math
 execute store result storage meccha:rt rgb.b int 1 run scoreboard players get #BBv meccha.math
-function meccha:dialog/build_hex with storage meccha:rt rgb
+function meccha:color_picker/build_hex with storage meccha:rt rgb
 
 # 9. Safely apply the constructed hex color to the entity
 

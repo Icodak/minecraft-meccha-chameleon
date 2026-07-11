@@ -1,4 +1,4 @@
-# meccha:dialog/apply_rgb (executed AS the clicking player)
+# meccha:color_picker/apply_rgb (executed AS the clicking player)
 # A swatch was tapped: meccha.pick_rgb = packed 0xRRGGBB + 1.
 execute store result score #P meccha.tmp run scoreboard players get @s meccha.pick_rgb
 scoreboard players set @s meccha.pick_rgb 0
@@ -24,7 +24,7 @@ execute store result storage meccha:rt rgb.g int 1 run scoreboard players get #G
 execute store result storage meccha:rt rgb.b int 1 run scoreboard players get #B meccha.tmp
 
 # Direct hex string reconstruction (or rely on build_hex to populate sample.rgb)
-function meccha:dialog/build_hex with storage meccha:rt rgb
+function meccha:color_picker/build_hex with storage meccha:rt rgb
 
 # Persist this player's chosen color under the per-player storage map.
 data modify storage meccha:player color set from storage meccha:rt sample.rgb
@@ -32,4 +32,4 @@ function meccha:lib/uuid/store_current_uuid_as_string with entity @s
 
 function meccha:lib/color/store_player_color with storage meccha:player
 
-function meccha:dialog/open_macro with storage meccha:rt sample
+function meccha:color_picker/open_macro with storage meccha:rt sample

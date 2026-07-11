@@ -1,4 +1,4 @@
-# meccha:dialog/assemble_hex   (macro: $(rh) $(gh) $(bh) two-char hex bytes)
+# meccha:color_picker/assemble_hex   (macro: $(rh) $(gh) $(bh) two-char hex bytes)
 # Commit the chosen color as the active brush color (opaque) + feedback.
 $data modify storage meccha:rt sample.rgb set value "#$(rh)$(gh)$(bh)"
 $title @s actionbar [{"text":"■ ","color":"#$(rh)$(gh)$(bh)"},{"text":"Color #$(rh)$(gh)$(bh)","color":"white"}]

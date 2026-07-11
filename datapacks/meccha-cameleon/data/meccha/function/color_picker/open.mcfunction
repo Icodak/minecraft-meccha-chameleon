@@ -1,4 +1,4 @@
-# meccha:dialog/open   (op helper)
+# meccha:color_picker/open   (op helper)
 # Open the color picker for the executing player. Non-ops can also open it from
 # the pause menu / Quick Actions key (see the dialog tags). Enable the triggers
 # so the first click registers immediately.
@@ -17,4 +17,4 @@ execute if data storage meccha:rt sample.rgb run execute store result storage me
 execute if data storage meccha:rt sample.rgb run execute store result storage meccha:rt rgb.g int 1 run scoreboard players get #GGv meccha.math
 execute if data storage meccha:rt sample.rgb run execute store result storage meccha:rt rgb.b int 1 run scoreboard players get #BBv meccha.math
 
-function meccha:dialog/open_macro with storage meccha:rt sample
+function meccha:color_picker/open_macro with storage meccha:rt sample
