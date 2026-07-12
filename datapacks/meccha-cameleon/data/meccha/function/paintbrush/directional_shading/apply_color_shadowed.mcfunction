@@ -89,4 +89,4 @@ function meccha:color_picker/build_hex with storage meccha:rt rgb
 
 # 9. Safely apply the constructed hex color to the entity
 
-data modify entity @s text.color set from storage meccha:rt sample.rgb
+data modify entity @s text.color set from storage meccha:rt assembled.rgb

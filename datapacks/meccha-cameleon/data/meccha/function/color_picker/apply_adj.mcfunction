@@ -24,7 +24,8 @@ execute store result storage meccha:rt rgb.g int 1 run scoreboard players get #G
 execute store result storage meccha:rt rgb.b int 1 run scoreboard players get #BBv meccha.math
 function meccha:color_picker/build_hex with storage meccha:rt rgb
 
-data modify storage meccha:player color set from storage meccha:rt sample.rgb
+data modify storage meccha:player color set from storage meccha:rt assembled.rgb
+data modify storage meccha:rt sample merge from storage meccha:rt assembled
 function meccha:lib/uuid/store_current_uuid_as_string with entity @s
 
 function meccha:lib/color/store_player_color with storage meccha:player

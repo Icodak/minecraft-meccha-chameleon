@@ -24,7 +24,7 @@ function meccha:game/blind_hunters with storage meccha:settings
 # make hunter runs when the round truly starts to avoid early kills
 execute as @a[tag=meccha_hider] run function meccha:role/make_hider
 
-title @s times 0 2s 1s
+title @a times 0 2s 1s
 title @a title [{"text":"Hide!","color":"green","bold":true}]
 title @a[tag=meccha_hunter] title [{"text":"Blinded","color":"dark_red","bold":true}]
 playsound minecraft:block.note_block.pling master @a ~ ~ ~ 1 1.5
