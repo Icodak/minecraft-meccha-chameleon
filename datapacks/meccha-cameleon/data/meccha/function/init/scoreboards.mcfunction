@@ -33,3 +33,5 @@ scoreboard objectives add meccha.hider_state dummy
 scoreboard objectives add meccha.dropped_item dummy
 
 scoreboard objectives add meccha.toggle_leave_spec_mode trigger
+
+scoreboard objectives add meccha.save_location trigger
