@@ -1,1 +1,1 @@
-$data modify storage meccha:start_screen locations_list_to_concat append value ',{"label":{"text":"$(name)","bold":$(is_selected),"italic":$(is_selected),"color":$(color)}, "action":{"type": "minecraft:run_command", "command": "trigger meccha.select_map set $(trigger_index)"}}'
+$data modify storage meccha:start_screen locations_list_to_concat append value ',{"label":{"text":"$(name)","bold":$(is_selected)b,"italic":$(is_selected)b,"color":"$(color)"}, "action":{"type": "minecraft:run_command", "command": "trigger meccha.select_map set $(trigger_index)"}}'

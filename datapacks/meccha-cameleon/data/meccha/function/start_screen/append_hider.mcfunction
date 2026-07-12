@@ -1,1 +1,1 @@
-$data modify storage meccha:start_screen hiders_list_to_concat append value ',{"player":{"id":[$(u0),$(u1),$(u2),$(u3)]}}'
+$data modify storage meccha:start_screen hiders_list_to_concat append value ',{"player":{"id":[$(u0),$(u1),$(u2),$(u3)]}}," "'

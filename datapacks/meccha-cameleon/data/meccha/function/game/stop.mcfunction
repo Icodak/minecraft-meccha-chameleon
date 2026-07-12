@@ -4,8 +4,11 @@
 #  role/clear_all to fully tear down.)
 data modify storage meccha:game phase set value "over"
 data modify storage meccha:game timer set value 0
-effect clear @a[tag=meccha_hunter] minecraft:blindness
-effect clear @a[tag=meccha_hunter] minecraft:darkness
-effect clear @a[tag=meccha_hunter] minecraft:slowness
-effect clear @a[tag=meccha_hunter] minecraft:jump_boost
+effect clear @a
+clear @a
 title @a actionbar [{"text":"Round over","color":"gray"}]
+
+function meccha:items/cancel_scheduled
+function meccha:highlight_rig/stop_highlight_blink
+
+function meccha:game/suggest_start_new_game

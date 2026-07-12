@@ -28,8 +28,8 @@ execute unless entity @a[tag=meccha_hunter] run data modify storage meccha:start
 execute unless entity @a[tag=meccha_hider] run data modify storage meccha:start_screen start_label set value "Add one hider to start the game"
 execute unless data storage meccha:save_locations saved[0] run data modify storage meccha:start_screen start_label set value "Please save one location to play"
 
-execute if entity @a[tag=meccha_hunter] if entity @a[tag=meccha_hider] if data storage meccha:save_locations saved[0] run data modify storage meccha:start_screen start_color set value "green"
-execute if entity @a[tag=meccha_hunter] if entity @a[tag=meccha_hider] if data storage meccha:save_locations saved[0] run data modify storage meccha:start_screen start_color set value "Start round"
+execute if entity @a[tag=meccha_hunter] if entity @a[tag=meccha_hider] if data storage meccha:save_locations saved[0] run data modify storage meccha:start_screen start_color set value "white"
+execute if entity @a[tag=meccha_hunter] if entity @a[tag=meccha_hider] if data storage meccha:save_locations saved[0] run data modify storage meccha:start_screen start_label set value "Start round"
 execute if entity @a[tag=meccha_hunter] if entity @a[tag=meccha_hider] if data storage meccha:save_locations saved[0] run data modify storage meccha:start_screen can_start set value 1b
 
 # build the screen

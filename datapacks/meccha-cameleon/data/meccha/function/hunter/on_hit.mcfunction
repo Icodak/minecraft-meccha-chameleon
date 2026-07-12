@@ -3,5 +3,3 @@
 function meccha:hunter/on_hit_msg with storage meccha:rt hunter
 playsound minecraft:entity.firework_rocket.blast master @s ~ ~ ~ 1 0.8
 function meccha:hunter/kill_hider with storage meccha:rt hunter
-
-execute unless entity @a[tag=meccha_hider] run function meccha:game/hunters_win
