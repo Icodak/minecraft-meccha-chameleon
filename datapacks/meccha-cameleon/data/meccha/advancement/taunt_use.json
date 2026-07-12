@@ -1,0 +1,14 @@
+{
+  "criteria": {
+    "toggle_shadow": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "player": {},
+        "recipe": "meccha:taunt"
+      }
+    }
+  },
+  "rewards": {
+    "function": "meccha:trigger/taunt"
+  }
+}

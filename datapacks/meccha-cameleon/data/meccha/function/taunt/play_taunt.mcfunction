@@ -1,0 +1,1 @@
+$execute at @e[type=marker,tag=meccha_rig_root,tag=r$(rid)] run playsound minecraft:entity.villager.celebrate master @a ~ ~ ~ 10

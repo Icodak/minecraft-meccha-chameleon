@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "show_notification": false,
+  "ingredients": [
+    "#minecraft:eggs"
+  ],
+  "result": "minecraft:jukebox"
+}

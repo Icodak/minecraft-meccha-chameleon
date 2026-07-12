@@ -1,0 +1,2 @@
+item replace entity @a[tag=needs_taunt_item] hotbar.3 with minecraft:knowledge_book[minecraft:recipes=["meccha:taunt"],minecraft:item_name=[{"text":"Taunt ","color":"#44ffa2"},{"text":"[Right click: play sound]","color":"#8b8b8b", italic: true}],minecraft:max_stack_size=1,item_model=goat_horn] 1
+tag @a[tag=needs_taunt_item] remove needs_taunt_item
