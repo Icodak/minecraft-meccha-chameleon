@@ -5,6 +5,7 @@
 execute unless entity @a[tag=meccha_hunter,limit=1] run return run tellraw @s [{"text":"[Meccha] ","color":"red"},{"text":"No hunter assigned.","color":"gray"}]
 execute unless entity @a[tag=meccha_hider,limit=1] run return run tellraw @s [{"text":"[Meccha] ","color":"red"},{"text":"No hider assigned.","color":"gray"}]
 
+dialog clear @a
 data modify storage meccha:game phase set value "hiding"
 # timer (ticks) = hide_seconds * 20
 execute store result score #HS meccha.sys run data get storage meccha:settings hide_seconds 1

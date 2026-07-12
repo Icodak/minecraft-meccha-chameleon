@@ -1,3 +1,5 @@
+$execute if data storage meccha:consts {string:{empty:"$(name)"}} run return run tellraw @s {text:"The location name must not be empty",color:"red"}
+
 data modify storage meccha:save_locations saving set value {}
 $data modify storage meccha:save_locations saving.name set value "$(name)"
 summon marker ~ ~ ~ {Tags:[saving_location]}
@@ -8,3 +10,5 @@ data modify storage meccha:save_locations saving.z set from entity @e[type=marke
 kill @e[type=marker,limit=1,tag=saving_location]
 
 data modify storage meccha:save_locations saved append from storage meccha:save_locations saving
+
+$tellraw @s {text:"New location $(name) added",color:"green"}

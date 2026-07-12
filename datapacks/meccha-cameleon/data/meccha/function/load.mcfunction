@@ -10,6 +10,7 @@
 function meccha:init/scoreboards
 function meccha:init/constants
 function meccha:init/hex_table
+function meccha:init/empty_string
 function meccha:init/int2hex_table
 function meccha:init/trig_table
 function meccha:init/storage_scaffold

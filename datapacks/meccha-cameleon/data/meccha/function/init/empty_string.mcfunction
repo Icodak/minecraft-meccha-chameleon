@@ -1,0 +1,1 @@
+data modify storage meccha:consts string.empty set value ""

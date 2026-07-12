@@ -8,7 +8,7 @@ scoreboard players set #ZERO meccha.math 0
 scoreboard players set #FALSE meccha.math 0
 scoreboard players set #TRUE meccha.math 1
 scoreboard players set #NEGATIVE_ONE meccha.math -1
-scoreboard players set #ONE meccha.math 1000
+scoreboard players set #ONE meccha.math 1
 # Vanilla directional shading multipliers * 1000 (Pillar 6).
 scoreboard players set #SHADE_TOP meccha.math 1000
 scoreboard players set #SHADE_NS meccha.math 800

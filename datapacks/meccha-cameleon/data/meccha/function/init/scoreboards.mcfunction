@@ -34,4 +34,9 @@ scoreboard objectives add meccha.dropped_item dummy
 
 scoreboard objectives add meccha.toggle_leave_spec_mode trigger
 
-scoreboard objectives add meccha.save_location trigger
+scoreboard objectives add meccha.select_team trigger
+scoreboard objectives add meccha.select_map trigger
+scoreboard objectives add meccha.select_start trigger
+
+scoreboard objectives add meccha.start_screen.location_trigger_value dummy
+scoreboard objectives add meccha.selected_location_index dummy
