@@ -12,8 +12,10 @@ scoreboard players set #C20 meccha.sys 20
 scoreboard players operation #RS meccha.sys *= #C20 meccha.sys
 execute store result storage meccha:game timer int 1 run scoreboard players get #RS meccha.sys
 
-title @a times 5 30 10
+title @a times 5t 30t 10t
 title @a title [{"text":"The hunt begins!","color":"red","bold":true}]
 title @a[tag=meccha_hunter] subtitle [{"text":"Find every hider","color":"gold"}]
 title @a[tag=meccha_hider] subtitle [{"text":"Hide and paint!","color":"green"}]
 playsound minecraft:entity.ender_dragon.growl master @a ~ ~ ~ 0.7 1.2
+
+execute as @a[tag=meccha_hunter] run function meccha:role/make_hunter

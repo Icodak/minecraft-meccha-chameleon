@@ -1,6 +1,6 @@
 # meccha:game/hunters_win
 # All hiders found - call this from your elimination logic when none remain.
-title @a times 10 60 20
+title @s times 2s 5s 1s
 title @a[tag=meccha_hunter] title [{"text":"Hunters win!","color":"#98ff68","bold":true}]
 title @a[tag=!meccha_hunter] title [{"text":"Hunters win!","color":"#ff6d68","bold":true}]
 title @a subtitle [{"text":"Every hider was found","color":"gray"}]

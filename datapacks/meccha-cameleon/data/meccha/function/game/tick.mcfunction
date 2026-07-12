@@ -6,3 +6,4 @@ execute if data storage meccha:game {phase:"hunting"} run function meccha:game/t
 execute if data storage meccha:game {prevent_item_drop:1b} run function meccha:prevent_item_drop/instant_pickup_on_drop
 
 function meccha:game/tick_toggle_leave_spec_mode
+function meccha:game/tick_start_new_round

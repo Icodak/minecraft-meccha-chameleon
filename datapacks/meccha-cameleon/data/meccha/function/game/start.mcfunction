@@ -21,11 +21,13 @@ execute store result storage meccha:game timer int 1 run scoreboard players get 
 # Hide the hunters' vision for the whole hide window.
 function meccha:game/blind_hunters with storage meccha:settings
 
-execute as @a[tag=meccha_hunter] run function meccha:role/make_hunter
+# make hunter runs when the round truly starts to avoid early kills
 execute as @a[tag=meccha_hider] run function meccha:role/make_hider
 
-title @a times 0 30 10
+title @s times 0 2s 1s
 title @a title [{"text":"Hide!","color":"green","bold":true}]
 title @a[tag=meccha_hunter] title [{"text":"Blinded","color":"dark_red","bold":true}]
 playsound minecraft:block.note_block.pling master @a ~ ~ ~ 1 1.5
 tellraw @a [{"text":"[Meccha] ","color":"green"},{"text":"Round started - hide!","color":"gray"}]
+
+function meccha:game/tp_to_selected_start_location with storage meccha:game selected_location

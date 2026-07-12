@@ -1,6 +1,6 @@
 # meccha:game/hiders_win
 # Hunt timer expired - the hiders survived.
-title @a times 10 60 20
+title @a times 2s 5s 1s
 title @a[tag=meccha_hunter] title [{"text":"Hiders win!","color":"#ff6d68","bold":true}]
 title @a[tag=!meccha_hunter] title [{"text":"Hiders win!","color":"#98ff68","bold":true}]
 title @a subtitle [{"text":"The hunters ran out of time","color":"gray"}]

@@ -40,3 +40,6 @@ scoreboard objectives add meccha.select_start trigger
 
 scoreboard objectives add meccha.start_screen.location_trigger_value dummy
 scoreboard objectives add meccha.selected_location_index dummy
+
+
+scoreboard objectives add meccha.start_new_round trigger

@@ -8,7 +8,7 @@ data modify storage meccha:rt hunter set value {found:0b}
 scoreboard players set #BEST_T meccha.math 2000000000
 
 # Broad phase over every active hider (never the shooter's own rig if tagged).
-execute as @e[tag=meccha_rig_root,tag=hider] at @s run function meccha:hunter/broad_phase
+execute as @e[tag=meccha_rig_root] at @s run function meccha:hunter/broad_phase
 
 execute if data storage meccha:rt {hunter:{found:1b}} run function meccha:hunter/on_hit
 execute unless data storage meccha:rt {hunter:{found:1b}} run function meccha:hunter/on_miss

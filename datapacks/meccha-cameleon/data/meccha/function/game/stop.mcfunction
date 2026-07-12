@@ -6,6 +6,8 @@ data modify storage meccha:game phase set value "over"
 data modify storage meccha:game timer set value 0
 effect clear @a
 clear @a
+execute as @a run attribute @s minecraft:scale base reset
+execute as @a run attribute @s minecraft:safe_fall_distance base reset
 title @a actionbar [{"text":"Round over","color":"gray"}]
 
 function meccha:items/cancel_scheduled

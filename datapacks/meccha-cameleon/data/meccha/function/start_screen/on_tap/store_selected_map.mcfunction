@@ -1,0 +1,1 @@
+$data modify storage meccha:game selected_location set from storage meccha:save_locations saved[$(selected_location_index)]
