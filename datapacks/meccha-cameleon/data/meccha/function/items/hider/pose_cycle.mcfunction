@@ -1,2 +1,2 @@
-item replace entity @a[tag=needs_pose_cycle] hotbar.2 with minecraft:knowledge_book[minecraft:recipes=["meccha:pose_cycle"],minecraft:item_name=[{"text":"Pose Switcher ","color":"yellow"},{"text":"[Right click]","color":"gray",italic:true}],item_model=armor_stand] 1
+item replace entity @a[tag=needs_pose_cycle] hotbar.4 with minecraft:knowledge_book[minecraft:recipes=["meccha:pose_cycle"],minecraft:item_name=[{"text":"Pose Switcher ","color":"yellow"},{"text":"[Right click]","color":"gray",italic:true}],item_model=armor_stand] 1
 tag @a[tag=needs_pose_cycle] remove needs_pose_cycle

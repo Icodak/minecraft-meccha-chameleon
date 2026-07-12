@@ -6,13 +6,13 @@
         "item": {
           "items": "minecraft:target",
           "predicates": {
-            "minecraft:custom_data": "{exit_painting_mode:true}"
+            "minecraft:custom_data": "{enter_running_mode:true}"
           }
         }
       }
     }
   },
   "rewards": {
-    "function": "meccha:trigger/exit_painting_mode"
+    "function": "meccha:trigger/enter_running_mode"
   }
 }
