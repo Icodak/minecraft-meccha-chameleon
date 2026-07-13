@@ -1,4 +1,7 @@
 # Minecraft Meccha Chameleon
+<p align="center">
+<img width="200" height="200" alt="mc meccha chameleon with rounded corners" src="https://github.com/user-attachments/assets/88c89c46-b7d0-42d3-9162-e6084df7bc45" />
+</p>
 
 This is Meccha Chameleon remade in **26.2 Vanilla Minecraft** without mods, plugins or resource packs
 
