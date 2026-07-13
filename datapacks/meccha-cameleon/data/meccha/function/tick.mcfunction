@@ -5,6 +5,7 @@
 function meccha:game/tick
 function meccha:color_picker/tick
 function meccha:start_screen/tick
+function meccha:scoring/tick
 
 # Ensure every player has a default brush color (white) exactly once.
 execute as @a unless score @s meccha.color matches 0.. run scoreboard players set @s meccha.color 16777215

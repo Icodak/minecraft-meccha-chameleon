@@ -43,3 +43,5 @@ scoreboard objectives add meccha.selected_location_index dummy
 
 
 scoreboard objectives add meccha.start_new_round trigger
+
+scoreboard objectives add meccha.scoring dummy
