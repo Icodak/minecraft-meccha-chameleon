@@ -5,10 +5,12 @@
 execute unless entity @a[tag=meccha_hunter,limit=1] run return run tellraw @s [{"text":"[Meccha] ","color":"red"},{"text":"No hunter assigned.","color":"gray"}]
 execute unless entity @a[tag=meccha_hider,limit=1] run return run tellraw @s [{"text":"[Meccha] ","color":"red"},{"text":"No hider assigned.","color":"gray"}]
 
-function meccha:items/cancel_scheduled
+function meccha:init/reset_scoring
 
+function meccha:items/cancel_scheduled
 function meccha:highlight_rig/stop_highlight_blink
 function meccha:reset_rig
+function meccha:scoring/start_periodic_score_copy
 
 dialog clear @a
 data modify storage meccha:game phase set value "hiding"

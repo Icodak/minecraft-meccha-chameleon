@@ -44,4 +44,8 @@ scoreboard objectives add meccha.selected_location_index dummy
 
 scoreboard objectives add meccha.start_new_round trigger
 
-scoreboard objectives add meccha.scoring dummy
+# Lightweight raycasting to be run each tick
+scoreboard objectives add meccha.los_result dummy
+scoreboard objectives add meccha.los_step dummy
+
+function meccha:init/reset_scoring

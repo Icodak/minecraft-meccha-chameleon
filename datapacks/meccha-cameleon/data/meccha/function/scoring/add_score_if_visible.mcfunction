@@ -20,14 +20,20 @@ scoreboard players set #result bs.data 0
 data modify storage meccha:score entity_is_visible set value 0b
 data modify storage meccha:score entity_is_within_fov set value 0b
 execute store result storage meccha:score entity_is_within_fov byte 1 run execute if score #hider_dir_yaw meccha.math matches -65..65 if score #hider_dir_pitch meccha.math matches -45..45
-execute if data storage meccha:score {entity_is_within_fov:1b} at @s facing entity @e[type=armor_stand,tag=scoring_direction_marker,limit=1] eyes run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:{blocks:0,entities:0},ignored_entities:"minecraft:player",on_targeted_entity:"execute if entity @s[tag=scoring_direction_marker] run data modify storage meccha:score entity_is_visible set value 1b"}}
+# execute if data storage meccha:score {entity_is_within_fov:1b} at @s facing entity @e[type=armor_stand,tag=scoring_direction_marker,limit=1] eyes run function #bs.raycast:run {with:{blocks:true,entities:true,piercing:{blocks:0,entities:0},ignored_entities:"minecraft:player",on_targeted_entity:"execute if entity @s[tag=scoring_direction_marker] run data modify storage meccha:score entity_is_visible set value 1b"}}
+
+
+scoreboard players set @s meccha.los_result 0
+scoreboard players set @s meccha.los_step 0
+execute if data storage meccha:score {entity_is_within_fov:1b} at @s facing entity @e[type=armor_stand,tag=scoring_direction_marker,limit=1] feet positioned ^ ^ ^0.5 run function meccha:scoring/step
+
 
 # say @s
-execute if data storage meccha:score {entity_is_visible:1b} run scoreboard players add @s meccha.scoring 1
+execute if score @s meccha.los_result matches 1 run scoreboard players add @s meccha.scoring 1
 
 # debug
 # execute if data storage meccha:score {entity_is_within_fov:1b} run say Within FOV
 # execute if data storage meccha:score {entity_is_within_fov:0b} run say OUTSIDE FOV
-# execute if data storage meccha:score {entity_is_visible:1b} run say Visible
-# execute if data storage meccha:score {entity_is_visible:0b} run say Hidden
+# execute if score @s meccha.los_result matches 1 run say Visible
+# execute if score @s meccha.los_result matches 0 run say Hidden
 # tellraw @a [{text:"yaw delta: "},{score:{objective:"meccha.math",name:"#hider_dir_yaw"}},{text:"pitch delta: "},{score:{objective:"meccha.math",name:"#hider_dir_pitch"}}]

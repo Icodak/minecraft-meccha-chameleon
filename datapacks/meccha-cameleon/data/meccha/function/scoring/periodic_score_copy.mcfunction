@@ -1,0 +1,1 @@
+execute as @e[type=marker,tag=meccha_rig_root] run function meccha:scoring/copy_score_from_rig

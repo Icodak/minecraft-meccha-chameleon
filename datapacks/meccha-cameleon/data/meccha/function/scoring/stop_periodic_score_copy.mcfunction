@@ -1,0 +1,1 @@
+schedule clear meccha:scoring/periodic_score_copy

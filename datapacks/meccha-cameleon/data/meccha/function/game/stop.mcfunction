@@ -12,5 +12,6 @@ title @a actionbar [{"text":"Round over","color":"gray"}]
 
 function meccha:items/cancel_scheduled
 function meccha:highlight_rig/stop_highlight_blink
+function meccha:scoring/stop_periodic_score_copy
 
 function meccha:game/suggest_start_new_game

@@ -1,0 +1,1 @@
+schedule function meccha:scoring/periodic_score_copy 2s
