@@ -12,7 +12,8 @@ function meccha:paintbrush/update_brush_type
 scoreboard players set #BEST_T meccha.math 2000000000
 
 # Visit every rig cuboid (markers carry their own geometry in `data`).
-execute as @e[tag=meccha_cuboid,distance=..8] run function meccha:paintbrush/test_cuboid
+execute store result storage meccha:player rid int 1 run scoreboard players get @s meccha.rig
+function meccha:paintbrush/test_matching_cuboids with storage meccha:player
 
 execute if data storage meccha:rt {brush:{found:1b}} run function meccha:paintbrush/paint
 execute unless data storage meccha:rt {brush:{found:1b}} run title @s actionbar {"text":"Brush missed the rig","color":"gray"}

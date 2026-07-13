@@ -1,0 +1,1 @@
+$execute as @e[tag=meccha_cuboid,distance=..8,tag=r$(rid)] run function meccha:paintbrush/test_cuboid
