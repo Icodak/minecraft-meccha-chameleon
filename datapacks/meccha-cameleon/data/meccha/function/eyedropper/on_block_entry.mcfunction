@@ -7,6 +7,11 @@
 function meccha:lib/block/get_block
 # say eyedropper hit block
 
+# Block min corner B from the raycast lambda (integer block coords), *1000.
+scoreboard players operation #BX meccha.math = $raycast.targeted_block.x bs.lambda
+scoreboard players operation #BY meccha.math = $raycast.targeted_block.y bs.lambda
+scoreboard players operation #BZ meccha.math = $raycast.targeted_block.z bs.lambda
+
 # Fresh sample record. best_t huge so the first valid face wins.
 data modify storage meccha:rt sample set value {model:"",found:0b}
 scoreboard players set #BEST_T meccha.math 2000000000
@@ -17,10 +22,6 @@ execute if data storage meccha:rt {sample:{model:""}} run return run function me
 function meccha:eyedropper/load_shape with storage meccha:rt sample
 
 # --- Step 3: virtual raycast over the shape's faces ---
-# Block min corner B from the raycast lambda (integer block coords), *1000.
-scoreboard players operation #BX meccha.math = $raycast.targeted_block.x bs.lambda
-scoreboard players operation #BY meccha.math = $raycast.targeted_block.y bs.lambda
-scoreboard players operation #BZ meccha.math = $raycast.targeted_block.z bs.lambda
 scoreboard players operation #BX meccha.math *= #SCALE meccha.math
 scoreboard players operation #BY meccha.math *= #SCALE meccha.math
 scoreboard players operation #BZ meccha.math *= #SCALE meccha.math

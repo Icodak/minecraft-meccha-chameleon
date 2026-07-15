@@ -52,6 +52,19 @@ def _model_parent_hint(lib: ModelLibrary, model_id: str) -> str | None:
     return p.split(":", 1)[-1] if p else None
 
 
+def _variant_model_id(model_id: str, apply: dict) -> str:
+    x = int(apply.get("x", 0))
+    y = int(apply.get("y", 0))
+    z = int(apply.get("z", 0))
+    uvlock = bool(apply.get("uvlock", False))
+    if x == 0 and y == 0 and z == 0 and not uvlock:
+        return model_id
+    suffix = f"x{x}_y{y}_z{z}"
+    if uvlock:
+        suffix += "_uvlock"
+    return f"{model_id}__{suffix}"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--assets", required=True, help="path to assets/ root")
@@ -70,29 +83,37 @@ def main() -> int:
     states_entries: list[tuple[str, dict]] = []
     model_entries: dict[str, dict] = {}     # model_id -> {shape, textures, ...}
     needed_models: set[str] = set()
+    variant_specs: dict[str, tuple[str, dict]] = {}
 
     # ---- pass 1: blockstates -> model refs + state table -----------------
     for bstate in iter_blockstates(bs_dir):
-        states_entries.append((bstate.block_id, bstate.to_nbt()))
+        nbt = bstate.to_nbt()
         applies = []
         if bstate.kind == "variants":
-            for lst in bstate.variants.values():
-                applies += lst
+            for lst in nbt["cases"]:
+                applies += lst["apply"]
         else:
-            for case in bstate.multipart:
+            for case in nbt["cases"]:
                 applies += case["apply"]
         for ap_ in applies:
+            variant_id = _variant_model_id(ap_["model"], ap_)
+            if variant_id not in variant_specs:
+                variant_specs[variant_id] = (ap_["model"], ap_)
+            ap_["model"] = variant_id
             needed_models.add(ap_["model"])
+        states_entries.append((bstate.block_id, nbt))
 
     # ---- pass 2: resolve models, intern shapes, collect textures ---------
     texture_vars: set[str] = set()
     no_geometry: list[str] = []
     for model_id in sorted(needed_models):
-        rm = lib.resolve(model_id)
+        base_model_id, apply = variant_specs.get(model_id, (model_id, {}))
+        rm = lib.resolve(base_model_id)
+        rm = rm.transformed(apply)
         if not rm.elements:
             no_geometry.append(model_id)
             continue
-        shape_id = shapes.intern(rm, _model_parent_hint(lib, model_id), model_id)
+        shape_id = shapes.intern(rm, _model_parent_hint(lib, base_model_id), model_id)
         model_entries[model_id] = {"shape": shape_id, "textures": rm.textures}
 
         for tex in rm.textures.values():

@@ -8,7 +8,8 @@ data modify storage meccha:rt match set value 0b
 execute if data storage meccha:rt cur_case{tests:[]} run data modify storage meccha:rt match set value 1b
 execute unless data storage meccha:rt cur_case{tests:[]} run function meccha:eyedropper/test_subsets
 
-execute if data storage meccha:rt {match:1b} run data modify storage meccha:rt sample.model set from storage meccha:rt cur_case.apply[0].model
+execute if data storage meccha:rt {match:1b} run data modify storage meccha:rt sample.apply set from storage meccha:rt cur_case.apply
+execute if data storage meccha:rt {match:1b} run function meccha:eyedropper/select_apply
 
 # Continue scanning remaining cases (loop ends when model found or list empty).
 function meccha:eyedropper/match_case
