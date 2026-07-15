@@ -60,13 +60,13 @@ def _face_geometry(d: str, f: list[float], t: list[float]):
     tx, ty, tz = t
     dx, dy, dz = tx - fx, ty - fy, tz - fz
     if d == "north":   # -Z
-        return [fx, ty, fz], [dx, 0, 0], [0, -dy, 0], [0, 0, -1]
+        return [tx, ty, fz], [-dx, 0, 0], [0, -dy, 0], [0, 0, -1]
     if d == "south":   # +Z
         return [fx, ty, tz], [dx, 0, 0], [0, -dy, 0], [0, 0, 1]
     if d == "west":    # -X
         return [fx, ty, fz], [0, 0, dz], [0, -dy, 0], [-1, 0, 0]
     if d == "east":    # +X
-        return [tx, ty, fz], [0, 0, dz], [0, -dy, 0], [1, 0, 0]
+        return [tx, ty, tz], [0, 0, -dz], [0, -dy, 0], [1, 0, 0]
     if d == "up":      # +Y
         return [fx, ty, fz], [dx, 0, 0], [0, 0, dz], [0, 1, 0]
     if d == "down":    # -Y

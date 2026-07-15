@@ -40,35 +40,37 @@ import json
 # ==========================================================================
 # AUTO-GENERATED _KNOWN_PARENTS MAPPING
 # Paste this directly into shape_grouper.py
+# Rotation-agnostic: base silhouette names only. shape_grouper.intern
+# appends the build-time rotation tag (e.g. __x0_y180_z0) per variant.
 # ==========================================================================
 _KNOWN_PARENTS = {
-    # --- Signature Group: ebfccc34 (Shared by 1 parents) ---
+    # --- Signature Group: 1b7c59c0 (Shared by 1 parents) ---
     "block/button": "button",
-    # --- Signature Group: 71c55ad2 (Shared by 1 parents) ---
+    # --- Signature Group: d36436d3 (Shared by 1 parents) ---
     "block/button_inventory": "button_inventory",
-    # --- Signature Group: e565a43f (Shared by 1 parents) ---
+    # --- Signature Group: 6bcf137c (Shared by 1 parents) ---
     "block/button_pressed": "button_pressed",
-    # --- Signature Group: 763d88ff (Shared by 1 parents) ---
+    # --- Signature Group: 5705d9a9 (Shared by 1 parents) ---
     "block/calibrated_sculk_sensor": "calibrated_sculk_sensor",
-    # --- Signature Group: b62e4bdd (Shared by 1 parents) ---
+    # --- Signature Group: ed6a976f (Shared by 1 parents) ---
     "block/carpet": "carpet",
-    # --- Signature Group: 962e44e8 (Shared by 1 parents) ---
+    # --- Signature Group: 3f8d2354 (Shared by 1 parents) ---
     "block/coral_fan": "coral_fan",
-    # --- Signature Group: 02e99761 (Shared by 1 parents) ---
+    # --- Signature Group: c5e65e2a (Shared by 1 parents) ---
     "block/coral_wall_fan": "coral_wall_fan",
-    # --- Signature Group: 4eb12930 (Shared by 3 parents) ---
+    # --- Signature Group: 004f27da (Shared by 3 parents) ---
     "block/crafter": "crafter",
     "block/crafter_crafting": "crafter",
     "block/crafter_triggered": "crafter",
-    # --- Signature Group: daa5a2bb (Shared by 1 parents) ---
+    # --- Signature Group: eaf10e54 (Shared by 1 parents) ---
     "block/crop": "crop",
-    # --- Signature Group: 23176cb3 (Shared by 3 parents) ---
+    # --- Signature Group: 69387b39 (Shared by 3 parents) ---
     "block/cross": "cross",
     "block/pointed_dripstone": "cross",
     "block/tinted_cross": "cross",
-    # --- Signature Group: ea2fafa5 (Shared by 1 parents) ---
+    # --- Signature Group: 5352254d (Shared by 1 parents) ---
     "block/cross_emissive": "cross_emissive",
-    # --- Signature Group: fabf0e5e (Shared by 9 parents) ---
+    # --- Signature Group: 0a49ef6e (Shared by 9 parents) ---
     "block/cube": "full_block",
     "block/cube_all": "full_block",
     "block/cube_bottom_top": "full_block",
@@ -78,167 +80,167 @@ _KNOWN_PARENTS = {
     "block/orientable": "full_block",
     "block/orientable_vertical": "full_block",
     "block/orientable_with_bottom": "full_block",
-    # --- Signature Group: cb76a639 (Shared by 1 parents) ---
+    # --- Signature Group: ce58f8c2 (Shared by 1 parents) ---
     "block/cube_all_inner_faces": "cube_all_inner_faces",
-    # --- Signature Group: 5bad2169 (Shared by 1 parents) ---
+    # --- Signature Group: f95d63d6 (Shared by 1 parents) ---
     "block/cube_bottom_top_inner_faces": "cube_bottom_top_inner_faces",
-    # --- Signature Group: 7d960536 (Shared by 1 parents) ---
+    # --- Signature Group: 28e0e5d3 (Shared by 1 parents) ---
     "block/cube_column_horizontal": "cube_column_horizontal",
-    # --- Signature Group: 2cd6b0a5 (Shared by 3 parents) ---
+    # --- Signature Group: f4ca633b (Shared by 3 parents) ---
     "block/cube_column_mirrored": "cube_mirrored",
     "block/cube_mirrored": "cube_mirrored",
     "block/cube_mirrored_all": "cube_mirrored",
-    # --- Signature Group: 1bf04677 (Shared by 1 parents) ---
+    # --- Signature Group: 69cf06ec (Shared by 1 parents) ---
     "block/cube_column_uv_locked_x": "cube_column_uv_locked_x",
-    # --- Signature Group: a2666cc5 (Shared by 1 parents) ---
+    # --- Signature Group: 4f2c6fa9 (Shared by 1 parents) ---
     "block/cube_column_uv_locked_z": "cube_column_uv_locked_z",
-    # --- Signature Group: d5ee08b3 (Shared by 2 parents) ---
+    # --- Signature Group: 0259edd0 (Shared by 2 parents) ---
     "block/cube_directional": "cube_directional",
     "block/template_command_block": "cube_directional",
-    # --- Signature Group: 27693f4d (Shared by 2 parents) ---
+    # --- Signature Group: 5789455d (Shared by 2 parents) ---
     "block/cube_north_west_mirrored": "cube_north_west_mirrored",
     "block/cube_north_west_mirrored_all": "cube_north_west_mirrored",
-    # --- Signature Group: 2a031312 (Shared by 1 parents) ---
+    # --- Signature Group: 7eda4048 (Shared by 1 parents) ---
     "block/custom_fence_inventory": "custom_fence_inventory",
-    # --- Signature Group: de9d7d89 (Shared by 1 parents) ---
+    # --- Signature Group: 8b6d7848 (Shared by 1 parents) ---
     "block/custom_fence_post": "custom_fence_post",
-    # --- Signature Group: 2ac9ac91 (Shared by 1 parents) ---
+    # --- Signature Group: 8e28b002 (Shared by 1 parents) ---
     "block/custom_fence_side_east": "custom_fence_side_east",
-    # --- Signature Group: 66ffd2f6 (Shared by 1 parents) ---
+    # --- Signature Group: 18720b67 (Shared by 1 parents) ---
     "block/custom_fence_side_north": "custom_fence_side_north",
-    # --- Signature Group: a051d770 (Shared by 1 parents) ---
+    # --- Signature Group: 231172a3 (Shared by 1 parents) ---
     "block/custom_fence_side_south": "custom_fence_side_south",
-    # --- Signature Group: 228a938c (Shared by 1 parents) ---
+    # --- Signature Group: e961f5d1 (Shared by 1 parents) ---
     "block/custom_fence_side_west": "custom_fence_side_west",
-    # --- Signature Group: 23ec3f66 (Shared by 1 parents) ---
+    # --- Signature Group: 33b79135 (Shared by 1 parents) ---
     "block/door_bottom_left": "door_bottom_left",
-    # --- Signature Group: d4ea7b30 (Shared by 1 parents) ---
+    # --- Signature Group: 24814b44 (Shared by 1 parents) ---
     "block/door_bottom_left_open": "door_bottom_left_open",
-    # --- Signature Group: b3bb0c8e (Shared by 1 parents) ---
+    # --- Signature Group: c42f5490 (Shared by 1 parents) ---
     "block/door_bottom_right": "door_bottom_right",
-    # --- Signature Group: ccb9154a (Shared by 1 parents) ---
+    # --- Signature Group: ab1fda3a (Shared by 1 parents) ---
     "block/door_bottom_right_open": "door_bottom_right_open",
-    # --- Signature Group: 563cc189 (Shared by 1 parents) ---
+    # --- Signature Group: 38d197b8 (Shared by 1 parents) ---
     "block/door_top_left": "door_top_left",
-    # --- Signature Group: 8f66ec21 (Shared by 1 parents) ---
+    # --- Signature Group: f689559e (Shared by 1 parents) ---
     "block/door_top_left_open": "door_top_left_open",
-    # --- Signature Group: beeb6e37 (Shared by 1 parents) ---
+    # --- Signature Group: 22268664 (Shared by 1 parents) ---
     "block/door_top_right": "door_top_right",
-    # --- Signature Group: a52eef8b (Shared by 1 parents) ---
+    # --- Signature Group: d07cf74c (Shared by 1 parents) ---
     "block/door_top_right_open": "door_top_right_open",
-    # --- Signature Group: 1abfca61 (Shared by 1 parents) ---
+    # --- Signature Group: d57f40cc (Shared by 1 parents) ---
     "block/dried_ghast": "dried_ghast",
-    # --- Signature Group: 3fc63a0e (Shared by 1 parents) ---
+    # --- Signature Group: cf3cd772 (Shared by 1 parents) ---
     "block/fence_inventory": "fence_inventory",
-    # --- Signature Group: af2ddf8f (Shared by 1 parents) ---
+    # --- Signature Group: 909119de (Shared by 1 parents) ---
     "block/fence_post": "fence_post",
-    # --- Signature Group: 73bd81f8 (Shared by 1 parents) ---
+    # --- Signature Group: acd3fe91 (Shared by 1 parents) ---
     "block/fence_side": "fence_side",
-    # --- Signature Group: fe290fa2 (Shared by 2 parents) ---
+    # --- Signature Group: fd11d312 (Shared by 2 parents) ---
     "block/flower_pot_cross": "flower_pot_cross",
     "block/tinted_flower_pot_cross": "flower_pot_cross",
-    # --- Signature Group: 31dd4e64 (Shared by 1 parents) ---
+    # --- Signature Group: 69a4afde (Shared by 1 parents) ---
     "block/flower_pot_cross_emissive": "flower_pot_cross_emissive",
-    # --- Signature Group: b627e80e (Shared by 1 parents) ---
+    # --- Signature Group: 5841a931 (Shared by 1 parents) ---
     "block/flowerbed_1": "flowerbed_1",
-    # --- Signature Group: 8da6dc5a (Shared by 1 parents) ---
+    # --- Signature Group: 97ee3f15 (Shared by 1 parents) ---
     "block/flowerbed_2": "flowerbed_2",
-    # --- Signature Group: dcb642d4 (Shared by 1 parents) ---
+    # --- Signature Group: 0c69f896 (Shared by 1 parents) ---
     "block/flowerbed_3": "flowerbed_3",
-    # --- Signature Group: 0f01ca80 (Shared by 1 parents) ---
+    # --- Signature Group: f485dc15 (Shared by 1 parents) ---
     "block/flowerbed_4": "flowerbed_4",
-    # --- Signature Group: b85ff6f6 (Shared by 1 parents) ---
+    # --- Signature Group: 1276a2b6 (Shared by 1 parents) ---
     "block/inner_stairs": "inner_stairs",
-    # --- Signature Group: f5295bfb (Shared by 1 parents) ---
+    # --- Signature Group: 4b033296 (Shared by 1 parents) ---
     "block/leaves": "leaves",
-    # --- Signature Group: 0d7340d2 (Shared by 1 parents) ---
+    # --- Signature Group: 4fe4a206 (Shared by 1 parents) ---
     "block/mossy_carpet_side": "mossy_carpet_side",
-    # --- Signature Group: 49af632e (Shared by 1 parents) ---
+    # --- Signature Group: f53b3da9 (Shared by 1 parents) ---
     "block/observer": "observer",
-    # --- Signature Group: 7e978c59 (Shared by 1 parents) ---
+    # --- Signature Group: 5d625ca0 (Shared by 1 parents) ---
     "block/outer_stairs": "outer_stairs",
-    # --- Signature Group: 204610fd (Shared by 1 parents) ---
+    # --- Signature Group: e8649a49 (Shared by 1 parents) ---
     "block/piston_extended": "piston_extended",
-    # --- Signature Group: 4c672782 (Shared by 1 parents) ---
+    # --- Signature Group: 84cbcbba (Shared by 1 parents) ---
     "block/pressure_plate_down": "pressure_plate_down",
-    # --- Signature Group: 2390afa7 (Shared by 1 parents) ---
+    # --- Signature Group: 489a732d (Shared by 1 parents) ---
     "block/pressure_plate_up": "pressure_plate_up",
-    # --- Signature Group: a68f3fd5 (Shared by 2 parents) ---
+    # --- Signature Group: 72c07a32 (Shared by 2 parents) ---
     "block/rail_curved": "rail_flat",
     "block/rail_flat": "rail_flat",
-    # --- Signature Group: ba3ca910 (Shared by 1 parents) ---
+    # --- Signature Group: a33943bc (Shared by 1 parents) ---
     "block/redstone_dust_side": "redstone_dust_side",
-    # --- Signature Group: 1186f37b (Shared by 1 parents) ---
+    # --- Signature Group: 5cc542dd (Shared by 1 parents) ---
     "block/redstone_dust_side_alt": "redstone_dust_side_alt",
-    # --- Signature Group: 715ed3d8 (Shared by 1 parents) ---
+    # --- Signature Group: a5392ab8 (Shared by 1 parents) ---
     "block/sculk_sensor": "sculk_sensor",
-    # --- Signature Group: 18e1ad85 (Shared by 1 parents) ---
+    # --- Signature Group: 2b383117 (Shared by 1 parents) ---
     "block/slab": "slab",
-    # --- Signature Group: 8921ece0 (Shared by 1 parents) ---
+    # --- Signature Group: 0cb66efe (Shared by 1 parents) ---
     "block/slab_top": "slab_top",
-    # --- Signature Group: 1a59aa6f (Shared by 1 parents) ---
+    # --- Signature Group: 6ed3bd97 (Shared by 1 parents) ---
     "block/sniffer_egg": "sniffer_egg",
-    # --- Signature Group: 0772c93b (Shared by 1 parents) ---
+    # --- Signature Group: 3e18db3c (Shared by 1 parents) ---
     "block/stairs": "stairs",
-    # --- Signature Group: 9f514eff (Shared by 1 parents) ---
+    # --- Signature Group: 36a5e06b (Shared by 1 parents) ---
     "block/stem_fruit": "stem_fruit",
-    # --- Signature Group: cf7933bd (Shared by 1 parents) ---
+    # --- Signature Group: 68b97766 (Shared by 1 parents) ---
     "block/stem_growth0": "stem_growth0",
-    # --- Signature Group: a2469de7 (Shared by 1 parents) ---
+    # --- Signature Group: e99cc97f (Shared by 1 parents) ---
     "block/stem_growth1": "stem_growth1",
-    # --- Signature Group: bd18da06 (Shared by 1 parents) ---
+    # --- Signature Group: 8314e397 (Shared by 1 parents) ---
     "block/stem_growth2": "stem_growth2",
-    # --- Signature Group: 0d05684a (Shared by 1 parents) ---
+    # --- Signature Group: 6fb17556 (Shared by 1 parents) ---
     "block/stem_growth3": "stem_growth3",
-    # --- Signature Group: b09ce190 (Shared by 1 parents) ---
+    # --- Signature Group: 073d8699 (Shared by 1 parents) ---
     "block/stem_growth4": "stem_growth4",
-    # --- Signature Group: 50d14de6 (Shared by 1 parents) ---
+    # --- Signature Group: eba5cbf9 (Shared by 1 parents) ---
     "block/stem_growth5": "stem_growth5",
-    # --- Signature Group: 5fdf1c14 (Shared by 1 parents) ---
+    # --- Signature Group: e59da462 (Shared by 1 parents) ---
     "block/stem_growth6": "stem_growth6",
-    # --- Signature Group: 614af54c (Shared by 1 parents) ---
+    # --- Signature Group: 5323cb0a (Shared by 1 parents) ---
     "block/stem_growth7": "stem_growth7",
-    # --- Signature Group: d4c6744e (Shared by 1 parents) ---
+    # --- Signature Group: 2b27cb20 (Shared by 1 parents) ---
     "block/template_anvil": "anvil",
-    # --- Signature Group: 392c9264 (Shared by 1 parents) ---
+    # --- Signature Group: 59ea11d2 (Shared by 1 parents) ---
     "block/template_attached_hanging_sign_rot_0": "attached_hanging_sign_rot_0",
-    # --- Signature Group: 85721df1 (Shared by 1 parents) ---
+    # --- Signature Group: 0dbe19e3 (Shared by 1 parents) ---
     "block/template_attached_hanging_sign_rot_1": "attached_hanging_sign_rot_1",
-    # --- Signature Group: 251375cf (Shared by 1 parents) ---
+    # --- Signature Group: 46a7ea8c (Shared by 1 parents) ---
     "block/template_attached_hanging_sign_rot_2": "attached_hanging_sign_rot_2",
-    # --- Signature Group: 09dea284 (Shared by 1 parents) ---
+    # --- Signature Group: 58604822 (Shared by 1 parents) ---
     "block/template_attached_hanging_sign_rot_3": "attached_hanging_sign_rot_3",
-    # --- Signature Group: 9e6ab5b3 (Shared by 1 parents) ---
+    # --- Signature Group: 6aceed77 (Shared by 1 parents) ---
     "block/template_azalea": "azalea",
-    # --- Signature Group: 8e2731ed (Shared by 1 parents) ---
+    # --- Signature Group: 4b5b4442 (Shared by 1 parents) ---
     "block/template_bars_cap": "bars_cap",
-    # --- Signature Group: f6c9f1d6 (Shared by 1 parents) ---
+    # --- Signature Group: 271c22c3 (Shared by 1 parents) ---
     "block/template_bars_cap_alt": "bars_cap_alt",
-    # --- Signature Group: 3159a48f (Shared by 1 parents) ---
+    # --- Signature Group: 48d1fdbe (Shared by 1 parents) ---
     "block/template_bars_post": "bars_post",
-    # --- Signature Group: 95f30b5b (Shared by 1 parents) ---
+    # --- Signature Group: 5b441ce0 (Shared by 1 parents) ---
     "block/template_bars_post_ends": "bars_post_ends",
-    # --- Signature Group: 5c8fffd6 (Shared by 1 parents) ---
+    # --- Signature Group: d6db2e2f (Shared by 1 parents) ---
     "block/template_bars_side": "bars_side",
-    # --- Signature Group: 39144f4a (Shared by 1 parents) ---
+    # --- Signature Group: fe44851b (Shared by 1 parents) ---
     "block/template_bars_side_alt": "bars_side_alt",
-    # --- Signature Group: cf5cecbb (Shared by 1 parents) ---
+    # --- Signature Group: 02c0bce2 (Shared by 1 parents) ---
     "block/template_bed_foot": "bed_foot",
-    # --- Signature Group: e48d7f60 (Shared by 1 parents) ---
+    # --- Signature Group: 19e00eaf (Shared by 1 parents) ---
     "block/template_bed_head": "bed_head",
-    # --- Signature Group: 5c7f506f (Shared by 1 parents) ---
+    # --- Signature Group: 43edd39f (Shared by 1 parents) ---
     "block/template_cake_with_candle": "cake_with_candle",
-    # --- Signature Group: 7166d0db (Shared by 1 parents) ---
+    # --- Signature Group: 196a120e (Shared by 1 parents) ---
     "block/template_campfire": "campfire",
-    # --- Signature Group: e0e87074 (Shared by 1 parents) ---
+    # --- Signature Group: 73c10820 (Shared by 1 parents) ---
     "block/template_candle": "candle",
-    # --- Signature Group: 1a04a917 (Shared by 1 parents) ---
+    # --- Signature Group: da901db8 (Shared by 1 parents) ---
     "block/template_cauldron_full": "cauldron_full",
-    # --- Signature Group: 233ea0b4 (Shared by 1 parents) ---
+    # --- Signature Group: 54e8ece9 (Shared by 1 parents) ---
     "block/template_cauldron_level1": "cauldron_level1",
-    # --- Signature Group: 9ea1bb90 (Shared by 1 parents) ---
+    # --- Signature Group: ff9e7ecf (Shared by 1 parents) ---
     "block/template_cauldron_level2": "cauldron_level2",
-    # --- Signature Group: 90a82f75 (Shared by 1 parents) ---
+    # --- Signature Group: ac91520d (Shared by 1 parents) ---
     "block/template_chain": "chain",
     # --- Signature Group: 79726145 (Shared by 1 parents) ---
     "block/template_chiseled_bookshelf_slot_bottom_left": "chiseled_bookshelf_slot_bottom_left",
@@ -252,111 +254,111 @@ _KNOWN_PARENTS = {
     "block/template_chiseled_bookshelf_slot_top_mid": "chiseled_bookshelf_slot_top_mid",
     # --- Signature Group: 09f08a16 (Shared by 1 parents) ---
     "block/template_chiseled_bookshelf_slot_top_right": "chiseled_bookshelf_slot_top_right",
-    # --- Signature Group: 41bd79f7 (Shared by 1 parents) ---
+    # --- Signature Group: dfcb29f7 (Shared by 1 parents) ---
     "block/template_chorus_flower": "chorus_flower",
-    # --- Signature Group: 41b85052 (Shared by 1 parents) ---
+    # --- Signature Group: 412c0ac5 (Shared by 1 parents) ---
     "block/template_custom_fence_gate": "custom_fence_gate",
-    # --- Signature Group: 25dbe2ff (Shared by 1 parents) ---
+    # --- Signature Group: 9ce8243a (Shared by 1 parents) ---
     "block/template_custom_fence_gate_open": "custom_fence_gate_open",
-    # --- Signature Group: 77b35dcd (Shared by 1 parents) ---
+    # --- Signature Group: 15385d7f (Shared by 1 parents) ---
     "block/template_custom_fence_gate_wall": "custom_fence_gate_wall",
-    # --- Signature Group: 78d1a106 (Shared by 1 parents) ---
+    # --- Signature Group: bf902518 (Shared by 1 parents) ---
     "block/template_custom_fence_gate_wall_open": "custom_fence_gate_wall_open",
-    # --- Signature Group: 1b253c22 (Shared by 1 parents) ---
+    # --- Signature Group: a20c6ad6 (Shared by 1 parents) ---
     "block/template_daylight_detector": "daylight_detector",
-    # --- Signature Group: aa822225 (Shared by 1 parents) ---
+    # --- Signature Group: e6f07f6f (Shared by 1 parents) ---
     "block/template_farmland": "farmland",
-    # --- Signature Group: c5dfa891 (Shared by 1 parents) ---
+    # --- Signature Group: 582493b4 (Shared by 1 parents) ---
     "block/template_fence_gate": "fence_gate",
-    # --- Signature Group: f07c663c (Shared by 1 parents) ---
+    # --- Signature Group: 15cb066d (Shared by 1 parents) ---
     "block/template_fence_gate_open": "fence_gate_open",
-    # --- Signature Group: 21806562 (Shared by 1 parents) ---
+    # --- Signature Group: 2d572b4c (Shared by 1 parents) ---
     "block/template_fence_gate_wall": "fence_gate_wall",
-    # --- Signature Group: db1d8d0c (Shared by 1 parents) ---
+    # --- Signature Group: 02bb91d4 (Shared by 1 parents) ---
     "block/template_fence_gate_wall_open": "fence_gate_wall_open",
-    # --- Signature Group: ba569fb9 (Shared by 1 parents) ---
+    # --- Signature Group: 13df5141 (Shared by 1 parents) ---
     "block/template_fire_floor": "fire_floor",
-    # --- Signature Group: 45dde691 (Shared by 1 parents) ---
+    # --- Signature Group: c128713d (Shared by 1 parents) ---
     "block/template_fire_side": "fire_side",
-    # --- Signature Group: 817c885e (Shared by 1 parents) ---
+    # --- Signature Group: 43f40c66 (Shared by 1 parents) ---
     "block/template_fire_side_alt": "fire_side_alt",
-    # --- Signature Group: 96c7ad85 (Shared by 1 parents) ---
+    # --- Signature Group: 9fd5eb19 (Shared by 1 parents) ---
     "block/template_fire_up": "fire_up",
-    # --- Signature Group: eec43d5b (Shared by 1 parents) ---
+    # --- Signature Group: 5064c64e (Shared by 1 parents) ---
     "block/template_fire_up_alt": "fire_up_alt",
-    # --- Signature Group: 8db873f7 (Shared by 1 parents) ---
+    # --- Signature Group: ca177f4e (Shared by 1 parents) ---
     "block/template_four_candles": "four_candles",
-    # --- Signature Group: d3b30a9d (Shared by 1 parents) ---
+    # --- Signature Group: 0ebe68c4 (Shared by 1 parents) ---
     "block/template_four_turtle_eggs": "four_turtle_eggs",
     # --- Signature Group: cf98c6e9 (Shared by 1 parents) ---
     "block/template_glass_pane_noside": "glass_pane_noside",
     # --- Signature Group: 4774e1cc (Shared by 1 parents) ---
     "block/template_glass_pane_noside_alt": "glass_pane_noside_alt",
-    # --- Signature Group: 1956a8fc (Shared by 1 parents) ---
+    # --- Signature Group: 04cc4c1d (Shared by 1 parents) ---
     "block/template_glass_pane_post": "glass_pane_post",
-    # --- Signature Group: c4d860d1 (Shared by 1 parents) ---
+    # --- Signature Group: db3746c3 (Shared by 1 parents) ---
     "block/template_glass_pane_side": "glass_pane_side",
-    # --- Signature Group: b358f689 (Shared by 1 parents) ---
+    # --- Signature Group: ecd94c02 (Shared by 1 parents) ---
     "block/template_glass_pane_side_alt": "glass_pane_side_alt",
-    # --- Signature Group: 24571476 (Shared by 1 parents) ---
+    # --- Signature Group: dcdc8fe0 (Shared by 1 parents) ---
     "block/template_glazed_terracotta": "glazed_terracotta",
-    # --- Signature Group: a71b7fbc (Shared by 1 parents) ---
+    # --- Signature Group: 4c01fb22 (Shared by 1 parents) ---
     "block/template_hanging_lantern": "hanging_lantern",
-    # --- Signature Group: 3621115c (Shared by 1 parents) ---
+    # --- Signature Group: 4d97a500 (Shared by 1 parents) ---
     "block/template_hanging_sign_rot_0": "hanging_sign_rot_0",
-    # --- Signature Group: 95ed7e0e (Shared by 1 parents) ---
+    # --- Signature Group: 49f16ab5 (Shared by 1 parents) ---
     "block/template_hanging_sign_rot_1": "hanging_sign_rot_1",
-    # --- Signature Group: 3e5a0d93 (Shared by 1 parents) ---
+    # --- Signature Group: 048bfefc (Shared by 1 parents) ---
     "block/template_hanging_sign_rot_2": "hanging_sign_rot_2",
-    # --- Signature Group: d4bc78a4 (Shared by 1 parents) ---
+    # --- Signature Group: 7914984b (Shared by 1 parents) ---
     "block/template_hanging_sign_rot_3": "hanging_sign_rot_3",
-    # --- Signature Group: 062fdd44 (Shared by 1 parents) ---
+    # --- Signature Group: b10dd36c (Shared by 1 parents) ---
     "block/template_item_frame": "item_frame",
-    # --- Signature Group: 500ecadc (Shared by 1 parents) ---
+    # --- Signature Group: 604ade34 (Shared by 1 parents) ---
     "block/template_item_frame_map": "item_frame_map",
-    # --- Signature Group: df664ac0 (Shared by 1 parents) ---
+    # --- Signature Group: a61b603d (Shared by 1 parents) ---
     "block/template_lantern": "lantern",
-    # --- Signature Group: af283685 (Shared by 1 parents) ---
+    # --- Signature Group: da0528d8 (Shared by 1 parents) ---
     "block/template_leaf_litter_1": "leaf_litter_1",
-    # --- Signature Group: 7dc4e334 (Shared by 1 parents) ---
+    # --- Signature Group: a71057e1 (Shared by 1 parents) ---
     "block/template_leaf_litter_2": "leaf_litter_2",
-    # --- Signature Group: 0abe125d (Shared by 1 parents) ---
+    # --- Signature Group: 9b955c20 (Shared by 1 parents) ---
     "block/template_leaf_litter_3": "leaf_litter_3",
-    # --- Signature Group: 6f3b647c (Shared by 1 parents) ---
+    # --- Signature Group: 5cbabe20 (Shared by 1 parents) ---
     "block/template_leaf_litter_4": "leaf_litter_4",
-    # --- Signature Group: 7c9608f8 (Shared by 1 parents) ---
+    # --- Signature Group: abd86b67 (Shared by 1 parents) ---
     "block/template_lightning_rod": "lightning_rod",
-    # --- Signature Group: 40112b47 (Shared by 1 parents) ---
+    # --- Signature Group: 2e2ddcc1 (Shared by 1 parents) ---
     "block/template_orientable_trapdoor_bottom": "orientable_trapdoor_bottom",
-    # --- Signature Group: daeb22ca (Shared by 1 parents) ---
+    # --- Signature Group: ec97c1d0 (Shared by 1 parents) ---
     "block/template_orientable_trapdoor_open": "orientable_trapdoor_open",
-    # --- Signature Group: 71b7e2f1 (Shared by 1 parents) ---
+    # --- Signature Group: 923aadf0 (Shared by 1 parents) ---
     "block/template_orientable_trapdoor_top": "orientable_trapdoor_top",
-    # --- Signature Group: f42256ca (Shared by 1 parents) ---
+    # --- Signature Group: e15c821d (Shared by 1 parents) ---
     "block/template_piston": "piston",
-    # --- Signature Group: 1827d371 (Shared by 1 parents) ---
+    # --- Signature Group: 43f7005f (Shared by 1 parents) ---
     "block/template_piston_head": "piston_head",
-    # --- Signature Group: 04dc78b6 (Shared by 1 parents) ---
+    # --- Signature Group: 27c7ad98 (Shared by 1 parents) ---
     "block/template_piston_head_short": "piston_head_short",
-    # --- Signature Group: 40d43234 (Shared by 1 parents) ---
+    # --- Signature Group: 9c3d34a3 (Shared by 1 parents) ---
     "block/template_potted_azalea_bush": "potted_azalea_bush",
-    # --- Signature Group: d3925923 (Shared by 1 parents) ---
+    # --- Signature Group: 668ddf70 (Shared by 1 parents) ---
     "block/template_rail_raised_ne": "rail_raised_ne",
-    # --- Signature Group: cb9fda7a (Shared by 1 parents) ---
+    # --- Signature Group: 40e5dae9 (Shared by 1 parents) ---
     "block/template_rail_raised_sw": "rail_raised_sw",
-    # --- Signature Group: 977f6664 (Shared by 1 parents) ---
+    # --- Signature Group: 63e39b23 (Shared by 1 parents) ---
     "block/template_redstone_torch": "redstone_torch",
-    # --- Signature Group: de135316 (Shared by 1 parents) ---
+    # --- Signature Group: b717327c (Shared by 1 parents) ---
     "block/template_redstone_torch_wall": "redstone_torch_wall",
-    # --- Signature Group: 8b15c7a8 (Shared by 1 parents) ---
+    # --- Signature Group: 10bc9cb8 (Shared by 1 parents) ---
     "block/template_sculk_shrieker": "sculk_shrieker",
-    # --- Signature Group: 37758fb4 (Shared by 1 parents) ---
+    # --- Signature Group: 1da9ea49 (Shared by 1 parents) ---
     "block/template_seagrass": "seagrass",
-    # --- Signature Group: 226027b5 (Shared by 1 parents) ---
+    # --- Signature Group: b87e912f (Shared by 1 parents) ---
     "block/template_shelf_body": "shelf_body",
     # --- Signature Group: b36143f7 (Shared by 1 parents) ---
     "block/template_shelf_center": "shelf_center",
-    # --- Signature Group: ddd2c8f1 (Shared by 1 parents) ---
+    # --- Signature Group: 9cce0687 (Shared by 1 parents) ---
     "block/template_shelf_inventory": "shelf_inventory",
     # --- Signature Group: 754e021f (Shared by 1 parents) ---
     "block/template_shelf_left": "shelf_left",
@@ -366,51 +368,51 @@ _KNOWN_PARENTS = {
     "block/template_shelf_unconnected": "shelf_unconnected",
     # --- Signature Group: c1c215a1 (Shared by 1 parents) ---
     "block/template_shelf_unpowered": "shelf_unpowered",
-    # --- Signature Group: a349bb1a (Shared by 1 parents) ---
+    # --- Signature Group: d0a51cc0 (Shared by 1 parents) ---
     "block/template_sign_rot_0": "sign_rot_0",
-    # --- Signature Group: fbcfcb07 (Shared by 1 parents) ---
+    # --- Signature Group: 564f2357 (Shared by 1 parents) ---
     "block/template_sign_rot_1": "sign_rot_1",
-    # --- Signature Group: 7fc600a7 (Shared by 1 parents) ---
+    # --- Signature Group: 458bd06e (Shared by 1 parents) ---
     "block/template_sign_rot_2": "sign_rot_2",
-    # --- Signature Group: 3b842fdb (Shared by 1 parents) ---
+    # --- Signature Group: c85b7293 (Shared by 1 parents) ---
     "block/template_sign_rot_3": "sign_rot_3",
     # --- Signature Group: e4a2a0d4 (Shared by 1 parents) ---
     "block/template_single_face": "single_face",
-    # --- Signature Group: e8d5415f (Shared by 1 parents) ---
+    # --- Signature Group: 1e27a94b (Shared by 1 parents) ---
     "block/template_three_candles": "three_candles",
-    # --- Signature Group: 3b19c8ab (Shared by 1 parents) ---
+    # --- Signature Group: ab2f7381 (Shared by 1 parents) ---
     "block/template_three_turtle_eggs": "three_turtle_eggs",
-    # --- Signature Group: 3f0534de (Shared by 2 parents) ---
+    # --- Signature Group: 7534058f (Shared by 2 parents) ---
     "block/template_torch": "torch",
     "block/template_torch_unlit": "torch",
-    # --- Signature Group: b15f9342 (Shared by 2 parents) ---
+    # --- Signature Group: 2f72a48b (Shared by 2 parents) ---
     "block/template_torch_wall": "torch_wall",
     "block/template_torch_wall_unlit": "torch_wall",
-    # --- Signature Group: aa738b9b (Shared by 1 parents) ---
+    # --- Signature Group: 4e726b91 (Shared by 1 parents) ---
     "block/template_trapdoor_bottom": "trapdoor_bottom",
-    # --- Signature Group: 525e0a83 (Shared by 1 parents) ---
+    # --- Signature Group: bad5388e (Shared by 1 parents) ---
     "block/template_trapdoor_open": "trapdoor_open",
-    # --- Signature Group: f81be6cc (Shared by 1 parents) ---
+    # --- Signature Group: e8c14260 (Shared by 1 parents) ---
     "block/template_trapdoor_top": "trapdoor_top",
-    # --- Signature Group: 5bb807f6 (Shared by 1 parents) ---
+    # --- Signature Group: a4d3ae65 (Shared by 1 parents) ---
     "block/template_turtle_egg": "turtle_egg",
-    # --- Signature Group: a8a66b55 (Shared by 1 parents) ---
+    # --- Signature Group: 6384de1c (Shared by 1 parents) ---
     "block/template_two_candles": "two_candles",
-    # --- Signature Group: 5e5a4d61 (Shared by 1 parents) ---
+    # --- Signature Group: 57559bb7 (Shared by 1 parents) ---
     "block/template_two_turtle_eggs": "two_turtle_eggs",
-    # --- Signature Group: daa603dc (Shared by 1 parents) ---
+    # --- Signature Group: 21d732ac (Shared by 1 parents) ---
     "block/template_vault": "vault",
-    # --- Signature Group: 926f3dd5 (Shared by 1 parents) ---
+    # --- Signature Group: c214d155 (Shared by 1 parents) ---
     "block/template_wall_hanging_sign": "wall_hanging_sign",
-    # --- Signature Group: 3002f680 (Shared by 1 parents) ---
+    # --- Signature Group: 8c2a12ed (Shared by 1 parents) ---
     "block/template_wall_post": "wall_post",
-    # --- Signature Group: 423d1099 (Shared by 1 parents) ---
+    # --- Signature Group: b17af2bf (Shared by 1 parents) ---
     "block/template_wall_side": "wall_side",
-    # --- Signature Group: e2897749 (Shared by 1 parents) ---
+    # --- Signature Group: 49a614cc (Shared by 1 parents) ---
     "block/template_wall_side_tall": "wall_side_tall",
-    # --- Signature Group: cc599e2e (Shared by 1 parents) ---
+    # --- Signature Group: ad79a6c5 (Shared by 1 parents) ---
     "block/template_wall_sign": "wall_sign",
-    # --- Signature Group: 9569ef04 (Shared by 1 parents) ---
+    # --- Signature Group: 11268da8 (Shared by 1 parents) ---
     "block/wall_inventory": "wall_inventory",
 }
 
