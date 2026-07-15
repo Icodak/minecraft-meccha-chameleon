@@ -137,6 +137,9 @@ def main() -> int:
             textures[tkey] = tex.to_nbt()
 
     # ---- emit builders ---------------------------------------------------
+    # Wipe previously generated part files so a smaller run never leaves stale
+    # orphans behind (they would be committed but unreferenced by _index).
+    _clean_generated(args.datapack)
     emitted: list[str] = []
     emitted += _emit_textures(args.datapack, textures, args.chunk)
     emitted += _emit_shapes(args.datapack, shapes.shapes_nbt(), args.chunk)
@@ -188,6 +191,16 @@ def main() -> int:
 def _chunks(items, n):
     for i in range(0, len(items), n):
         yield i // n, items[i:i + n]
+
+
+def _clean_generated(root):
+    """Remove stale generated/*.mcfunction files before a fresh emit."""
+    gdir = os.path.join(root, "data", "meccha", "function", "generated")
+    if not os.path.isdir(gdir):
+        return
+    for name in os.listdir(gdir):
+        if name.endswith(".mcfunction"):
+            os.remove(os.path.join(gdir, name))
 
 
 def _emit_textures(root, textures, chunk):

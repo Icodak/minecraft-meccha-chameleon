@@ -1,4 +1,4 @@
 # meccha:eyedropper/match_case
-# Recurse over `cases` until a model is chosen (first-match is sufficient for
-# color sampling; the full renderer uses match="all" for multipart).
-execute if data storage meccha:rt cases[0] if data storage meccha:rt {sample:{model:""}} run function meccha:eyedropper/match_case_step
+# Walk every case. Variants stop at the first match (decided in the step);
+# multipart keeps going so all matching parts stack into `faces`.
+execute if data storage meccha:rt cases[0] run function meccha:eyedropper/match_case_step
