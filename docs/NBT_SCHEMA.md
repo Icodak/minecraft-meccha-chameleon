@@ -22,7 +22,9 @@ shapes   : {                                  # deduped geometry (Vertex&Face)
 # <FACE'> = { dir, el:int,
 #             p0:[x,y,z], eu:[x,y,z], ev:[x,y,z],   # face frame (1/16 units)
 #             n:[x,y,z],                            # outward unit normal
-#             uv:[u1,v1,u2,v2], tex:"#var", var:"key", rot:0 }
+#             uv:[u1,v1,u2,v2],                    # raw model UV rectangle
+#             uvm:[ub,vb,uu,uv,vu,vv],             # pu=ub+u*uu+v*uv; pv=vb+u*vu+v*vv
+#             tex:"#var", var:"key", rot:0 }
 
 models   : {                                  # Model-to-Shape/UV
   "<model_id>" : { shape:"<shape_id>", textures:{ "<var>":"<texkey>" } }

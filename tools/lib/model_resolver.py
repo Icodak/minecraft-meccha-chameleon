@@ -30,6 +30,31 @@ import os
 _FACES = ("north", "south", "west", "east", "up", "down")
 
 
+def _uv_affine(uv: list[float], rot: int) -> list[float]:
+    """Return affine UV mapping coefficients for this face.
+
+    The runtime maps face-local (u, v) in [0..1] to texture pixels via:
+      pu = ub + u*uu + v*uv
+      pv = vb + u*vu + v*vv
+
+    This embeds vanilla face `rotation` directly in the coefficients so the
+    in-game eyedropper does not need per-face switch logic.
+    """
+    u1, v1, u2, v2 = uv
+    du = u2 - u1
+    dv = v2 - v1
+    r = int(rot) % 360
+    if r not in (0, 90, 180, 270):
+        raise ValueError(f"Unsupported face UV rotation: {rot}")
+    if r == 0:
+        return [u1, v1, du, 0.0, 0.0, dv]
+    if r == 90:
+        return [u1, v1 + dv, 0.0, du, -dv, 0.0]
+    if r == 180:
+        return [u1 + du, v1 + dv, -du, 0.0, 0.0, -dv]
+    return [u1 + du, v1, 0.0, -du, dv, 0.0]
+
+
 def _face_geometry(d: str, f: list[float], t: list[float]):
     fx, fy, fz = f
     tx, ty, tz = t
@@ -202,15 +227,17 @@ class ModelLibrary:
                     p0, eu, ev, n = _apply_rotation(rot, p0, eu, ev, n)
                 uv = face.get("uv") or _default_uv(d, f, t)
                 tex = face.get("texture", "#missing")
+                face_rot = int(face.get("rotation", 0))
                 faces_out[d] = {
                     "p0": [round(c, 5) for c in p0],
                     "eu": [round(c, 5) for c in eu],
                     "ev": [round(c, 5) for c in ev],
                     "n": _normalize(n),
                     "uv": [float(round(c, 4)) for c in uv],
+                    "uvm": [float(round(c, 4)) for c in _uv_affine(uv, face_rot)],
                     "tex": tex,
                     "var": tex.lstrip("#"),
-                    "rot": int(face.get("rotation", 0)),
+                    "rot": face_rot,
                 }
             out.append({"from": f, "to": t, "faces": faces_out})
         return out

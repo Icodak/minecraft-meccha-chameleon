@@ -192,7 +192,7 @@ def _emit_shapes(root, shapes_nbt, chunk):
     items = list(shapes_nbt.items())
     for part, batch in _chunks(items, max(1, chunk // 4)):
         fn = FunctionWriter(f"meccha:generated/shapes_part{part}",
-                            "AUTO-GENERATED Vertex & Face Builder (p0/eu/ev/normal/uv per face)")
+                            "AUTO-GENERATED Vertex & Face Builder (p0/eu/ev/normal/uv/uvm per face)")
         for shape_id, nbt in batch:
             fn.set_storage("meccha:registry", "shapes." + qpath(shape_id), nbt)
         fn.write(root)

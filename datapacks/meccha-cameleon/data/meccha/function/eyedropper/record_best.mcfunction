@@ -4,24 +4,34 @@
 # (Transparent texels must NOT advance best_t: the ray sees through them to
 #  faces behind, exactly like the eyedropper "ignore #..00" rule.)
 
-# uv pixel coords: pu = uv0 + U*(uv2-uv0) ; pv = uv1 + V*(uv3-uv1)
-execute store result score #UV0 meccha.math run data get storage meccha:rt face.uv[0] 1000
-execute store result score #UV1 meccha.math run data get storage meccha:rt face.uv[1] 1000
-execute store result score #UV2 meccha.math run data get storage meccha:rt face.uv[2] 1000
-execute store result score #UV3 meccha.math run data get storage meccha:rt face.uv[3] 1000
-scoreboard players operation #DU meccha.math = #UV2 meccha.math
-scoreboard players operation #DU meccha.math -= #UV0 meccha.math
-scoreboard players operation #DV meccha.math = #UV3 meccha.math
-scoreboard players operation #DV meccha.math -= #UV1 meccha.math
+# uv pixel coords from affine face mapping:
+#   pu = ub + U*uu + V*uv
+#   pv = vb + U*vu + V*vv
+execute store result score #UB meccha.math run data get storage meccha:rt face.uvm[0] 1000
+execute store result score #VB meccha.math run data get storage meccha:rt face.uvm[1] 1000
+execute store result score #UU meccha.math run data get storage meccha:rt face.uvm[2] 1000
+execute store result score #UV meccha.math run data get storage meccha:rt face.uvm[3] 1000
+execute store result score #VU meccha.math run data get storage meccha:rt face.uvm[4] 1000
+execute store result score #VV meccha.math run data get storage meccha:rt face.uvm[5] 1000
+
+scoreboard players operation #PU meccha.math = #UB meccha.math
 scoreboard players operation #A meccha.math = #U meccha.math
-scoreboard players operation #B meccha.math = #DU meccha.math
+scoreboard players operation #B meccha.math = #UU meccha.math
 function meccha:lib/math/mul
-scoreboard players operation #PU meccha.math = #UV0 meccha.math
 scoreboard players operation #PU meccha.math += #R meccha.math
 scoreboard players operation #A meccha.math = #V meccha.math
-scoreboard players operation #B meccha.math = #DV meccha.math
+scoreboard players operation #B meccha.math = #UV meccha.math
 function meccha:lib/math/mul
-scoreboard players operation #PV meccha.math = #UV1 meccha.math
+scoreboard players operation #PU meccha.math += #R meccha.math
+
+scoreboard players operation #PV meccha.math = #VB meccha.math
+scoreboard players operation #A meccha.math = #U meccha.math
+scoreboard players operation #B meccha.math = #VU meccha.math
+function meccha:lib/math/mul
+scoreboard players operation #PV meccha.math += #R meccha.math
+scoreboard players operation #A meccha.math = #V meccha.math
+scoreboard players operation #B meccha.math = #VV meccha.math
+function meccha:lib/math/mul
 scoreboard players operation #PV meccha.math += #R meccha.math
 
 # texel = floor(p/1000), clamped to a 16x16 sprite.
