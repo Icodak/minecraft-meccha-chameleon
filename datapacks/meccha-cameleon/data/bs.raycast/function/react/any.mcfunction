@@ -26,4 +26,7 @@ scoreboard players set #raycast.tm bs.data 2147483647
 scoreboard players operation #raycast.tm bs.data < #raycast.tb bs.data
 scoreboard players operation #raycast.tm bs.data < #raycast.te bs.data
 
-execute if score #raycast.tm bs.data <= #raycast.lx bs.data if score #raycast.tm bs.data <= #raycast.ly bs.data if score #raycast.tm bs.data <= #raycast.lz bs.data run function bs.raycast:react/any
+execute if score #raycast.tm bs.data <= #raycast.lx bs.data \
+  if score #raycast.tm bs.data <= #raycast.ly bs.data \
+  if score #raycast.tm bs.data <= #raycast.lz bs.data \
+  run function bs.raycast:react/any

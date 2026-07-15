@@ -50,6 +50,9 @@ scoreboard players operation #i bs.ctx < #j bs.ctx
 scoreboard players operation #i bs.ctx < #k bs.ctx
 
 # check for valid intersection: near ≤ far and within ray bounds
-execute if score #x bs.ctx matches 0.. if score #x bs.ctx <= #i bs.ctx if score #x bs.ctx <= #raycast.dm bs.data run return run function bs.raycast:record/entity/add
+execute if score #x bs.ctx matches 0.. \
+  if score #x bs.ctx <= #i bs.ctx \
+  if score #x bs.ctx <= #raycast.dm bs.data \
+  run return run function bs.raycast:record/entity/add
 
 scoreboard players reset @s bs.raycast.id

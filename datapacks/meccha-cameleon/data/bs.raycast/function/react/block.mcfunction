@@ -21,9 +21,17 @@ execute if score #n bs.ctx matches 2 if score #raycast.uz bs.data matches 0.. ru
 execute if score #n bs.ctx matches 3 if score #raycast.uy bs.data matches ..-1 run scoreboard players set $raycast.hit_face bs.lambda 1
 execute if score #n bs.ctx matches 3 if score #raycast.uy bs.data matches 0.. run scoreboard players set $raycast.hit_face bs.lambda 0
 
-execute store result storage bs:data raycast.tmin double .001 store result score $raycast.entry_point.x bs.lambda store result score $raycast.entry_point.y bs.lambda store result score $raycast.entry_point.z bs.lambda run scoreboard players operation $raycast.entry_distance bs.lambda = #raycast.tm bs.data
+execute store result storage bs:data raycast.tmin double .001 \
+  store result score $raycast.entry_point.x bs.lambda \
+  store result score $raycast.entry_point.y bs.lambda \
+  store result score $raycast.entry_point.z bs.lambda \
+  run scoreboard players operation $raycast.entry_distance bs.lambda = #raycast.tm bs.data
 
-execute store result storage bs:data raycast.tmax double .001 store result score $raycast.exit_point.x bs.lambda store result score $raycast.exit_point.y bs.lambda store result score $raycast.exit_point.z bs.lambda store result score $raycast.exit_distance bs.lambda run data get storage bs:data raycast.rb[-1].tmax
+execute store result storage bs:data raycast.tmax double .001 \
+  store result score $raycast.exit_point.x bs.lambda \
+  store result score $raycast.exit_point.y bs.lambda \
+  store result score $raycast.exit_point.z bs.lambda \
+  store result score $raycast.exit_distance bs.lambda run data get storage bs:data raycast.rb[-1].tmax
 
 execute if data storage bs:lambda hitbox run return run function bs.raycast:react/cell
 

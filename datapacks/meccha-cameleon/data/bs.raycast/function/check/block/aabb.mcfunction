@@ -53,7 +53,10 @@ scoreboard players operation #i bs.ctx < #j bs.ctx
 scoreboard players operation #i bs.ctx < #k bs.ctx
 
 # check for valid intersection: near ≤ far and within ray bounds
-execute if score #x bs.ctx matches 0.. if score #x bs.ctx <= #i bs.ctx if score #x bs.ctx <= #raycast.dm bs.data run function bs.raycast:record/block/add
+execute if score #x bs.ctx matches 0.. \
+  if score #x bs.ctx <= #i bs.ctx \
+  if score #x bs.ctx <= #raycast.dm bs.data \
+  run function bs.raycast:record/block/add
 
 data remove storage bs:lambda hitbox.shape[-1]
 execute if data storage bs:lambda hitbox.shape[-1] run function bs.raycast:check/block/aabb

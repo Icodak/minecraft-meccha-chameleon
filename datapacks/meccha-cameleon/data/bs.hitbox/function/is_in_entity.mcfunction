@@ -13,7 +13,8 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless entity @s[tag=bs.hitbox.custom] run return run execute if entity @s[dy=0] positioned ~-.99999999999999 ~-.99999999999999 ~-.99999999999999 if entity @s[dy=0]
+execute unless entity @s[tag=bs.hitbox.custom] run return run \
+  execute if entity @s[dy=0] positioned ~-.99999999999999 ~-.99999999999999 ~-.99999999999999 if entity @s[dy=0]
 
 data modify storage bs:ctx _ set from entity @s Pos
 data modify storage bs:ctx x set from storage bs:ctx _[0]
@@ -32,4 +33,10 @@ execute if score #y bs.ctx = #j bs.ctx run scoreboard players operation #j bs.ct
 scoreboard players operation #j bs.ctx += @s bs.height
 scoreboard players operation #k bs.ctx += @s bs.depth
 
-return run execute if score #x bs.ctx matches ..0 if score #i bs.ctx matches 0.. if score #y bs.ctx matches ..0 if score #j bs.ctx matches 0.. if score #z bs.ctx matches ..0 if score #k bs.ctx matches 0..
+return run execute \
+  if score #x bs.ctx matches ..0 \
+  if score #i bs.ctx matches 0.. \
+  if score #y bs.ctx matches ..0 \
+  if score #j bs.ctx matches 0.. \
+  if score #z bs.ctx matches ..0 \
+  if score #k bs.ctx matches 0..

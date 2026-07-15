@@ -15,7 +15,8 @@
 
 $execute store result score #l bs.ctx if data storage bs:ctx _.g[{n:"$(name)"}].o[]
 
-execute if score #l bs.ctx matches 1.. run function bs.block:transform/shift_properties/recurse/shift_property with storage bs:ctx _.i[-1]
+execute if score #l bs.ctx matches 1.. \
+  run function bs.block:transform/shift_properties/recurse/shift_property with storage bs:ctx _.i[-1]
 
 data remove storage bs:ctx _.i[-1]
 function bs.block:transform/shift_properties/recurse/next with storage bs:ctx _.i[-1]

@@ -18,14 +18,21 @@ scoreboard players operation $raycast.piercing bs.lambda = #raycast.pb bs.data
 
 execute store result score $raycast.exit_distance bs.lambda run scoreboard players get #raycast.lx bs.data
 scoreboard players operation $raycast.exit_distance bs.lambda < #raycast.ly bs.data
-execute store result storage bs:data raycast.tmax double .001 store result score $raycast.exit_point.x bs.lambda store result score $raycast.exit_point.y bs.lambda store result score $raycast.exit_point.z bs.lambda \
+execute store result storage bs:data raycast.tmax double .001 \
+  store result score $raycast.exit_point.x bs.lambda \
+  store result score $raycast.exit_point.y bs.lambda \
+  store result score $raycast.exit_point.z bs.lambda \
  run scoreboard players operation $raycast.exit_distance bs.lambda < #raycast.lz bs.data
 
 execute store result score $raycast.targeted_block.x bs.lambda store result score #raycast.tm bs.data run scoreboard players operation #raycast.lx bs.data -= #raycast.dx bs.data
 execute store result score $raycast.targeted_block.y bs.lambda run scoreboard players operation #raycast.ly bs.data -= #raycast.dy bs.data
 execute store result score $raycast.targeted_block.z bs.lambda run scoreboard players operation #raycast.lz bs.data -= #raycast.dz bs.data
 scoreboard players operation #raycast.tm bs.data > #raycast.ly bs.data
-execute store result storage bs:data raycast.tmin double .001 store result score $raycast.entry_point.x bs.lambda store result score $raycast.entry_point.y bs.lambda store result score $raycast.entry_point.z bs.lambda store result score $raycast.entry_distance bs.lambda run scoreboard players operation #raycast.tm bs.data > #raycast.lz bs.data
+execute store result storage bs:data raycast.tmin double .001 \
+  store result score $raycast.entry_point.x bs.lambda \
+  store result score $raycast.entry_point.y bs.lambda \
+  store result score $raycast.entry_point.z bs.lambda \
+  store result score $raycast.entry_distance bs.lambda run scoreboard players operation #raycast.tm bs.data > #raycast.lz bs.data
 
 scoreboard players operation $raycast.targeted_block.x bs.lambda /= #raycast.dx bs.data
 scoreboard players operation $raycast.targeted_block.y bs.lambda /= #raycast.dy bs.data

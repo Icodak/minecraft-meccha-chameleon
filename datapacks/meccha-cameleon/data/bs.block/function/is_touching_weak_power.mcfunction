@@ -13,5 +13,11 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute positioned ~1 ~ ~ unless predicate bs.block:is_weakly_powered positioned ~ ~1 ~ unless predicate bs.block:is_weakly_powered positioned ~ ~ ~1 unless predicate bs.block:is_weakly_powered positioned ~-1 ~ ~ unless predicate bs.block:is_weakly_powered positioned ~ ~-1 ~ unless predicate bs.block:is_weakly_powered positioned ~ ~ ~-1 unless predicate bs.block:is_weakly_powered run return fail
+execute positioned ~1 ~ ~ unless predicate bs.block:is_weakly_powered \
+  positioned ~ ~1 ~ unless predicate bs.block:is_weakly_powered \
+  positioned ~ ~ ~1 unless predicate bs.block:is_weakly_powered \
+  positioned ~-1 ~ ~ unless predicate bs.block:is_weakly_powered \
+  positioned ~ ~-1 ~ unless predicate bs.block:is_weakly_powered \
+  positioned ~ ~ ~-1 unless predicate bs.block:is_weakly_powered \
+  run return fail
 return 1

@@ -25,8 +25,16 @@ execute if score #n bs.ctx matches 3 if score #raycast.uy bs.data matches ..-1 r
 execute if score #n bs.ctx matches 3 if score #raycast.uy bs.data matches 0.. run scoreboard players set $raycast.hit_face bs.lambda 0
 scoreboard players operation $raycast.piercing bs.lambda = #raycast.pe bs.data
 
-execute store result storage bs:data raycast.tmin double .001 store result score $raycast.entry_point.x bs.lambda store result score $raycast.entry_point.y bs.lambda store result score $raycast.entry_point.z bs.lambda run scoreboard players operation $raycast.entry_distance bs.lambda = #raycast.tm bs.data
-execute store result storage bs:data raycast.tmax double .001 store result score $raycast.exit_point.x bs.lambda store result score $raycast.exit_point.y bs.lambda store result score $raycast.exit_point.z bs.lambda store result score $raycast.exit_distance bs.lambda run data get storage bs:data raycast.re[-1].tmax
+execute store result storage bs:data raycast.tmin double .001 \
+  store result score $raycast.entry_point.x bs.lambda \
+  store result score $raycast.entry_point.y bs.lambda \
+  store result score $raycast.entry_point.z bs.lambda \
+  run scoreboard players operation $raycast.entry_distance bs.lambda = #raycast.tm bs.data
+execute store result storage bs:data raycast.tmax double .001 \
+  store result score $raycast.exit_point.x bs.lambda \
+  store result score $raycast.exit_point.y bs.lambda \
+  store result score $raycast.exit_point.z bs.lambda \
+  store result score $raycast.exit_distance bs.lambda run data get storage bs:data raycast.re[-1].tmax
 
 execute store result score #x bs.ctx run data get storage bs:data raycast.re[-1].x
 execute store result score #y bs.ctx run data get storage bs:data raycast.re[-1].y

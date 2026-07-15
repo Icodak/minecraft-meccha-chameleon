@@ -21,7 +21,12 @@ scoreboard players add #raycast.pb bs.data 1
 scoreboard players add #raycast.pe bs.data 1
 
 execute store result score #raycast.tb bs.data store result score #raycast.te bs.data run scoreboard players set #raycast.tm bs.data 2147483647
-execute store result score #count bs.raycast.id store result score $raycast.entry_distance bs.lambda store result score $raycast.exit_distance bs.lambda store result score $raycast.prev_entry_distance bs.lambda store result score $raycast.prev_exit_distance bs.lambda run scoreboard players set #i bs.ctx 0
+execute store result score #count bs.raycast.id \
+  store result score $raycast.entry_distance bs.lambda \
+  store result score $raycast.exit_distance bs.lambda \
+  store result score $raycast.prev_entry_distance bs.lambda \
+  store result score $raycast.prev_exit_distance bs.lambda \
+  run scoreboard players set #i bs.ctx 0
 
 execute unless data storage bs:data raycast{blocks:0b} run scoreboard players add #i bs.ctx 2
 execute unless data storage bs:data raycast{entities:0b} run scoreboard players add #i bs.ctx 3

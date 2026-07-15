@@ -13,7 +13,13 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute if score #i bs.ctx matches 1.. if score #j bs.ctx matches 1.. if score #k bs.ctx matches 1.. if score #i bs.ctx < #x bs.ctx if score #j bs.ctx < #y bs.ctx if score #k bs.ctx < #z bs.ctx run return 0
+execute if score #i bs.ctx matches 1.. \
+  if score #j bs.ctx matches 1.. \
+  if score #k bs.ctx matches 1.. \
+  if score #i bs.ctx < #x bs.ctx \
+  if score #j bs.ctx < #y bs.ctx \
+  if score #k bs.ctx < #z bs.ctx \
+  run return 0
 
 function bs.block:get/get_block
 function #bs.block:replace_type with storage bs:in block.fill_type

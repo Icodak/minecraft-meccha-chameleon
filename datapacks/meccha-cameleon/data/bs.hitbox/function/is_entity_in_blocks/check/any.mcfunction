@@ -14,7 +14,13 @@
 # ------------------------------------------------------------------------------------------------------------
 
 $execute if block ~ ~ ~ $(ignored) run return 0
-execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return run execute if score #x bs.ctx matches ..9999999 if score #i bs.ctx matches 0.. if score #y bs.ctx matches ..9999999 if score #j bs.ctx matches 0.. if score #z bs.ctx matches ..9999999 if score #k bs.ctx matches 0..
+execute if block ~ ~ ~ #bs.hitbox:is_full_cube run return run execute \
+  if score #x bs.ctx matches ..9999999 \
+  if score #i bs.ctx matches 0.. \
+  if score #y bs.ctx matches ..9999999 \
+  if score #j bs.ctx matches 0.. \
+  if score #z bs.ctx matches ..9999999 \
+  if score #k bs.ctx matches 0..
 
 $function $(shape)
 execute unless data storage bs:out hitbox.shape run return 0

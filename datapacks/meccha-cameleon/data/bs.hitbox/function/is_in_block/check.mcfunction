@@ -27,7 +27,13 @@ scoreboard players operation #o bs.ctx += #u bs.ctx
 scoreboard players operation #k bs.ctx += #v bs.ctx
 scoreboard players operation #q bs.ctx += #v bs.ctx
 
-execute if score #x bs.ctx >= #i bs.ctx if score #x bs.ctx < #o bs.ctx if score #y bs.ctx >= #j bs.ctx if score #y bs.ctx < #p bs.ctx if score #z bs.ctx >= #k bs.ctx if score #z bs.ctx < #q bs.ctx \
+execute \
+  if score #x bs.ctx >= #i bs.ctx \
+  if score #x bs.ctx < #o bs.ctx \
+  if score #y bs.ctx >= #j bs.ctx \
+  if score #y bs.ctx < #p bs.ctx \
+  if score #z bs.ctx >= #k bs.ctx \
+  if score #z bs.ctx < #q bs.ctx \
 run return 1
 
 execute if data storage bs:ctx _[0] run return run function bs.hitbox:is_in_block/check

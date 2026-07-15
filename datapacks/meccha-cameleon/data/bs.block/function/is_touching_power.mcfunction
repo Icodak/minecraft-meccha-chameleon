@@ -13,5 +13,12 @@
 # For more details, refer to the MPL v2.0.
 # ------------------------------------------------------------------------------------------------------------
 
-execute unless predicate bs.block:internal/is_touching_power positioned ~1 ~ ~ unless predicate bs.block:is_powered positioned ~ ~1 ~ unless predicate bs.block:is_powered positioned ~ ~ ~1 unless predicate bs.block:is_powered positioned ~-1 ~ ~ unless predicate bs.block:is_powered positioned ~ ~-1 ~ unless predicate bs.block:is_powered positioned ~ ~ ~-1 unless predicate bs.block:is_powered run return fail
+execute unless predicate bs.block:internal/is_touching_power \
+  positioned ~1 ~ ~ unless predicate bs.block:is_powered \
+  positioned ~ ~1 ~ unless predicate bs.block:is_powered \
+  positioned ~ ~ ~1 unless predicate bs.block:is_powered \
+  positioned ~-1 ~ ~ unless predicate bs.block:is_powered \
+  positioned ~ ~-1 ~ unless predicate bs.block:is_powered \
+  positioned ~ ~ ~-1 unless predicate bs.block:is_powered \
+  run return fail
 return 1

@@ -18,7 +18,9 @@ execute if data storage bs:ctx _.i[-1].by store result score #n bs.ctx run data 
 
 scoreboard players set #i bs.ctx 0
 $execute store success score #s bs.ctx run data modify storage bs:ctx _.i[-1].v set from storage bs:out block.properties."$(name)"
-execute if score #s bs.ctx matches 1 store result score #i bs.ctx run function bs.block:transform/shift_properties/recurse/index with storage bs:ctx _.i[-1]
+execute if score #s bs.ctx matches 1 \
+  store result score #i bs.ctx \
+  run function bs.block:transform/shift_properties/recurse/index with storage bs:ctx _.i[-1]
 
 scoreboard players operation #i bs.ctx += #n bs.ctx
 execute store result storage bs:ctx _.i[-1].i short 1 run scoreboard players operation #i bs.ctx %= #l bs.ctx

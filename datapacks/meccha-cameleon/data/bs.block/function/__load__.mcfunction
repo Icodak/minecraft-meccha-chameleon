@@ -23,7 +23,8 @@ scoreboard objectives add bs.data dummy [{text:"BS ",color:"dark_gray"},{text:"D
 
 data modify storage bs:out block set value {}
 
-execute unless data storage bs:const log.messages[{namespaces:["bs.block"]}] run data modify storage bs:const log.messages[{namespaces:["bs"]}].namespaces append value "bs.block"
+execute unless data storage bs:const log.messages[{namespaces:["bs.block"]}] run \
+  data modify storage bs:const log.messages[{namespaces:["bs"]}].namespaces append value "bs.block"
 
 
 function bs.block:import/groups_table

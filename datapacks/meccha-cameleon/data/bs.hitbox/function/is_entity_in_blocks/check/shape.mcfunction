@@ -28,7 +28,13 @@ scoreboard players operation #n bs.ctx += #v bs.ctx
 scoreboard players operation #q bs.ctx += #v bs.ctx
 
 # check aabb vs aabb collision
-execute if score #x bs.ctx < #o bs.ctx if score #i bs.ctx > #l bs.ctx if score #y bs.ctx < #p bs.ctx if score #j bs.ctx > #m bs.ctx if score #z bs.ctx < #q bs.ctx if score #k bs.ctx > #n bs.ctx \
+execute \
+  if score #x bs.ctx < #o bs.ctx \
+  if score #i bs.ctx > #l bs.ctx \
+  if score #y bs.ctx < #p bs.ctx \
+  if score #j bs.ctx > #m bs.ctx \
+  if score #z bs.ctx < #q bs.ctx \
+  if score #k bs.ctx > #n bs.ctx \
 run return 1
 
 execute if data storage bs:ctx _[0] run return run function bs.hitbox:is_entity_in_blocks/check/shape
