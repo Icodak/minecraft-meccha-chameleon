@@ -451,7 +451,16 @@ class ShapeRegistry:
         self.alias_mismatches: list[dict] = []    # _KNOWN_PARENTS disagreeing with itself
 
     def intern(self, resolved_model, parent_hint: str | None = None,
-               model_id: str | None = None) -> str:
+               model_id: str | None = None, rot_suffix: str = "") -> str:
+        # rot_suffix is the build-time rotation tag (e.g. "__x0_y180_z0" or
+        # "__x0_y90_z0_uvlock") that parse_assets derives from a variant's
+        # apply block. _KNOWN_PARENTS is rotation-agnostic (it names only the
+        # base silhouette), so the same base template rotated four ways would
+        # otherwise all fight for one name and get hash-disambiguated. We
+        # instead append the rotation tag to the base canonical name, giving
+        # stable, human-readable names like "button__x0_y180_z0" that still
+        # dedupe across wood types (same rotation of the same base shares one
+        # texture-agnostic signature, hence one name).
         sig = _signature(resolved_model.elements)
         if sig in self._sig_to_id:
             name = self._sig_to_id[sig]
@@ -464,6 +473,8 @@ class ShapeRegistry:
             # first silently won. This is precisely how a log ended up named
             # "acacia_leaves": catch it here instead of via a bug report.
             expected = _KNOWN_PARENTS.get(parent_hint or "", None)
+            if expected:
+                expected += rot_suffix
             if expected and expected != name:
                 self.alias_mismatches.append({
                     "parent_hint": parent_hint,
@@ -474,12 +485,18 @@ class ShapeRegistry:
             return name
         name = _KNOWN_PARENTS.get(parent_hint or "", None)
         known = name is not None
-        if not name:
+        if name:
+            # Known base silhouette: append the rotation tag so each rotated
+            # variant gets its own stable name off the shared base canonical.
+            name += rot_suffix
+        else:
             # Unrecognised silhouette: prefer the source model's own file
             # name (e.g. "block/custom_gate" -> "custom_gate") over a bare
             # hash, so a human staring at generated shapes.mcfunction can
             # tell which model first produced this geometry. Falls back to
-            # the hash only if we truly have no model id to work with.
+            # the hash only if we truly have no model id to work with. The
+            # variant model id already carries the rotation tag here, so we
+            # deliberately do NOT re-append rot_suffix.
             name = model_id.rsplit("/", 1)[-1] if model_id else f"shape_{sig[:8]}"
         # A friendly-name collision means two DIFFERENT shapes both want the
         # same name (either two unmapped models share a filename basename, or
