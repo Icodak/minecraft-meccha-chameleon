@@ -60,13 +60,13 @@ def _face_geometry(d: str, f: list[float], t: list[float]):
     tx, ty, tz = t
     dx, dy, dz = tx - fx, ty - fy, tz - fz
     if d == "north":   # -Z
-        return [fx, ty, fz], [dx, 0, 0], [0, -dy, 0], [0, 0, -1]
+        return [tx, ty, fz], [-dx, 0, 0], [0, -dy, 0], [0, 0, -1]
     if d == "south":   # +Z
         return [fx, ty, tz], [dx, 0, 0], [0, -dy, 0], [0, 0, 1]
     if d == "west":    # -X
         return [fx, ty, fz], [0, 0, dz], [0, -dy, 0], [-1, 0, 0]
     if d == "east":    # +X
-        return [tx, ty, fz], [0, 0, dz], [0, -dy, 0], [1, 0, 0]
+        return [tx, ty, tz], [0, 0, -dz], [0, -dy, 0], [1, 0, 0]
     if d == "up":      # +Y
         return [fx, ty, fz], [dx, 0, 0], [0, 0, dz], [0, 1, 0]
     if d == "down":    # -Y
@@ -131,6 +131,20 @@ def _normalize(v):
     return [round(c / m, 6) for c in v]
 
 
+def _rotate_element_bounds(f: list[float], t: list[float], steps: list[tuple[str, float]], origin):
+    corners = []
+    for x in (f[0], t[0]):
+        for y in (f[1], t[1]):
+            for z in (f[2], t[2]):
+                p = [x, y, z]
+                for ax, ang in steps:
+                    p = _rotate_point(p, origin, ax, ang)
+                corners.append(p)
+    mins = [min(p[i] for p in corners) for i in range(3)]
+    maxs = [max(p[i] for p in corners) for i in range(3)]
+    return [round(c, 5) for c in mins], [round(c, 5) for c in maxs]
+
+
 class ResolvedModel:
     def __init__(self, model_id: str):
         self.id = model_id                # "block/oak_stairs"
@@ -140,6 +154,49 @@ class ResolvedModel:
 
     def to_nbt(self) -> dict:
         return {"textures": self.textures, "elements": self.elements}
+
+    def transformed(self, rot: dict | None = None) -> "ResolvedModel":
+        """Return a copy rotated like a blockstate-applied model."""
+        if not rot:
+            return self
+        x = -float(rot.get("x", 0) or 0)
+        y = -float(rot.get("y", 0) or 0)
+        z = -float(rot.get("z", 0) or 0)
+        steps = [(ax, ang) for ax, ang in (("x", x), ("y", y), ("z", z)) if ang]
+        if not steps:
+            return self
+
+        out = ResolvedModel(self.id)
+        out.parent = self.parent
+        out.textures = dict(self.textures)
+        out.elements = []
+        origin = [8, 8, 8]
+        for el in self.elements:
+            f, t = _rotate_element_bounds(el["from"], el["to"], steps, origin)
+            faces_out = {}
+            for d, face in el["faces"].items():
+                p0 = face["p0"]
+                eu = face["eu"]
+                ev = face["ev"]
+                n = face["n"]
+                for ax, ang in steps:
+                    p0 = _rotate_point(p0, origin, ax, ang)
+                    eu = _rotate_vec(eu, ax, ang)
+                    ev = _rotate_vec(ev, ax, ang)
+                    n = _rotate_vec(n, ax, ang)
+                faces_out[d] = {
+                    **face,
+                    "p0": [round(c, 5) for c in p0],
+                    "eu": [round(c, 5) for c in eu],
+                    "ev": [round(c, 5) for c in ev],
+                    "n": _normalize(n),
+                }
+            out.elements.append({"from": f, "to": t, "faces": faces_out})
+        return out
+
+    def tranformed(self, rot: dict | None = None) -> "ResolvedModel":
+        """Backward-compatible alias for a previous misspelling."""
+        return self.transformed(rot)
 
 
 class ModelLibrary:

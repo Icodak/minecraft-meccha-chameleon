@@ -13,13 +13,14 @@ scoreboard players operation #BY meccha.math = $raycast.targeted_block.y bs.lamb
 scoreboard players operation #BZ meccha.math = $raycast.targeted_block.z bs.lambda
 
 # Fresh sample record. best_t huge so the first valid face wins.
-data modify storage meccha:rt sample set value {model:"",found:0b}
+data modify storage meccha:rt sample set value {found:0b}
 scoreboard players set #BEST_T meccha.math 2000000000
 
-# --- Step 2: state -> model -> shape geometry ---
+# --- Step 2: state -> model(s) -> combined shape geometry ---
+# resolve_state bakes the faces of every applicable model (all matching
+# multipart parts, or the first matching variant) into `faces`.
 function meccha:eyedropper/resolve_state with storage meccha:rt block
-execute if data storage meccha:rt {sample:{model:""}} run return run function meccha:eyedropper/no_sample
-function meccha:eyedropper/load_shape with storage meccha:rt sample
+execute unless data storage meccha:rt faces[0] run return run function meccha:eyedropper/no_sample
 
 # --- Step 3: virtual raycast over the shape's faces ---
 scoreboard players operation #BX meccha.math *= #SCALE meccha.math

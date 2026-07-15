@@ -52,14 +52,11 @@ scoreboard players operation #IDX meccha.math += #TXU meccha.math
 execute store result storage meccha:rt pick.index int 1 run scoreboard players get #IDX meccha.math
 
 # resolve "#var" -> final texture key, then fetch the hex pixel.
-# Reset texkey/color first so a var missing from the model's texture map can't
-# leave a stale key (or raise a macro error in fetch_pixel).
-data modify storage meccha:rt pick.texkey set value ""
+# The final texture key is already baked onto each face (bake_faces), so the
+# multi-part face union stays self-contained even when parts use different
+# texture maps. Reset color first; a face with no texture ("") is skipped.
 data modify storage meccha:rt pick.color set value "#00000000"
-data modify storage meccha:rt pick.var set from storage meccha:rt face.var
-
-function meccha:eyedropper/resolve_tex with storage meccha:rt pick
-# tellraw @a [{"text":"Pick: ","color":"gold"},{"nbt":"pick","storage":"meccha:rt","interpret":false,"color":"aqua"}]
+data modify storage meccha:rt pick.texkey set from storage meccha:rt face.tex
 
 execute unless data storage meccha:rt {pick:{texkey:""}} run function meccha:eyedropper/fetch_pixel with storage meccha:rt pick
 # alpha = last two hex chars of "#RRGGBBAA" (indices 7..9 via `set string`).

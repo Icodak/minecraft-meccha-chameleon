@@ -52,17 +52,24 @@ def _model_parent_hint(lib: ModelLibrary, model_id: str) -> str | None:
     return p.split(":", 1)[-1] if p else None
 
 
-def _variant_model_id(model_id: str, apply: dict) -> str:
+def _variant_suffix(apply: dict) -> str:
+    """Build-time rotation tag for a variant's apply block, or "" for the
+    identity rotation. Shared by the variant model id and the shape name so
+    both stay in lockstep (e.g. apply {y:180} -> "__x0_y180_z0")."""
     x = int(apply.get("x", 0))
     y = int(apply.get("y", 0))
     z = int(apply.get("z", 0))
     uvlock = bool(apply.get("uvlock", False))
     if x == 0 and y == 0 and z == 0 and not uvlock:
-        return model_id
-    suffix = f"x{x}_y{y}_z{z}"
+        return ""
+    suffix = f"__x{x}_y{y}_z{z}"
     if uvlock:
         suffix += "_uvlock"
-    return f"{model_id}__{suffix}"
+    return suffix
+
+
+def _variant_model_id(model_id: str, apply: dict) -> str:
+    return f"{model_id}{_variant_suffix(apply)}"
 
 
 def main() -> int:
@@ -113,7 +120,8 @@ def main() -> int:
         if not rm.elements:
             no_geometry.append(model_id)
             continue
-        shape_id = shapes.intern(rm, _model_parent_hint(lib, base_model_id), model_id)
+        shape_id = shapes.intern(rm, _model_parent_hint(lib, base_model_id),
+                                 model_id, rot_suffix=_variant_suffix(apply))
         model_entries[model_id] = {"shape": shape_id, "textures": rm.textures}
 
         for tex in rm.textures.values():
@@ -137,6 +145,9 @@ def main() -> int:
             textures[tkey] = tex.to_nbt()
 
     # ---- emit builders ---------------------------------------------------
+    # Wipe previously generated part files so a smaller run never leaves stale
+    # orphans behind (they would be committed but unreferenced by _index).
+    _clean_generated(args.datapack)
     emitted: list[str] = []
     emitted += _emit_textures(args.datapack, textures, args.chunk)
     emitted += _emit_shapes(args.datapack, shapes.shapes_nbt(), args.chunk)
@@ -188,6 +199,16 @@ def main() -> int:
 def _chunks(items, n):
     for i in range(0, len(items), n):
         yield i // n, items[i:i + n]
+
+
+def _clean_generated(root):
+    """Remove stale generated/*.mcfunction files before a fresh emit."""
+    gdir = os.path.join(root, "data", "meccha", "function", "generated")
+    if not os.path.isdir(gdir):
+        return
+    for name in os.listdir(gdir):
+        if name.endswith(".mcfunction"):
+            os.remove(os.path.join(gdir, name))
 
 
 def _emit_textures(root, textures, chunk):

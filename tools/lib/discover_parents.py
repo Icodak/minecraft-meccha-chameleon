@@ -4,6 +4,15 @@ Meccha Chameleon - Known Parents Dictionary Generator
 Scans the vanilla block models directory, finds all models acting as parents,
 groups them by their unique geometry/UV variable signature, and outputs
 a safe, collision-free `_KNOWN_PARENTS` dictionary configuration.
+
+NOTE ON GROUPING: This table is intentionally ROTATION-AGNOSTIC. It names only
+the base silhouette of each parent template (keyed by the texture-agnostic
+`_signature`, identical to the one shape_grouper.intern uses). At build time
+parse_assets derives a rotation tag from each variant's apply block (e.g.
+"__x0_y180_z0" or "__x0_y90_z0_uvlock") and shape_grouper.intern appends it to
+the base canonical name below. So a base template like block/button yields
+names such as "button", "button__x0_y180_z0", ... - all sharing this single
+base entry. Do NOT add rotated entries here; emit base names only.
 """
 from __future__ import annotations
 import os
@@ -89,6 +98,8 @@ def generate_clean_parents(assets_root: str):
     print("\n# ==========================================================================")
     print("# AUTO-GENERATED _KNOWN_PARENTS MAPPING")
     print("# Paste this directly into shape_grouper.py")
+    print("# Rotation-agnostic: base silhouette names only. shape_grouper.intern")
+    print("# appends the build-time rotation tag (e.g. __x0_y180_z0) per variant.")
     print("# ==========================================================================")
     print("_KNOWN_PARENTS = {")
     
