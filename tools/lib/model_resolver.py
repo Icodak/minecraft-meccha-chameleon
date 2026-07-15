@@ -62,15 +62,15 @@ def _face_geometry(d: str, f: list[float], t: list[float]):
     if d == "north":   # -Z
         return [fx, ty, fz], [dx, 0, 0], [0, -dy, 0], [0, 0, -1]
     if d == "south":   # +Z
-        return [tx, ty, tz], [-dx, 0, 0], [0, -dy, 0], [0, 0, 1]
+        return [fx, ty, tz], [dx, 0, 0], [0, -dy, 0], [0, 0, 1]
     if d == "west":    # -X
-        return [fx, ty, tz], [0, 0, -dz], [0, -dy, 0], [-1, 0, 0]
+        return [fx, ty, fz], [0, 0, dz], [0, -dy, 0], [-1, 0, 0]
     if d == "east":    # +X
         return [tx, ty, fz], [0, 0, dz], [0, -dy, 0], [1, 0, 0]
     if d == "up":      # +Y
-        return [fx, ty, tz], [dx, 0, 0], [0, 0, -dz], [0, 1, 0]
+        return [fx, ty, fz], [dx, 0, 0], [0, 0, dz], [0, 1, 0]
     if d == "down":    # -Y
-        return [fx, fy, fz], [dx, 0, 0], [0, 0, dz], [0, -1, 0]
+        return [fx, fy, tz], [dx, 0, 0], [0, 0, -dz], [0, -1, 0]
     raise ValueError(d)
 
 
