@@ -159,9 +159,9 @@ class ResolvedModel:
         """Return a copy rotated like a blockstate-applied model."""
         if not rot:
             return self
-        x = float(rot.get("x", 0) or 0)
-        y = float(rot.get("y", 0) or 0)
-        z = float(rot.get("z", 0) or 0)
+        x = -float(rot.get("x", 0) or 0)
+        y = -float(rot.get("y", 0) or 0)
+        z = -float(rot.get("z", 0) or 0)
         steps = [(ax, ang) for ax, ang in (("x", x), ("y", y), ("z", z)) if ang]
         if not steps:
             return self
