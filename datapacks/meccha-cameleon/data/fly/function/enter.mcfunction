@@ -12,4 +12,3 @@ scoreboard players set @s fly.jumpPrev 1
 scoreboard players set @s fly.state 0
 
 title @s actionbar [{"text":"Flight enabled","color":"aqua"}]
-playsound minecraft:block.beacon.activate player @s ~ ~ ~ 0.5 2

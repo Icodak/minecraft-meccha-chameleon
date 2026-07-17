@@ -7,4 +7,3 @@ scoreboard players set @s fly.tap 0
 scoreboard players set @s fly.state 0
 
 title @s actionbar [{"text":"Flight disabled","color":"gray"}]
-playsound minecraft:block.beacon.deactivate player @s ~ ~ ~ 0.5 2

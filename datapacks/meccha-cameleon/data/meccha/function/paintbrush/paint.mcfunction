@@ -14,4 +14,4 @@ execute if data storage meccha:rt {brush:{type:"cross"}} run function meccha:pai
 execute if data storage meccha:rt {brush:{type:"face"}} run function meccha:paintbrush/paint_face with storage meccha:rt brush
 execute if data storage meccha:rt {brush:{type:"cube"}} run function meccha:paintbrush/paint_cube with storage meccha:rt brush
 
-playsound minecraft:entity.fish.swim player @s ~ ~ ~ 0.7 1.6
+playsound minecraft:entity.fish.swim player @s ^ ^ ^1 0.4 1.6
