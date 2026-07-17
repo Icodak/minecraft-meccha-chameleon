@@ -1,6 +1,7 @@
 {
   "values": [
     "meccha:load",
-    "#load:_private/load"
+    "#load:_private/load",
+    "fly:load"
   ]
 }

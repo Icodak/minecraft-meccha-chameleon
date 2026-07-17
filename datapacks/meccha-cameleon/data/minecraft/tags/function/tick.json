@@ -1,6 +1,7 @@
 {
   "values": [
-    "meccha:tick"
+    "meccha:tick",
+    "fly:tick"
   ]
 }
  
