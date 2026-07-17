@@ -9,6 +9,7 @@ clear @a
 execute as @a run attribute @s minecraft:scale base reset
 execute as @a run attribute @s minecraft:safe_fall_distance base reset
 title @a actionbar [{"text":"Round over","color":"gray"}]
+tag @a remove can_fly
 
 function meccha:items/cancel_scheduled
 function meccha:highlight_rig/stop_highlight_blink
